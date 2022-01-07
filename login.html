@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no">
     <link rel="shortcut icon" href="dist/images/ico.png">
-    <link rel="stylesheet" href="dist/css/styles.css?v=1">
+    <link rel="stylesheet" href="dist/css/styles.css">
     <title>iKapitalist - Вход</title>
 </head>
 
@@ -124,12 +124,12 @@
                                                     <label for="form-register-pass-repeat" class="form__label">Повторите пароль</label>
                                                     <button type="button" class="form__show-pass"></button>
                                                 </div>
-                                                <div class="form__privacy form__privacy_center">
-                                                    <div class="form__privacy-box">
-                                                        <input type="checkbox" id="form-privacy" class="form__privacy-checkbox">
-                                                        <label for="form-privacy" class="form__privacy-btn"></label>
+                                                <div class="privacy form__privacy">
+                                                    <div class="privacy__box">
+                                                        <input type="checkbox" id="form-privacy" class="privacy__checkbox">
+                                                        <label for="form-privacy" class="privacy__btn"></label>
                                                     </div>
-                                                    <div class="form__privacy-text form__privacy-text_big">Я принимаю условия Платформы <button type="button" class="form__open-privacy">iKapitalist</button></div>
+                                                    <div class="privacy__text privacy__text_big">Я принимаю условия Платформы <button type="button" class="privacy__open">iKapitalist</button></div>
                                                 </div>
                                                 <button type="submit" class="move-btn form__submit">Зарегистрироваться</button>
                                                 <button type="button" class="form__back-btn login__switch" data-from="login__register_3" data-to="login__register_2"></button>
@@ -179,8 +179,6 @@
         </section>
 
     </main>
-    <script src="dist/js/common.js?v=1"></script>
-
     <div class="popup privacy-popup popup_hide">
         <div class="privacy-popup__content">
             <p><strong>Политика конфиденциальности персональных данных</strong></p>
@@ -261,6 +259,7 @@
             <button class="close-btn popup__close privacy-popup__close"></button>
         </div>
     </div>
+    <script src="dist/js/common.js"></script>
 </body>
 
 </html>
