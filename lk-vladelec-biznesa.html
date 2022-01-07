@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="shortcut icon" href="dist/images/ico.png">
+    <link rel="stylesheet" href="dist/css/styles.css">
+    <title>iKapitalist - Владелец бизнеса</title>
+</head>
+
+<body>
+    <div class="lk">
+        <aside class="sidebar">
+            <div class="sidebar__content">
+                <div class="sidebar__header">
+                    <button class="sidebar__toggle">
+                        <img src="dist/images/icons/lk-menu.svg" alt="">
+                    </button>
+                    <a href="./" class="logo sidebar__logo">
+                        <img src="dist/images/logo.svg" alt="" class="logo__img">
+                    </a>    
+                </div>
+                <div class="sidebar__list">
+                    <div class="sidebar__item">
+                        <a href="./lk-spisok-sdelok.html" class="sidebar__link">
+                            <img src="dist/images/icons/sidebar/handshake.svg" alt="" class="sidebar__icon">
+                            Список сделок
+                        </a>
+                    </div>
+                    <div class="sidebar__item">
+                        <a href="#" class="sidebar__link">
+                            <img src="dist/images/icons/sidebar/card.svg" alt="" class="sidebar__icon">
+                            Лента новостей
+                        </a>
+                    </div>
+                    <div class="sidebar__item">
+                        <a href="#" class="sidebar__link">
+                            <img src="dist/images/icons/sidebar/bank.svg" alt="" class="sidebar__icon">
+                            Портфель инвестора
+                        </a>
+                    </div>
+                    <div class="sidebar__item sidebar__item_active">
+                        <a href="./lk-vladelec-biznesa.html" class="sidebar__link">
+                            <img src="dist/images/icons/sidebar/case.svg" alt="" class="sidebar__icon">
+                            Владелец бизнеса
+                        </a>
+                    </div>
+                    <div class="sidebar__item">
+                        <a href="#" class="sidebar__link">
+                            <img src="dist/images/icons/sidebar/check.svg" alt="" class="sidebar__icon">
+                            Гарант
+                        </a>
+                    </div>
+                    <div class="sidebar__item">
+                        <a href="#" class="sidebar__link">
+                            <img src="dist/images/icons/sidebar/chart.svg" alt="" class="sidebar__icon">
+                            Аналитика
+                        </a>
+                    </div>
+                    <div class="sidebar__item">
+                        <a href="#" class="sidebar__link">
+                            <img src="dist/images/icons/sidebar/files.svg" alt="" class="sidebar__icon">
+                            Документы
+                        </a>
+                    </div>
+                    <div class="sidebar__item">
+                        <a href="#" class="sidebar__link">
+                            <img src="dist/images/icons/sidebar/notification.svg" alt="" class="sidebar__icon">
+                            Уведомления
+                            <span class="not-view sidebar__count">1</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="sidebar__footer">
+                    <a href="#" class="download-btn sidebar__download">
+                        Скачать мобильное приложение
+                    </a>
+                </div>
+            </div>
+        </aside>
+        <div class="lk__body">
+            <header class="lk-header">
+                <div class="container">
+                    <div class="lk-header__content">
+                        <div class="user-verif user-verif_error lk-header__verif">
+                            <button class="user-verif__btn">Верификация не пройдена</button>
+                            <div class="user-verif__main">
+                                <div class="user-verif__item">Подтверждение Email</div>
+                                <div class="user-verif__item user-verif__item_error">Проверка по ИИН</div>
+                                <div class="user-verif__item user-verif__item_warning">Договор с платформой</div>
+                                <div class="user-verif__item user-verif__item_error">Онлайн тест</div>
+                            </div>
+                        </div>
+                        <div class="user-panel">
+                            <button class="user-panel__btn">
+                                <div class="user-panel__name">Нурбек Раев</div>
+                                <img src="dist/images/user-avatar.png" alt="" class="user-panel__img">
+                            </button>
+                            <div class="user-panel__main">
+                                <div class="user-panel__item">
+                                    <a href="#" class="user-panel__link">
+                                        <img src="dist/images/icons/user-panel/file.svg" alt="" class="user-panel__icon">
+                                        Мои договора
+                                    </a>
+                                </div>
+                                <div class="user-panel__item">
+                                    <a href="#" class="user-panel__link">
+                                        <img src="dist/images/icons/user-panel/edit.svg" alt="" class="user-panel__icon">
+                                        Редактировать профиль
+                                    </a>
+                                </div>
+                                <div class="user-panel__item">
+                                    <img src="dist/images/icons/user-panel/lang.svg" alt="" class="user-panel__icon">
+                                    <div class="user-panel__lang">
+                                        <button class="user-panel__lang-btn user-panel__lang-btn_active">
+                                            <span class="user-panel__lang-name">Казахский</span>
+                                            <img src="dist/images/icons/user-panel/kz.png" alt="" class="user-panel__lang-img">
+                                        </button>
+                                        <button class="user-panel__lang-btn">
+                                            <span class="user-panel__lang-name">Русский</span>
+                                            <img src="dist/images/icons/user-panel/ru.png" alt="" class="user-panel__lang-img">
+                                        </button>
+                                        <button class="user-panel__lang-btn">
+                                            <span class="user-panel__lang-name">English</span>
+                                            <img src="dist/images/icons/user-panel/gb.png" alt="" class="user-panel__lang-img">
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="user-panel__item user-panel__exit">
+                                    <a href="#" class="user-panel__link">
+                                        <img src="dist/images/icons/user-panel/exit.svg" alt="" class="user-panel__icon">
+                                        Выйти
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <main class="lk-main">
+                <div class="container">
+                    <div class="lk-owner">
+                        <h1 class="lk-title1">Владелец бизнеса</h1>
+                        <h3 class="lk-title3 lk-owner__title3">Заявки на привлечение инвестиций</h3>
+                        <div class="lk-owner__controls">
+                            <div class="search lk-owner__search">
+                                <input type="text" class="search__field" placeholder="Поиск">
+                                <button class="search__btn">
+                                    <img src="dist/images/icons/search.svg" alt="Search">
+                                </button>
+                            </div>
+                            <a href="./lk-dobavit-kompanyu.html" class="lk-btn lk-owner__create">Создать заявку</a>
+                        </div>
+                        <div class="table lk-owner__table">
+                            <div class="table__filters">
+                                <div class="table__filters-left">
+                                    <button class="filter-btn table__filter-btn">По компаниям</button>
+                                    <button class="filter-btn table__filter-btn">По типу сделки</button>
+                                    <input type="number" class="filter-field table__filter-field" placeholder="Сумма от">
+                                    <input type="number" class="filter-field table__filter-field" placeholder="Сумма до">
+                                    <button class="filter-btn table__filter-btn">По дате</button>
+                                </div>
+                                <div class="table__filters-right">
+                                    <button class="filter-btn table__filter-btn">Настроить таблицу</button>
+                                    <button class="filter-btn table__filter-btn table__filter-btn_export">Экспортировать</button>
+                                </div>
+                            </div>
+                            <div class="table__wrapper">
+                                <table class="table__main">
+                                    <tr>
+                                        <th class="table__companies">
+                                            <button class="table__sort">Компании</button>
+                                        </th>
+                                        <th>
+                                            <button class="table__sort">Сумма</button>
+                                        </th>
+                                        <th>
+                                            <button class="table__sort">Процент</button>
+                                        </th>
+                                        <th>
+                                            <button class="table__sort">Коммисия</button>
+                                        </th>
+                                        <th>
+                                            <button class="table__sort">Срок(мес)</button>
+                                        </th>
+                                        <th>
+                                            <button class="table__sort">Дата</button>
+                                        </th>
+                                        <th>
+                                            <button class="table__sort">Статус</button>
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="table__company">
+                                                <img src="dist/images/companies/starbucks.png" alt="" class="table__company-img">
+                                                <a class="table__link" href="#">Starbucks</a>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <span class="table__price">20 150 000</span> <span class="table__price-type">₸</span>
+                                        </td>
+                                        <td>
+                                            <span class="table__text">25%</span>
+                                        </td>
+                                        <td>
+                                            <span class="table__text">1 %</span>
+                                        </td>
+                                        <td>
+                                            <span class="table__text table__text_gray">5</span>
+                                        </td>
+                                        <td>
+                                            <span class="table__text table__text_gray">14.07.2021</span>
+                                        </td>
+                                        <td>
+                                            <span class="table__status table__status_warning">На подписи у гаранта</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="table__company">
+                                                <img src="dist/images/companies/starbucks.png" alt="" class="table__company-img">
+                                                <a class="table__link" href="#">Starbucks</a>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <span class="table__price">1 150 000</span> <span class="table__price-type">₸</span>
+                                        </td>
+                                        <td>
+                                            <span class="table__text">25%</span>
+                                        </td>
+                                        <td>
+                                            <span class="table__text">1 %</span>
+                                        </td>
+                                        <td>
+                                            <span class="table__text table__text_gray">5</span>
+                                        </td>
+                                        <td>
+                                            <span class="table__text table__text_gray">14.07.2021</span>
+                                        </td>
+                                        <td>
+                                            <span class="table__status table__status_warning">На подписании</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="table__company">
+                                                <img src="dist/images/companies/starbucks.png" alt="" class="table__company-img">
+                                                <a class="table__link" href="#">Starbucks</a>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <span class="table__price">150 000</span> <span class="table__price-type">₸</span>
+                                        </td>
+                                        <td>
+                                            <span class="table__text">25%</span>
+                                        </td>
+                                        <td>
+                                            <span class="table__text">1 %</span>
+                                        </td>
+                                        <td>
+                                            <span class="table__text table__text_gray">5</span>
+                                        </td>
+                                        <td>
+                                            <span class="table__text table__text_gray">14.07.2021</span>
+                                        </td>
+                                        <td>
+                                            <span class="table__status table__status_check">Проверка анонса</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="table__company">
+                                                <img src="dist/images/companies/starbucks.png" alt="" class="table__company-img">
+                                                <a class="table__link" href="#">Starbucks</a>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <span class="table__price">900 000</span> <span class="table__price-type">₸</span>
+                                        </td>
+                                        <td>
+                                            <span class="table__text">25%</span>
+                                        </td>
+                                        <td>
+                                            <span class="table__text">1 %</span>
+                                        </td>
+                                        <td>
+                                            <span class="table__text table__text_gray">5</span>
+                                        </td>
+                                        <td>
+                                            <span class="table__text table__text_gray">14.07.2021</span>
+                                        </td>
+                                        <td>
+                                            <span class="table__status table__status_error">Отказано</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="table__company">
+                                                <img src="dist/images/companies/starbucks.png" alt="" class="table__company-img">
+                                                <a class="table__link" href="#">Starbucks</a>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <span class="table__price">20 150 000</span> <span class="table__price-type">₸</span>
+                                        </td>
+                                        <td>
+                                            <span class="table__text">25%</span>
+                                        </td>
+                                        <td>
+                                            <span class="table__text">1 %</span>
+                                        </td>
+                                        <td>
+                                            <span class="table__text table__text_gray">5</span>
+                                        </td>
+                                        <td>
+                                            <span class="table__text table__text_gray">14.07.2021</span>
+                                        </td>
+                                        <td>
+                                            <span class="table__status">Сумма не собрана</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="table__company">
+                                                <img src="dist/images/companies/starbucks.png" alt="" class="table__company-img">
+                                                <a class="table__link" href="#">Starbucks</a>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <span class="table__price">20 150 000</span> <span class="table__price-type">₸</span>
+                                        </td>
+                                        <td>
+                                            <span class="table__text">25%</span>
+                                        </td>
+                                        <td>
+                                            <span class="table__text">1 %</span>
+                                        </td>
+                                        <td>
+                                            <span class="table__text table__text_gray">5</span>
+                                        </td>
+                                        <td>
+                                            <span class="table__text table__text_gray">14.07.2021</span>
+                                        </td>
+                                        <td>
+                                            <span class="table__status table__status_warning">На подписи у инвестора</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="table__company">
+                                                <img src="dist/images/companies/starbucks.png" alt="" class="table__company-img">
+                                                <a class="table__link" href="#">Starbucks</a>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <span class="table__price">20 150 000</span> <span class="table__price-type">₸</span>
+                                        </td>
+                                        <td>
+                                            <span class="table__text">25%</span>
+                                        </td>
+                                        <td>
+                                            <span class="table__text">1 %</span>
+                                        </td>
+                                        <td>
+                                            <span class="table__text table__text_gray">5</span>
+                                        </td>
+                                        <td>
+                                            <span class="table__text table__text_gray">14.07.2021</span>
+                                        </td>
+                                        <td>
+                                            <span class="table__status table__status_warning">На подписании</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="table__company">
+                                                <img src="dist/images/companies/starbucks.png" alt="" class="table__company-img">
+                                                <a class="table__link" href="#">Starbucks</a>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <span class="table__price">20 150 000</span> <span class="table__price-type">₸</span>
+                                        </td>
+                                        <td>
+                                            <span class="table__text">25%</span>
+                                        </td>
+                                        <td>
+                                            <span class="table__text">1 %</span>
+                                        </td>
+                                        <td>
+                                            <span class="table__text table__text_gray">5</span>
+                                        </td>
+                                        <td>
+                                            <span class="table__text table__text_gray">14.07.2021</span>
+                                        </td>
+                                        <td>
+                                            <span class="table__status table__status_success">На подписании</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="table__company">
+                                                <img src="dist/images/companies/starbucks.png" alt="" class="table__company-img">
+                                                <a class="table__link" href="#">Starbucks</a>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <span class="table__price">20 150 000</span> <span class="table__price-type">₸</span>
+                                        </td>
+                                        <td>
+                                            <span class="table__text">25%</span>
+                                        </td>
+                                        <td>
+                                            <span class="table__text">1 %</span>
+                                        </td>
+                                        <td>
+                                            <span class="table__text table__text_gray">5</span>
+                                        </td>
+                                        <td>
+                                            <span class="table__text table__text_gray">14.07.2021</span>
+                                        </td>
+                                        <td>
+                                            <span class="table__status table__status_success">Выплачено</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="table__company">
+                                                <img src="dist/images/companies/starbucks.png" alt="" class="table__company-img">
+                                                <a class="table__link" href="#">Starbucks</a>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <span class="table__price">20 150 000</span> <span class="table__price-type">₸</span>
+                                        </td>
+                                        <td>
+                                            <span class="table__text">25%</span>
+                                        </td>
+                                        <td>
+                                            <span class="table__text">1 %</span>
+                                        </td>
+                                        <td>
+                                            <span class="table__text table__text_gray">5</span>
+                                        </td>
+                                        <td>
+                                            <span class="table__text table__text_gray">14.07.2021</span>
+                                        </td>
+                                        <td>
+                                            <span class="table__status table__status_success">Выплачено</span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="table__footer">
+                                <div class="table__count">
+                                    <span class="table__count-text">Показано</span>
+                                    <span class="table__count-value">1</span>
+                                    <span class="table__count-text">-</span>
+                                    <span class="table__count-value">10</span>
+                                    <span class="table__count-text">из</span>
+                                    <span class="table__count-value">48</span>
+                                    <span class="table__count-text">записей</span>
+                                </div>
+                                <div class="lk-pagination table__pagination">
+                                    <a href="#" class="lk-pagination__link lk-pagination__prev"></a>
+                                    <a href="#" class="lk-pagination__link lk-pagination__link_active">1</a>
+                                    <a href="#" class="lk-pagination__link">2</a>
+                                    <a href="#" class="lk-pagination__link">3</a>
+                                    <a href="#" class="lk-pagination__link">4</a>
+                                    <a href="#" class="lk-pagination__link lk-pagination__next"></a>
+                                </div>
+                                <div class="table__show">
+                                    Показать по
+                                    <div class="select table__show-select">
+                                        <select class="select__field">
+                                            <option value="10" class="select__option">10</option>
+                                            <option value="20" class="select__option">20</option>
+                                            <option value="30" class="select__option">30</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script src="dist/js/common.js"></script>
+</body>
+
+</html>
