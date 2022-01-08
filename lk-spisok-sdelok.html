@@ -274,17 +274,20 @@
                                     <button class="tab-btn tab-btn_active deals-list__tab-btn">Первичный рынок</button>
                                     <button class="tab-btn deals-list__tab-btn">Вторичный рынок <span class="not-view deals-list__tab-btn-count">1</span></button>
                                 </div>
-                                <div class="deals-list__switch">
-                                    Активные сделки
-                                    <div class="switcher deals-list__switcher">
-                                        <input type="checkbox" name="active-deals" class="switcher__field" id="active-deals">
-                                        <label for="active-deals" class="switcher__label"></label>
+                                <div class="filter-menu deals-list__filters">
+                                    <div class="switcher filter-menu__switch">
+                                        <div class="switcher__text">Активные сделки</div>
+                                        <div class="switcher__main">
+                                            <input type="checkbox" name="active-deals" class="switcher__field" id="active-deals">
+                                            <label for="active-deals" class="switcher__label"></label>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="deals-list__filter-btns">
-                                    <button class="filter-btn deals-list__filter-btn">Инструмент</button>
-                                    <button class="filter-btn deals-list__filter-btn">Цель</button>
-                                    <button class="filter-btn deals-list__filter-btn">Город</button>
+                                    <div class="filter-menu__btns">
+                                        <button class="filter-btn filter-menu__btn">Инструмент</button>
+                                        <button class="filter-btn filter-menu__btn">Цель</button>
+                                        <button class="filter-btn filter-menu__btn">Город</button>
+                                    </div>
+                                    <button class="back-btn close-filter-btn filter-menu__close "></button>
                                 </div>
                             </div>
                             <div class="deals-list__items">
@@ -568,12 +571,12 @@
                 </a>
             </div>
             <div class="mobile-menu__item">
-                <a href="#" class="mobile-menu__link">
+                <button class="mobile-menu__link open-sidebar">
                     <div class="mobile-menu__icon-box">
                         <img src="dist/images/icons/lk-menu.svg" alt="" class="mobile-menu__icon">
                     </div>
                     <span class="mobile-menu__text">Меню</span>
-                </a>
+                </button>
             </div>
         </div>
     </div>
