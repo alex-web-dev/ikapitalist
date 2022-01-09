@@ -1,0 +1,22 @@
+@mixin font-face($font-family, $file-path, $weight: normal, $style: normal, $asset-pipeline: false ) {
+	@font-face {
+    font-family: $font-family;
+    font-weight: $weight;
+    font-display: swap;
+    font-style: $style;
+    src: url('#{$file-path}.woff') format('woff'),
+        url('#{$file-path}.ttf') format('truetype');
+  }
+}
+
+@mixin down-icon($width, $height) {
+  background: url('../images/icons/down.svg') center / contain no-repeat;
+  width: $width;
+  height: $height;
+}
+
+@mixin bg-icon($url, $width, $height) {
+  background: url($url) center / contain no-repeat;
+  width: $width;
+  height: $height;
+}
