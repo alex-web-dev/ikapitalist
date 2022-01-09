@@ -177,7 +177,60 @@
                                     <button class="filter-btn filter-menu__btn table__filter-btn">По дате</button>
                                 </div>
                                 <div class="filter-menu__right">
-                                    <button class="filter-btn filter-menu__btn table__filter-btn">Настроить таблицу</button>
+                                    <div class="filter filter-menu__item">
+                                        <button class="filter-btn filter__btn filter-menu__btn">Настроить таблицу</button>
+                                        <div class="filter__main">
+                                            <div class="switch switch_filter filter__switch">
+                                                <div class="switch__text">Инвестиции</div>
+                                                <div class="switch__main">
+                                                    <input type="checkbox" name="invests" class="switch__field" id="filter-invests">
+                                                    <label for="filter-invests" class="switch__label"></label>
+                                                </div>
+                                            </div>
+                                            <div class="switch switch_filter filter__switch">
+                                                <div class="switch__text">Начало инвестиции</div>
+                                                <div class="switch__main">
+                                                    <input type="checkbox" name="start-invests" class="switch__field" id="filter-start-invests">
+                                                    <label for="filter-start-invests" class="switch__label"></label>
+                                                </div>
+                                            </div>
+                                            <div class="switch switch_filter filter__switch">
+                                                <div class="switch__text">Тип сделки</div>
+                                                <div class="switch__main">
+                                                    <input type="checkbox" name="type-transaction" class="switch__field" id="filter-type-transaction">
+                                                    <label for="filter-type-transaction" class="switch__label"></label>
+                                                </div>
+                                            </div>
+                                            <div class="switch switch_filter filter__switch">
+                                                <div class="switch__text">Номинал</div>
+                                                <div class="switch__main">
+                                                    <input type="checkbox" name="nominal" class="switch__field" id="filter-nominal">
+                                                    <label for="filter-nominal" class="switch__label"></label>
+                                                </div>
+                                            </div>
+                                            <div class="switch switch_filter filter__switch">
+                                                <div class="switch__text">Доходность</div>
+                                                <div class="switch__main">
+                                                    <input type="checkbox" name="yield" class="switch__field" id="filter-yield">
+                                                    <label for="filter-yield" class="switch__label"></label>
+                                                </div>
+                                            </div>
+                                            <div class="switch switch_filter filter__switch">
+                                                <div class="switch__text">Полученный доход</div>
+                                                <div class="switch__main">
+                                                    <input type="checkbox" name="income" class="switch__field" id="filter-income">
+                                                    <label for="filter-income" class="switch__label"></label>
+                                                </div>
+                                            </div>
+                                            <div class="switch switch_filter filter__switch">
+                                                <div class="switch__text">Доход будущих проектов</div>
+                                                <div class="switch__main">
+                                                    <input type="checkbox" name="income-future" class="switch__field" id="filter-income-future">
+                                                    <label for="filter-income-future" class="switch__label"></label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <button class="filter-btn filter-btn_export filter-menu__btn table__filter-btn">Экспортировать</button>
                                 </div>
                                 <button class="back-btn close-filter-btn filter-menu__close "></button>
@@ -188,7 +241,7 @@
                                         <th class="table__companies">
                                             <button class="table__sort">Компании</button>
                                         </th>
-                                        <th>
+                                        <th class="table__sum">
                                             <button class="table__sort">Сумма</button>
                                         </th>
                                         <th class="table__percent">
@@ -203,7 +256,7 @@
                                         <th class="table__date">
                                             <button class="table__sort">Дата</button>
                                         </th>
-                                        <th class="table__statuses">
+                                        <th class="statuses">
                                             <button class="table__sort">Статус</button>
                                         </th>
                                     </tr>
@@ -211,7 +264,7 @@
                                         <td>
                                             <div class="table__company">
                                                 <img src="dist/images/companies/starbucks.png" alt="" class="table__company-img">
-                                                <a class="table__link" href="#">Starbucks</a>
+                                                <a class="table__link" href="./lk-vladelec-zayavka.html">Starbucks</a>
                                             </div>
                                         </td>
                                         <td>
@@ -230,14 +283,14 @@
                                             <span class="table__text table__text_gray">14.07.2021</span>
                                         </td>
                                         <td>
-                                            <span class="table__status table__status_warning">На подписи у гаранта</span>
+                                            <span class="status status_warning">На подписи у гаранта</span>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
                                             <div class="table__company">
                                                 <img src="dist/images/companies/starbucks.png" alt="" class="table__company-img">
-                                                <a class="table__link" href="#">Starbucks</a>
+                                                <a class="table__link" href="./lk-vladelec-zayavka.html">Starbucks</a>
                                             </div>
                                         </td>
                                         <td>
@@ -256,14 +309,14 @@
                                             <span class="table__text table__text_gray">14.07.2021</span>
                                         </td>
                                         <td>
-                                            <span class="table__status table__status_warning">На подписании</span>
+                                            <span class="status status_warning">На подписании</span>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
                                             <div class="table__company">
                                                 <img src="dist/images/companies/starbucks.png" alt="" class="table__company-img">
-                                                <a class="table__link" href="#">Starbucks</a>
+                                                <a class="table__link" href="./lk-vladelec-zayavka.html">Starbucks</a>
                                             </div>
                                         </td>
                                         <td>
@@ -282,14 +335,14 @@
                                             <span class="table__text table__text_gray">14.07.2021</span>
                                         </td>
                                         <td>
-                                            <span class="table__status table__status_check">Проверка анонса</span>
+                                            <span class="status status_check">Проверка анонса</span>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
                                             <div class="table__company">
                                                 <img src="dist/images/companies/starbucks.png" alt="" class="table__company-img">
-                                                <a class="table__link" href="#">Starbucks</a>
+                                                <a class="table__link" href="./lk-vladelec-zayavka.html">Starbucks</a>
                                             </div>
                                         </td>
                                         <td>
@@ -308,14 +361,14 @@
                                             <span class="table__text table__text_gray">14.07.2021</span>
                                         </td>
                                         <td>
-                                            <span class="table__status table__status_error">Отказано</span>
+                                            <span class="status status_error">Отказано</span>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
                                             <div class="table__company">
                                                 <img src="dist/images/companies/starbucks.png" alt="" class="table__company-img">
-                                                <a class="table__link" href="#">Starbucks</a>
+                                                <a class="table__link" href="./lk-vladelec-zayavka.html">Starbucks</a>
                                             </div>
                                         </td>
                                         <td>
@@ -334,14 +387,14 @@
                                             <span class="table__text table__text_gray">14.07.2021</span>
                                         </td>
                                         <td>
-                                            <span class="table__status">Сумма не собрана</span>
+                                            <span class="status">Сумма не собрана</span>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
                                             <div class="table__company">
                                                 <img src="dist/images/companies/starbucks.png" alt="" class="table__company-img">
-                                                <a class="table__link" href="#">Starbucks</a>
+                                                <a class="table__link" href="./lk-vladelec-zayavka.html">Starbucks</a>
                                             </div>
                                         </td>
                                         <td>
@@ -360,14 +413,14 @@
                                             <span class="table__text table__text_gray">14.07.2021</span>
                                         </td>
                                         <td>
-                                            <span class="table__status table__status_warning">На подписи у инвестора</span>
+                                            <span class="status status_warning">На подписи у инвестора</span>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
                                             <div class="table__company">
                                                 <img src="dist/images/companies/starbucks.png" alt="" class="table__company-img">
-                                                <a class="table__link" href="#">Starbucks</a>
+                                                <a class="table__link" href="./lk-vladelec-zayavka.html">Starbucks</a>
                                             </div>
                                         </td>
                                         <td>
@@ -386,14 +439,14 @@
                                             <span class="table__text table__text_gray">14.07.2021</span>
                                         </td>
                                         <td>
-                                            <span class="table__status table__status_warning">На подписании</span>
+                                            <span class="status status_warning">На подписании</span>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
                                             <div class="table__company">
                                                 <img src="dist/images/companies/starbucks.png" alt="" class="table__company-img">
-                                                <a class="table__link" href="#">Starbucks</a>
+                                                <a class="table__link" href="./lk-vladelec-zayavka.html">Starbucks</a>
                                             </div>
                                         </td>
                                         <td>
@@ -412,14 +465,14 @@
                                             <span class="table__text table__text_gray">14.07.2021</span>
                                         </td>
                                         <td>
-                                            <span class="table__status table__status_success">На подписании</span>
+                                            <span class="status status_success">На подписании</span>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
                                             <div class="table__company">
                                                 <img src="dist/images/companies/starbucks.png" alt="" class="table__company-img">
-                                                <a class="table__link" href="#">Starbucks</a>
+                                                <a class="table__link" href="./lk-vladelec-zayavka.html">Starbucks</a>
                                             </div>
                                         </td>
                                         <td>
@@ -438,14 +491,14 @@
                                             <span class="table__text table__text_gray">14.07.2021</span>
                                         </td>
                                         <td>
-                                            <span class="table__status table__status_success">Выплачено</span>
+                                            <span class="status status_success">Выплачено</span>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
                                             <div class="table__company">
                                                 <img src="dist/images/companies/starbucks.png" alt="" class="table__company-img">
-                                                <a class="table__link" href="#">Starbucks</a>
+                                                <a class="table__link" href="./lk-vladelec-zayavka.html">Starbucks</a>
                                             </div>
                                         </td>
                                         <td>
@@ -464,7 +517,7 @@
                                             <span class="table__text table__text_gray">14.07.2021</span>
                                         </td>
                                         <td>
-                                            <span class="table__status table__status_success">Выплачено</span>
+                                            <span class="status status_success">Выплачено</span>
                                         </td>
                                     </tr>
                                 </table>
