@@ -263,6 +263,10 @@
     font-size: 24px;
     font-weight: 700;
     text-decoration: underline;
+
+    &_blue {
+        color: #3777b1;
+    }
 }
 
 .lk-title2 {
@@ -3561,6 +3565,10 @@
     }
 }
 
+.lk-main {
+    padding-bottom: 50px;
+}
+
 .lk-deals {
     padding-bottom: 83px;
 
@@ -4255,26 +4263,19 @@
     text-decoration: underline;
     transition: color .3s, border .3s;
 
-    &:hover {
-        border-color: #4D5A65;
-    }
-
     &_request {
         color: rgba(#4D5A65, .32);
-
-        &:hover {
-            color: #4D5A65;
-        }
+        border-color: rgba(#E9EFF5, .32);
     }
 
     &_active {
         border-color: #1C6FBC;
         color: #1C6FBC;
+    }
 
-        &:hover {
-            color: #1C6FBC;
-            border-color: #1C6FBC;
-        }
+    &_selected {
+        color: #4D5A65;
+        border-color: #E9EFF5;
     }
 }
 
@@ -4815,6 +4816,10 @@
             text-decoration: none;
         }
     }
+
+    &__doc-item {
+        margin-top: 30px;
+    }
 }
 
 .request-menu {
@@ -4825,6 +4830,7 @@
         flex: 1 1 210px;
         padding-left: 16px;
         padding-right: 16px;
+        white-space: nowrap;
     }
 }
 
@@ -4887,6 +4893,60 @@
 
     &__inf-type {
         color: #868F98;
+    }
+}
+
+.doc-item {
+    &__group {
+        &:not(:first-child) {
+            border-top: 1px solid #E9EFF5;
+            margin-top: 16px;
+            padding-top: 16px;
+        }
+    }
+
+    &__title {
+        margin: 30px 0 24px;
+    }
+
+    &__field-group {
+        margin: 16px -15px;
+
+        .field-group__item {
+            margin: 0 15px;
+        }
+    }
+
+    &__field {
+        margin: 16px 0;
+    }
+
+    &__btns {
+        display: flex;
+        margin: 16px -15px;
+    }
+
+    &__btns-item {
+        margin: 0 15px;
+        flex: 1 1 50%;
+    }
+
+    &__elem {
+        padding: 16px;
+        font-size: 13px;
+        border: 1px solid #E9EFF5;
+        border-radius: 4px;
+        font-weight: 500;
+        color: #1C6FBC;
+        text-decoration: underline;
+    }
+
+    &__btn {
+        width: 100%;
+        box-shadow: none;
+        color: #3777b1;
+        font-size: 13px;
+        line-height: 1.4;
     }
 }
 
