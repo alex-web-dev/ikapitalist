@@ -6,6 +6,7 @@ import './popup-boxes';
 
 import './steps';
 import './date-input';
+import './file-input';
 import './sidebar';
 import './filter-menu';
 

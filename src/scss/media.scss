@@ -1588,8 +1588,14 @@
         }
     }
 
-    .doc-item {
+    .file {
+        &__btn-text {
+            padding: 8px 14px;
 
+            &:before {
+                margin-right: 0;
+            }
+        }
     }
 }
 
