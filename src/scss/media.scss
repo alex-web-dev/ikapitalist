@@ -143,6 +143,23 @@
             flex-direction: column;
         }
     }
+
+    .doc-item {
+        &__field-group {
+            .field-group__item {
+                margin: 16px 0;
+            }
+        }
+
+        &__btns {
+            flex-direction: column;
+            margin: 8px 0;
+        }
+
+        &__btns-item {
+            margin: 8px 0;
+        }
+    }
 }
 
 @media screen and (max-width: 1199px) {
@@ -745,6 +762,8 @@
     }
 
     .lk-deals {
+        padding-bottom: 30px;
+
         &__title3 {
             margin-top: 0;
         }
@@ -1566,6 +1585,16 @@
 
         &__item-btn {
             margin: 0 6px;
+        }
+    }
+
+    .file {
+        &__btn-text {
+            padding: 8px 14px;
+
+            &:before {
+                margin-right: 0;
+            }
         }
     }
 }
