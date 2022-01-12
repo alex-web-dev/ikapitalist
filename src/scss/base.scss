@@ -9,7 +9,6 @@ html, body {
 body {
   display: flex;
   flex-direction: column;
-  text-decoration-thickness: 5%;
   font-size: 15px;
 }
 
@@ -19,17 +18,10 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
-  text-decoration: underline;
-  text-decoration-thickness: 2px;
 }
 
 p {
   margin: 0;
-}
-
-span, p {
-  text-decoration: underline;
-  text-decoration-thickness: 5%;
 }
 
 ul {
@@ -46,7 +38,6 @@ button {
   padding: 0;
   border: none;
   background: transparent;
-  text-decoration: underline;
 }
 
 input[type='number'] {
@@ -68,4 +59,8 @@ th {
 
 td {
   font-size: 15px;
+}
+
+a {
+  text-decoration: none;
 }

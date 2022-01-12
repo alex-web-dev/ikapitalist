@@ -13,7 +13,6 @@
     color: #fff;
     box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.24);
     transition: background .2s, box-shadow .2s;
-    text-decoration: underline;
 
     &:disabled {
         cursor: default;
@@ -40,7 +39,6 @@
     color: #1C6FBC;
     line-height: 1.2;
     font-weight: 500;
-    text-decoration: underline;
     display: inline-block;
 }
 
@@ -52,7 +50,6 @@
     display: inline-flex;
     align-items: center;
     border-radius: 12px;
-    text-decoration: underline;
 
     &:before {
         content: '';
@@ -153,7 +150,6 @@
     padding: 15px 30px;
     font-weight: 500;
     color: #fff;
-    text-decoration: underline;
     display: inline-block;
     text-align: center;
 
@@ -203,10 +199,6 @@
     align-items: center;
     font-weight: 700;
 
-    &:hover {
-        text-decoration: none;
-    }
-
     &:before {
         content: '';
         display: block;
@@ -228,7 +220,6 @@
     border: 1px solid #E9EFF5;
     width: 196px;
     text-align: left;
-    text-decoration: underline;
 
     &:before {
         content: '';
@@ -290,7 +281,6 @@
     color: #4D5A65;
     font-size: 24px;
     font-weight: 700;
-    text-decoration: underline;
 
     &_blue {
         color: #3777b1;
@@ -470,7 +460,6 @@
 }
 
 .tdu {
-    text-decoration: underline;
 }
 
 .header {
@@ -563,7 +552,6 @@
         font-size: 24px;
         line-height: 1.4;
         color: $color-secondary;
-        text-decoration: underline;
     }
 
     &__text {
@@ -573,7 +561,6 @@
 
     &__license {
         color: $color-secondary;
-        text-decoration-line: underline;
         font-size: 21px;
         line-height: 1.6;
         position: relative;
@@ -593,7 +580,6 @@
 
         span {
             color: #1c6fbc;
-            text-decoration-thickness: 1px;
         }
     }
 
@@ -679,7 +665,6 @@
         align-items: center;
         justify-content: space-between;
         font-weight: 700;
-        text-decoration: underline;
 
         &:after {
             content: '';
@@ -802,7 +787,6 @@
     &__item-value {
         font-weight: 500;
         font-size: 32px;
-        text-decoration: underline;
 
         span {
             margin-left: 7px;
@@ -813,7 +797,6 @@
         color: #4d5a65;
         font-size: 19px;
         line-height: 1.2;
-        text-decoration: underline;
         margin-top: 16px;
     }
 }
@@ -886,7 +869,6 @@
 
     &__progress-bar {
         background: #38C470;
-        text-decoration: underline;
         font-size: 16px;
         line-height: 1.6;
     }
@@ -897,7 +879,6 @@
         font-size: 16px;
         line-height: 1.6;
         color: #fff;
-        text-decoration: underline;
         text-align: center;
         margin-top: 20px;
 
@@ -1097,7 +1078,6 @@
     background: #fff;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.04);
     border-radius: 4px;
-    text-decoration: underline;
 
     &_blue {
         color: #379CD5;
@@ -1129,7 +1109,6 @@
     border: 1px solid #E9EFF5;
     border-radius: 8px;
     color: #1c6fbc;
-    text-decoration: underline;
 }
 
 .news {
@@ -1202,21 +1181,17 @@
         font-weight: 900;
         font-size: 48px;
         line-height: 1.2;
-        text-decoration: none;
 
         a {
             color: inherit;
-            text-decoration-thickness: 2.5px;
         }
     }
 
     &__title4 {
         font-size: 32px;
         font-weight: 500;
-        text-decoration: none;
 
         a {
-            text-decoration-thickness: 2.5px;
             color: inherit;
         }
     }
@@ -1340,7 +1315,6 @@
         background: transparent;
         border: none;
         cursor: pointer;
-        text-decoration: none;
 
         span {
             margin-top: 20px;
@@ -1374,7 +1348,6 @@
         font-size: 32px;
         font-weight: 500;
         color: #fff;
-        text-decoration: underline;
 
         a {
             color: inherit;
@@ -1462,7 +1435,6 @@
     &__field {
         padding: 14px 16px;
         color: #BAC0C6;
-        text-decoration: underline;
         font-size: 15px;
         line-height: 1.2;
         border: 1px solid #BAC0C6;
@@ -1579,7 +1551,6 @@
     &__type {
         font-size: 13px;
         line-height: 140%;
-        text-decoration-line: underline;
         color: #1C6FBC;
         padding: 9px 16px;
         background: #FFFFFF;
@@ -1772,11 +1743,6 @@
         color: #ffffff;
         display: inline-block;
         margin-top: 12px;
-        text-decoration: none;
-
-        &:hover {
-            text-decoration: underline;
-        }
     }
 
     &__copyright {
@@ -1788,7 +1754,6 @@
         font-size: 20px;
         color: rgba(255, 255, 255, 0.5);
         margin-bottom: 32px;
-        text-decoration: underline;
     }
 
     &__address {
@@ -1892,7 +1857,6 @@
         margin-top: 8px;
         
         span {
-            text-decoration: underline;
         }
 
         &:before {
@@ -1901,7 +1865,6 @@
             margin-right: 12px;
             color: #868F98;
             font-weight: 500;
-            text-decoration: underline;
         }
     }
 
@@ -1912,7 +1875,6 @@
 
     &__mark-item {
         line-height: 1.8;
-        text-decoration-thickness: 1px;
 
         &::marker {
             font-size: 15px;
@@ -2099,7 +2061,6 @@
         padding-bottom: 12px;
         cursor: pointer;
         user-select: none;
-        text-decoration-thickness: 1px;
 
         &:after {
             content: '';
@@ -2226,7 +2187,6 @@
 
     &__subtitle {
         font-weight: 500;
-        text-decoration: underline;
     }
 
     &__list {
@@ -2285,7 +2245,6 @@
         font-size: 17px;
         color: #868f98;
         margin-top: 12px;
-        text-decoration: underline;
     }
 
     &__info {
@@ -2347,7 +2306,6 @@
 
     &__item-address {
         line-height: 1.2;
-        text-decoration: underline;
         font-weight: 400;
     }
 
@@ -2398,7 +2356,6 @@
         color: #1c6fbc;
         font-size: 14px;
         line-height: 1.4;
-        text-decoration: underline;
     }
 }
 
@@ -2433,9 +2390,7 @@
         align-items: center;
         border: 1px solid #1c6fbc;
         color: $color-secondary;
-        text-decoration: none;
         margin-right: 15px;
-        text-decoration: underline;
         transition: color .3s, background .3s;
 
         &:hover {
@@ -2478,7 +2433,6 @@
         background: transparent;
         cursor: pointer;
         color: #bac0c6;
-        text-decoration: underline;
 
         &_active {
             border-bottom-color: #3777B1;
@@ -2521,7 +2475,6 @@
         &::placeholder {
             color: #BAC0C6;
             font-size: 13px;
-            text-decoration: underline;
         }
     }
 
@@ -2532,7 +2485,6 @@
         font-size: 13px;
         line-height: 1.4;
         color: #868F98;
-        text-decoration: underline;
         cursor: text;
     }
 
@@ -2578,17 +2530,12 @@
         margin-left: auto;
         font-size: 13px;
         line-height: 1.4;
-        text-decoration: underline;
         cursor: pointer;
         color: #1c6fbc;
         display: block;
         background: transparent;
         border: none;
         margin-top: 5px;
-
-        &:hover {
-            text-decoration: none;
-        }
     }
 
     &__message {
@@ -2707,7 +2654,6 @@
         background: transparent;
         cursor: pointer;
         color: #4d5a65;
-        text-decoration: underline;
 
         &_active {
             color: #1C6FBC;
@@ -2772,7 +2718,6 @@
 
             li {
                 margin-bottom: 32px;
-                text-decoration: underline;
             }
         }
     }
@@ -2939,7 +2884,6 @@
         font-size: 17px;
         line-height: 1.2;
         color: #1c6fbc;
-        text-decoration: underline;
     }    
 
     &__conf-author {
@@ -2947,7 +2891,6 @@
         font-size: 17px;
         line-height: 1.2;
         color: #4d5a65;
-        text-decoration: underline;
     }
 
     &__map {
@@ -3027,10 +2970,6 @@
         font-weight: 500;
         font-size: 17px;
         line-height: 1.4;
-        
-        &:hover {
-            text-decoration: none;
-        }
     }
 
     &__other-date {
@@ -3087,7 +3026,6 @@
     &__position {
         font-size: 13px;
         line-height: 140%;
-        text-decoration-line: underline;
         color: #868F98;
     }
 }
@@ -3134,7 +3072,6 @@
             font-size: 19px; 
             line-height: 1.6;
             color: #4D5A65;
-            text-decoration: underline;
         }
 
         p {
@@ -3151,7 +3088,6 @@
             font-size: 15px;
             line-height: 1.6;
             color: $color-secondary;
-            text-decoration: underline;
             position: relative;
 
             &:before,
@@ -3801,7 +3737,6 @@
 
     &__show {
         color: #4D5A65;
-        text-decoration: underline;
         display: flex;
         align-items: center;
     }
@@ -3848,7 +3783,6 @@
     &__field {
         font-size: 13px;
         padding: 10px 12px 10px 16px;
-        text-decoration: underline;
         width: 100%;
         -webkit-appearance: none;
         -moz-appearance: none;
@@ -3900,7 +3834,6 @@
         font-size: 13px;
         line-height: 1.4;
         color: #4D5A65;
-        text-decoration: underline;
         -webkit-appearance: none;
         -moz-appearance: none;
 
@@ -3912,7 +3845,6 @@
         &::placeholder {
             color: #BAC0C6;
             font-size: 13px;
-            text-decoration: underline;
         }
     }
 
@@ -3952,7 +3884,6 @@
     font-weight: 500;
     font-size: 13px;
     line-height: 1.2;
-    text-decoration: underline;
 
     &__main {
         height: 24px;
@@ -4075,7 +4006,6 @@
 
         &::placeholder {
             color: #BAC0C6;
-            text-decoration: underline;
         }
 
         &:focus {
@@ -4132,7 +4062,6 @@
 
     &::placeholder {
         color: #BAC0C6;
-        text-decoration: underline;
     }
 
     &:focus {
@@ -4306,9 +4235,7 @@
     padding: 0 0 14px;
     border: none;
     border-bottom: 2px solid #E9EFF5;
-    text-decoration: underline;
     color: #4d5a65;
-    text-decoration: underline;
     transition: color .3s, border .3s;
 
     &_request {
@@ -4362,7 +4289,6 @@
         line-height: 1.4;
         font-size: 13px;
         transition: border .3s;
-        text-decoration: underline;
 
         &[type='date'] {
             padding-left: 13px;
@@ -4372,11 +4298,9 @@
             &::-webkit-datetime-edit-month-field,
             &::-webkit-datetime-edit-day-field,
             &::-webkit-datetime-edit-year-field {
-                text-decoration: underline;
             }
 
             &::-webkit-datetime-edit { 
-                text-decoration: underline;
                 font-size: 13px;
                 color: #4d5a65;
             }
@@ -4408,7 +4332,6 @@
         &::placeholder {
             color: #BAC0C6;
             font-size: 13px;
-            text-decoration: underline;
         }
 
         &:read-only {
@@ -4423,7 +4346,6 @@
         font-size: 13px;
         line-height: 1.4;
         color: #868F98;
-        text-decoration: underline;
         cursor: text;
         pointer-events: none;
     }
@@ -4466,11 +4388,6 @@
         font-weight: 500;
     }
 
-    .qs-month,
-    .qs-year {
-        text-decoration: none;
-    }
-
     .qs-squares {
         padding-top: 18px;
     }
@@ -4494,7 +4411,6 @@
     .qs-num {
         color: #4D5A65;
         font-size: 15px;
-        text-decoration: underline;
     }
 }
 
@@ -4509,7 +4425,6 @@
         &_big {
             color: $color-secondary;
             font-size: 15px;
-            text-decoration: underline;
         }
     }
 
@@ -4551,7 +4466,6 @@
         border: none;
         background: transparent;
         color: #1c6fbc;
-        text-decoration: underline;
         cursor: pointer;
         padding: 0;
     }
@@ -4680,7 +4594,6 @@
         border: 1px solid #E9EFF5;
         display: inline-block;
         cursor: pointer;
-        text-decoration: underline;
     }
 
     &__input:checked + &__label {
@@ -4871,13 +4784,8 @@
         border-radius: 4px;
         border: 1px solid #3777B1;
         color: #3777b1;
-        text-decoration: underline;
         font-size: 13px;
         line-height: 1.4;
-
-        &:hover {
-            text-decoration: none;
-        }
     }
 
     &__doc-item {
@@ -4919,7 +4827,6 @@
         font-weight: 500;
         font-size: 13px;
         color: #1C6FBC;
-        text-decoration: underline;
         margin-left: 5px;
     }
 
@@ -4944,7 +4851,6 @@
         font-size: 13px;
         line-height: 1.4;
         color: #4d5a65;
-        text-decoration: underline;
     }
 
     &__inf-text {
@@ -4955,7 +4861,6 @@
         font-weight: 500;
         font-size: 15px;
         color: #4D5A65;
-        text-decoration: underline;
 
         &_success {
             color: #38C470;
@@ -5077,7 +4982,6 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        text-decoration: underline;
         text-align: center;
         white-space: nowrap;
 
@@ -5161,7 +5065,6 @@
         font-size: 11px;
         font-weight: 600;
         margin-bottom: 8px;
-        text-decoration: underline;
     }
 
     &__status {
@@ -5227,7 +5130,6 @@
     border-radius: 4px;
     font-weight: 500;
     color: #1C6FBC;
-    text-decoration: underline;
 }
 
 .payment {
