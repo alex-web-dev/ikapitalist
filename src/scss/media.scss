@@ -131,6 +131,13 @@
         &__item {
             margin: 16px 0;
         }
+
+        &_m_30 {
+            .field-group__item {
+                margin-left: 0;
+                margin-right: 0;
+            }
+        }
     }
 
     .request-item {
@@ -277,6 +284,12 @@
     .news-popup {
         &__body {
             padding: 48px 50px 32px;
+        }
+    }
+
+    .payment {
+        &__sidebar {
+            margin-top: 22px;
         }
     }
 }
@@ -1596,6 +1609,10 @@
                 margin-right: 0;
             }
         }
+    }
+
+    .pay-sidebar {
+        padding: 12px;
     }
 }
 

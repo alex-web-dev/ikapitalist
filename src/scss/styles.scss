@@ -322,6 +322,19 @@
     }
 }
 
+.lk-title4 {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 1.2;
+    color: #112E49;
+}
+
+.lk-title5 {
+    font-size: 14px;
+    color: #000;
+    font-weight: 400;
+}
+
 .text {
     font-size: 19px;
     line-height: 1.6;
@@ -2053,6 +2066,10 @@
 .faq {
     padding-top: 36px;
 
+    &__title3 {
+        font-weight: 500;
+    }
+
     &__item {
         margin-bottom: 22px;
 
@@ -3592,6 +3609,7 @@
 
 .lk-main {
     padding-bottom: 50px;
+    overflow: hidden;
 }
 
 .lk-deals {
@@ -4319,6 +4337,16 @@
         margin: 0 8px;
         width: 100%;
     }
+
+    &_m_30 {
+        margin-left: -15px;
+        margin-right: -15px;
+
+        .field-group__item {
+            margin-left: 15px;
+            margin-right: 15px;
+        }
+    }
 }
 
 .field {
@@ -4380,6 +4408,10 @@
             color: #BAC0C6;
             font-size: 13px;
             text-decoration: underline;
+        }
+
+        &:read-only {
+            border-color: #E9EFF5;
         }
     }
 
@@ -5041,6 +5073,7 @@
         justify-content: center;
         text-decoration: underline;
         text-align: center;
+        white-space: nowrap;
 
         &:before {
             content: '';
@@ -5188,6 +5221,137 @@
     font-weight: 500;
     color: #1C6FBC;
     text-decoration: underline;
+}
+
+.payment {
+    &__body {
+        margin-top: 36px;
+    }
+
+    &__name {
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 1.2;
+        color: #4D5A65;
+    }
+
+    &__title3 {
+        font-weight: 500;
+    }
+
+    &__bin {
+        font-size: 13px;
+        line-height: 1.4;
+        color: #868F98;
+        margin: 12px 0 36px;
+    }
+
+    &__details {
+        margin: 24px 0 16px;
+        padding-bottom: 16px;
+        border-bottom: 1px solid #E9EFF5;
+    }
+
+    &__field-group,
+    &__field {
+        margin-top: 16px;
+        margin-bottom: 16px;
+    }
+
+    &__download {
+        width: 100%;
+        color: #3777B1;
+        border: 1px solid #3777B1;
+        box-shadow: none;
+        font-weight: 400;
+    }
+
+    &__faq {
+        .faq__list {
+            padding-top: 24px;
+        }
+
+        .faq__item {
+            margin-bottom: 14px;
+        }
+
+        .faq__item-title {
+            color: #1c6fbc;
+            font-size: 13px;
+            padding-top: 10px;
+        }
+
+        .faq__item-main {
+            background: #fafbfc;
+            padding: 10px 12px;
+        }
+
+        .faq__item-text {
+            font-size: 14px;
+            line-height: 1.4;
+            font-weight: 400;
+
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+    }
+}
+
+.pay-sidebar {
+    box-shadow: 0px 6px 32px rgba(0, 0, 0, 0.08);
+    padding: 24px;
+    overflow: hidden;
+
+    &__field {
+        margin: 24px 0;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 12px 0;
+        line-height: 1.2;
+        font-size: 15px;
+        padding: 0 8px;
+    }
+
+    &__item-name {
+        line-height: 1.2;
+        color: #4D5A65;
+        white-space: nowrap;
+        padding-right: 5px;
+    }
+
+    &__item-value {
+        color: #112E49;
+        font-weight: 500;
+        white-space: nowrap;
+    }
+
+    &__total {
+        border-top: 1px solid #E9EFF5;
+        border-bottom: 1px solid #E9EFF5;
+        padding: 24px 0;
+        margin: 24px 0;
+    }
+
+    &__message {
+        padding: 0 8px;
+        font-size: 13px;
+        line-height: 1.4;
+        color: #868f98;
+    }
+
+    &__subtitle {
+        margin-bottom: 12px;
+    }
+
+    &__submit {
+        width: 100%;
+        margin-top: 24px;
+    }
 }
 
 @import 'media';
