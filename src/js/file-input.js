@@ -1,7 +1,5 @@
 const $fileForms = document.querySelectorAll('.file');
 $fileForms.forEach(($form, index) => {
-  console.log($form, index);
-  
   const $input = $form.querySelector('.file__input');
   const $btn = $form.querySelector('.file__btn');
   const $deleteBtn = $form.querySelector('.file__delete');
@@ -9,7 +7,6 @@ $fileForms.forEach(($form, index) => {
   
   $input.addEventListener('change', () => {
     handleFiles($input.files, $form);
-    console.log($form, index);
   });
 
   $btn.addEventListener('drop', (e) => {
