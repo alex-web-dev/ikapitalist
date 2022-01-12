@@ -3961,6 +3961,7 @@
     height: 18px;
     color: #fff;
     font-size: 11px;
+    line-height: 11px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -4919,6 +4920,10 @@
         margin: 16px 0;
         width: 510px;
         max-width: 100%;
+
+        &_full {
+            width: 100%;
+        }
     }
 
     &__links {
@@ -4948,6 +4953,14 @@
 }
 
 .file {
+    &__title3 {
+        padding-top: 8px;
+        font-weight: 500;
+        color: #3777B1;
+        margin-bottom: 12px;
+        line-height: 1.4;
+    }
+
     &__input {
         display: none;
     }
@@ -5081,6 +5094,7 @@
         text-align: right;
         margin-top: 12px;
         line-height: 1.4;
+        display: none;
     }
 
     &_loaded,
@@ -5104,6 +5118,12 @@
         .file__status,
         .file__result-header-btns {
             display: none;
+        }
+    }
+
+    &_error {
+        .file__error-text {
+            display: block;
         }
     }
 }
