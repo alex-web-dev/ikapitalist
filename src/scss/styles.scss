@@ -167,13 +167,28 @@
     &_green {
         background: #14A84F;
     }
+
+    &_small {
+        font-size: 13px;
+        padding: 10px 24px;
+    }
 }
 
 .delete-btn {
-    &:before {
+    display: flex;
+    justify-content: center;
+
+    &:after {
         content: '';
         @include bg-icon('../images/icons/basket.svg', 13px, 16px);
         display: inline-block;
+    }
+
+    &__text {
+        font-size: 13px;
+        color: #4D5A65;
+        margin-right: 8px;   
+        margin-top: 1px;
     }
 }
 
@@ -3287,12 +3302,16 @@
     &__desktop-content {
         display: flex;
         align-items: center;
+        justify-content: flex-end;
         padding: 14px 0;
     }
 
     &__verif {
-        margin-left: auto;
         margin-right: 16px;
+    }
+
+    &__deal {
+        margin-right: 24px;
     }
 
     &__mobile {
@@ -3478,7 +3497,6 @@
     &__lang {
         display: flex;
         align-items: center;
-        margin-bottom: 4px;
         padding: 11px 0;
     }
 
@@ -4267,6 +4285,10 @@
         width: 100%;
     }
 
+    &__btn {
+        margin: 0 8px;
+    }
+
     &_m_30 {
         margin-left: -15px;
         margin-right: -15px;
@@ -5007,6 +5029,10 @@
         }
     }
 
+    &__btn-desktop-text {
+        margin-left: 4px;
+    }
+
     &__progress {
         height: 10px;
         width: 100%;
@@ -5317,6 +5343,167 @@
 .error-text {
     color: $color-error;
     line-height: 1.2;
+}
+
+.create-deal {
+    &__banner {
+        margin-top: 32px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+
+        &:before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            background: rgba(0, 2, 4, 0.36);
+        }
+    }
+
+    &__banner-content {
+        position: relative;
+        height: 100%;
+        min-height: 364px;
+    }
+
+    &__banner-change {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__logo {
+        width: 96px;
+        height: 96px;
+        position: absolute;
+        right: 0;
+        bottom: -48px;
+        background: #fff;
+        border-radius: 4px;
+        border: 1px solid #E9EFF5;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 8px;
+    }
+
+    &__logo-change {
+        position: absolute;
+        padding: 12px 0;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        background: rgba(0, 2, 4, 0.36);
+        border-radius: 0px 0px 3px 3px;
+        text-align: center;
+    }
+
+    &__main {
+        margin-top: 24px;
+    }
+
+    &__menu {
+        margin-bottom: 60px;
+        max-width: 870px;
+    }
+
+    &__photos {
+        margin-top: 36px;
+    }
+
+    &__photos-list {
+        margin-top: 24px;
+    }
+
+    &__file {
+        width: 100%;
+        margin-top: 16px;
+    }
+
+    &__finance {
+        padding-top: 36px;
+        margin-top: 36px;
+        border-top: 1px solid #E9EFF5;
+    }
+
+    &__finance-item {
+        margin-top: 12px;
+        margin-bottom: 12px;
+    }
+
+    &__finance-delete {
+        width: 48px;
+        height: 48px;
+        border: 1px solid #E9EFF5;
+        border-radius: 2px;
+        flex: 0 0 auto;
+        align-self: center;
+        align-items: center;
+
+        &:after {
+            width: 18px;
+            height: 24px;
+        }
+    }
+
+    &__finance-add {
+        width: 100%;
+        box-shadow: none;
+        border-color: #3777B1;
+    }
+}
+
+.img-btn {
+    color: #bac0c6;
+    font-size: 12px;
+    line-height: 1.2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:before {
+        content: '';
+        display: inline-block;
+        @include bg-icon('../images/icons/camera.svg', 13px, 14px);
+    }
+
+    &__text {
+        margin-left: 12px;
+    }
+}
+
+.photo {
+    &__img {
+        width: 100%;
+        border-radius: 2px;
+    }
+
+    &__delete {
+        margin-top: 8px;
+        padding: 10px;
+        width: 100%;
+        border: 1px solid #E9EFF5;
+        background: #fff;
+        border-radius: 2px;
+    }
+}
+
+.deal-controls {
+    display: flex;
+
+    &__btn {
+        box-shadow: none;
+        border-color: #3777B1;
+
+        &:not(:last-child) {
+            margin-right: 12px;
+        }
+    }
 }
 
 @import 'media';
