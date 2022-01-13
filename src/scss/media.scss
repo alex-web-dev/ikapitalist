@@ -167,6 +167,40 @@
             margin: 8px 0;
         }
     }
+
+    .create-deal {
+        &__logo {
+            width: 80px;
+            height: 80px;
+            bottom: -40px;
+        }
+
+        &__logo-change {
+            padding: 10px 0;
+        }
+
+        &__main {
+            margin-top: 64px;    
+        }
+
+        &__finance-item {
+            position: relative;
+
+            &:not(:first-child) {
+                border-top: 1px solid #E9EFF5;
+            }
+        }
+
+        &__finance-delete {
+            width: 54px;
+            height: 54px;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            border: none;
+            margin: 0;
+        }
+    }
 }
 
 @media screen and (max-width: 1199px) {
@@ -980,6 +1014,41 @@
             }
         }
     }
+
+    .contract-form {
+        &__submit {
+            position: fixed;
+            z-index: 2;
+            bottom: 16px;
+            left: 50%;
+            transform: translateX(-50%);
+            margin-left: 0;
+            width: calc(100% - 30px);
+        }
+    }
+
+    .deal-controls {
+        flex-direction: column;
+        align-items: flex-start;
+
+        &__btn {
+            width: 100%;
+            max-width: 375px;
+            
+            &:not(:last-child) {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+        }
+    }
+
+    .create-deal {
+        padding-bottom: 30px;
+        
+        &__banner {
+            margin-top: -24px;
+        }
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -1602,17 +1671,50 @@
     }
 
     .file {
-        &__btn-text {
-            padding: 8px 14px;
-
-            &:before {
-                margin-right: 0;
-            }
+        &__btn-desktop-text {
+            display: none;
         }
     }
 
     .pay-sidebar {
         padding: 12px;
+    }
+
+    .create-deal {
+        &__banner-content {
+            min-height: 160px;
+        }
+
+        &__logo {
+            width: 64px;
+            height: 64px;
+            bottom: -32px;
+        }
+
+        &__logo-change {
+            padding: 8px 0 9px;
+        }
+
+        &__main {
+            margin-top: 56px;    
+        }
+
+        &__photos {
+            margin-top: 24px;
+        }
+
+        &__photos-list {
+            margin-top: 16px;
+        }
+
+        &__title {
+            font-size: 17px;
+        }
+
+        &__finance {
+            margin-top: 24px;
+            padding-top: 24px;
+        }
     }
 }
 

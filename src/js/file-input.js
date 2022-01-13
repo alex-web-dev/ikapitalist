@@ -1,5 +1,6 @@
 const $fileForms = document.querySelectorAll('.file');
-$fileForms.forEach(($form, index) => {
+
+$fileForms.forEach($form => {
   const $input = $form.querySelector('.file__input');
   const $btn = $form.querySelector('.file__btn');
   const $deleteBtn = $form.querySelector('.file__delete');
@@ -39,7 +40,6 @@ $fileForms.forEach(($form, index) => {
   });
 });
 
-
 function handleDrop(e, $form) {
   let dt = e.dataTransfer;
   let files = dt.files;
@@ -48,38 +48,61 @@ function handleDrop(e, $form) {
 }
 
 function handleFiles(files, $form) {
-  ([...files]).forEach(file => uploadFile(file, $form));
+  const fileType = $form.dataset.type;
+  let callbackFunction;
+
+  if (fileType === 'file') {
+    ([...files]).forEach(file => uploadFile(file, $form, callbackFunction));
+
+    fileLoadingAnimate($form, files[0].name);
+
+  } else if (fileType === 'image') {
+    ([...files]).forEach(file => uploadImage(file, $form, callbackFunction));
+  }
 }
 
-function uploadFile(file, $form) {
-  fileLoadingHandler($form, file.name);
-
+function uploadFile(file, $form, fn) {
   let url = './load-file-handler.php'; //Изменить на файл обработчик
   let formData = new FormData()
   formData.append('file', file)
 
-
   /**Убрать после добавления функционала отправки файлов на сервер */
-  setTimeout(() => {
-    $form.classList.remove('file_loading');
-    $form.classList.add('file_loaded');
-  }, 1100);
-
+  setTimeout(() => fileLoadedAnimate($form), 1100);
   return;
+
   fetch(url, {
     method: 'POST',
     body: formData
   })
   .then(() => { 
-    setTimeout(() => {
-      $form.classList.remove('file_loading');
-      $form.classList.add('file_loaded');
-    }, 1100);
+    setTimeout(() => fileLoadedAnimate($form), 1100);
    })
   .catch(() => { 'error' });
 }
 
-function fileLoadingHandler($form, fileName = '') {
+function uploadImage(file, $form, fn) {
+  let url = './load-image-handler.php'; //Изменить на файл обработчик
+  let formData = new FormData()
+  formData.append('image', file)
+
+  console.log('image load');
+  
+  return;
+
+  fetch(url, {
+    method: 'POST',
+    body: formData
+  })
+  .then(() => { 'success' })
+  .catch(() => { 'error' });
+}
+
+function fileLoadedAnimate($form) {
+  $form.classList.remove('file_loading');
+  $form.classList.add('file_loaded');
+}
+
+function fileLoadingAnimate($form, fileName = '') {
   const fileType = getFileType(fileName);
 
   const $fileName = $form.querySelector('.file__result-name');
