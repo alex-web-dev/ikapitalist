@@ -4283,6 +4283,10 @@
         flex: 1 1 auto;
         margin: 0 8px;
         width: 100%;
+
+        &_w_330 {
+            max-width: 330px;
+        }
     }
 
     &__btn {
@@ -4388,6 +4392,13 @@
 
         .field__error-text {
             display: inline-block;
+        }
+    }
+
+    &_no-text {
+        .field__input {
+            padding-top: 19px;
+            padding-bottom: 19px;
         }
     }
 }
@@ -5346,6 +5357,15 @@
 }
 
 .create-deal {
+    &__title {
+        margin-bottom: 24px;    
+    }
+
+    &__title3 {
+        font-weight: 500;
+        margin-bottom: 24px;
+    }
+
     &__banner {
         margin-top: 32px;
         background-size: cover;
@@ -5425,12 +5445,6 @@
         margin-top: 16px;
     }
 
-    &__finance {
-        padding-top: 36px;
-        margin-top: 36px;
-        border-top: 1px solid #E9EFF5;
-    }
-
     &__finance-item {
         margin-top: 12px;
         margin-bottom: 12px;
@@ -5451,10 +5465,97 @@
         }
     }
 
-    &__finance-add {
+    &__manager-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__manager-name {
+        color: #4D5A65;
+        font-size: 13px;
+        font-weight: 500;
+    }
+
+    &__manager-delete {
+        font-size: 13px;
+        font-weight: 500;
+        color: #1C6FBC;
+    }
+
+    &__btn {
         width: 100%;
         box-shadow: none;
         border-color: #3777B1;
+    }
+
+    &__group {
+        &:not(:first-child) {
+            border-top: 1px solid #E9EFF5;
+            padding-top: 36px;
+            margin-top: 36px;
+        }
+    }
+
+    &__editor {
+        margin-top: 24px;
+    }
+
+    &__manager {
+        &:not(:first-child) {
+            border-top: 1px solid #E9EFF5;
+            margin-top: 16px;
+            padding-top: 16px;
+        }
+    }
+
+    &__manager-fields,
+    &__manager-field {
+        margin-top: 12px;
+        margin-bottom: 12px;
+    }
+
+    &__managers-footer {
+        border-top: 1px solid #E9EFF5;
+        padding-top: 12px;
+        margin-top: 12px;
+    }
+
+    &__advs,
+    &__disadvs {
+        margin-top: 20px;
+    }
+
+    &__advs-title,
+    &__disadvs-title {
+        color: #4D5A65;
+        font-size: 13px;
+        line-height: 1.4;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &:after {
+            content: '';
+            display: inline-block;
+            @include bg-icon('../images/icons/down.svg', 11px, 6px);
+        }
+    }
+
+    &__advs-field,
+    &__disadvs-field {
+        margin: 12px 0;
+    }
+
+    &__field {
+        margin-top: 12px;
+        margin-bottom: 12px;
+    }
+
+    &_step_2 {
+        .create-deal__main-content {
+            max-width: 870px;
+        }
     }
 }
 
@@ -5504,6 +5605,77 @@
             margin-right: 12px;
         }
     }
+}
+
+.editor {
+    &__toolbar.ql-snow {
+        border: 1px solid #E0E0E0;
+        border-bottom-color: #F2F2F2;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        padding: 16px;
+    }
+
+    &__toolbar-controls {
+        margin-right: 70px;
+        display: flex;
+        align-items: center;
+
+        &:last-child {
+            margin-right: 0;
+            margin-left: auto;
+        }
+    }
+
+    .ql-snow.ql-toolbar {
+        display: flex;
+        align-items: center;
+
+        button.editor__btn {
+            padding: 0;
+            float: none;
+
+            &:not(:last-child) {
+                margin-right: 30px;
+            }
+
+            svg {
+                display: none;
+            }
+
+            &_bold { @include bg-icon('../images/icons/editor/bold.svg', 11px, 14px); }
+            &_italic { @include bg-icon('../images/icons/editor/italic.svg', 6px, 14px); }
+            &_underline { @include bg-icon('../images/icons/editor/underline.svg', 13px, 17px); }
+            &_align { @include bg-icon('../images/icons/editor/align-left.svg', 18px, 12px); }
+            &_align-center { @include bg-icon('../images/icons/editor/align-center.svg', 18px, 12px); }
+            &_align-right { @include bg-icon('../images/icons/editor/align-right.svg', 18px, 12px); }
+            &_list-ordered { @include bg-icon('../images/icons/editor/list-ordered.svg', 20px, 14px); }
+            &_list-bullet { @include bg-icon('../images/icons/editor/list-bullet.svg', 20px, 13px); }
+            &_direction-rtl { @include bg-icon('../images/icons/editor/direction-rtl.svg', 11px, 14px); }
+            &_link { @include bg-icon('../images/icons/editor/link.svg', 20px, 10px); }
+            &_image { @include bg-icon('../images/icons/editor/image.svg', 20px, 16px); }
+            &_undo { @include bg-icon('../images/icons/editor/undo.svg', 18px, 7px); }
+            &_redo { @include bg-icon('../images/icons/editor/redo.svg', 18px, 7px); }
+            &_options { @include bg-icon('../images/icons/editor/options.svg', 8px, 13px); }
+        }
+    }
+
+    &__main.ql-snow {
+        border: 1px solid #E0E0E0;
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+    }
+
+    .ql-editor {
+        min-height: 94px;
+    }
+
+    .ql-editor.ql-blank:before {
+        color: #868F98;
+        font-size: 14px;
+        font-style: normal;
+    }
+
 }
 
 @import 'media';

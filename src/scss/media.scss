@@ -130,6 +130,10 @@
 
         &__item {
             margin: 16px 0;
+
+            &_w_330 {
+                max-width: 100%;
+            }
         }
 
         &_m_30 {
@@ -1711,7 +1715,7 @@
             font-size: 17px;
         }
 
-        &__finance {
+        &__group {
             margin-top: 24px;
             padding-top: 24px;
         }
