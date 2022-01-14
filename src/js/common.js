@@ -9,6 +9,7 @@ import './date-input';
 import './file-input';
 import './sidebar';
 import './filter-menu';
+import './editor';
 
 import './lk-header';
 import './lk-tabs';
