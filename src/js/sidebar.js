@@ -1,6 +1,5 @@
 const $sidebar = document.querySelector('.sidebar');
 const $openSidebarBtns = document.querySelectorAll('.open-sidebar');
-const isMobile = window.innerWidth < 992;
 
 if ($sidebar) {
   $openSidebarBtns.forEach($btn => {
@@ -10,7 +9,7 @@ if ($sidebar) {
   });
   
   $sidebar.addEventListener('click', e => {
-    console.log(isMobile, e.target, $sidebar);
+    const isMobile = window.innerWidth < 992;
     
     if (isMobile && e.target === $sidebar) {
       $sidebar.classList.remove('sidebar_active');

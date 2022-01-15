@@ -5600,10 +5600,20 @@
     &__btn {
         box-shadow: none;
         border-color: #3777B1;
+        white-space: nowrap;
 
         &:not(:last-child) {
             margin-right: 12px;
         }
+    }
+
+    &_mobile {
+        display: none;
+        overflow-x: auto;
+        background: #fff;
+        padding: 0 6px 8px;   
+        margin-bottom: 8px;
+        border-bottom: 1px solid #E9EFF5;
     }
 }
 
@@ -5621,7 +5631,7 @@
         display: flex;
         align-items: center;
 
-        &:last-child {
+        &_last {
             margin-right: 0;
             margin-left: auto;
         }

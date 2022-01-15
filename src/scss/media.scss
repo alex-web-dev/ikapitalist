@@ -205,6 +205,16 @@
             margin: 0;
         }
     }
+
+    .editor {
+        &__toolbar-controls {
+            margin-right: 50px;
+
+            &_last {
+                margin-right: 0;
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 1199px) {
@@ -1031,26 +1041,17 @@
         }
     }
 
-    .deal-controls {
-        flex-direction: column;
-        align-items: flex-start;
-
-        &__btn {
-            width: 100%;
-            max-width: 375px;
-            
-            &:not(:last-child) {
-                margin-right: 0;
-                margin-bottom: 15px;
-            }
-        }
-    }
-
     .create-deal {
-        padding-bottom: 30px;
+        padding-bottom: 70px;
         
         &__banner {
             margin-top: -24px;
+        }
+    }
+
+    .deal-controls {
+        &_mobile {
+            display: flex;
         }
     }
 }
@@ -1716,8 +1717,18 @@
         }
 
         &__group {
-            margin-top: 24px;
-            padding-top: 24px;
+            &:not(:first-child) {
+                margin-top: 24px;
+                padding-top: 24px;
+            }
+        }
+    }
+
+    .editor {
+        &__toolbar-controls {
+            &_desktop {
+                display: none;
+            }
         }
     }
 }
