@@ -4257,6 +4257,7 @@
     border-bottom: 2px solid $border-white;
     color: $color-medium;
     transition: color .3s, border .3s;
+    white-space: nowrap;
 
     &_request {
         color: rgba($color-medium, .32);
@@ -4277,6 +4278,7 @@
 .lk-tabs {
     &__btns {
         display: flex;
+        overflow-x: auto;
     }
 
     &__btn {
@@ -4729,6 +4731,7 @@
 
 .mobile-menu {
     position: fixed;
+    z-index: 3;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -5799,12 +5802,33 @@
 
     &__banner-content {
         position: relative;
+        min-height: 364px;
     }
 
     &__banner-main {
-        padding: 135px 0 24px;
         position: relative;
-        max-width: 570px;
+        width: 570px;
+        max-width: 82%;
+        margin-top: -250px;
+        margin-top: -350px;
+    }
+
+    &__banner-discuss {
+        margin-top: 27px;
+        display: none;
+        align-items: center;
+        color: #1C6FBC;
+
+        &:before {
+            content: '';
+            display: inline-block;
+            @include bg-icon('../images/icons/comment-blue.svg', 20px, 19px);
+            margin-right: 14px;
+        }
+    }
+
+    &__banner-discuss-value {
+        margin-left: auto;
     }
 
     &__banner-title {
@@ -5841,6 +5865,7 @@
     &__logo {
         position: absolute;
         right: 400px;
+        right: 34.2%;
         bottom: 0;
         transform: translateY(50%);
         width: 96px;
@@ -5851,6 +5876,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        padding: 8px;
     }
 
     &__about {
@@ -5859,6 +5885,10 @@
 
     &__about-text {
         margin-top: 16px;
+    }
+
+    &__groups {
+        margin-top: 64px;
     }
 
     &__group {
@@ -5898,6 +5928,11 @@
     &__discuss {
         margin-top: 12px;
     }
+
+    &__inf-btn {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
 }
 
 .facts {
@@ -5922,6 +5957,10 @@
 
     &__title {
         margin-bottom: 12px;
+        color: $color-secondary;
+    }
+
+    &__text {
         color: $color-secondary;
     }
 
@@ -6150,6 +6189,12 @@
     &__item-text {
         margin-top: 16px;
         text-align: justify;
+    }
+
+    &__item-position {
+        margin-top: 8px;
+        font-size: 15px;
+        color: rgba($color-medium, .9);
     }
 }
 
@@ -6439,6 +6484,7 @@
         line-height: 11px;
         font-weight: 700;
         cursor: default;
+        flex: 0 0 auto;
     }
 
     &__name {
@@ -6460,6 +6506,7 @@
     &__lock {
         margin-left: 24px;
         @include bg-icon('../images/icons/unlock.svg', 18px, 20px);
+        flex: 0 0 auto;
     }
 
     &_locked {
@@ -6571,6 +6618,7 @@
 
 .discuss-sidebar {
     box-shadow: 0px 6px 32px rgba(0, 0, 0, 0.08);
+    display: block;
 
     &__header {
         box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.06);
@@ -6687,6 +6735,11 @@
     &__attach {
         margin-right: 10px;
     }
+
+    &__attach,
+    &__telegram {
+        flex: 0 0 auto;
+    }
 }
 
 .discuss-comment {
@@ -6776,6 +6829,16 @@
         line-height: 1;
         color: #fff;
         font-weight: 500;
+    }
+}
+
+.open-add-menu {
+    &_discuss {
+        &:before {
+            content: '';
+            display: inline-block;
+            @include bg-icon('../images/icons/comment.svg', 14px, 14px);
+        }
     }
 }
 
