@@ -3,16 +3,21 @@ import './menu';
 import './form';
 import './login';
 import './popup-boxes';
+import './range-field';
 
 import './steps';
 import './date-input';
 import './file-input';
-import './sidebar';
-import './filter-menu';
+
 import './editor';
 
-import './lk-header';
-import './lk-tabs';
+import './lk/header';
+import './lk/lk-tabs';
+import './lk/sidebar';
+import './lk/filter-menu';
+import './lk/chart';
+import './lk/calc';
+import './lk/discuss';
 
 
 window.addEventListener('load', () => {

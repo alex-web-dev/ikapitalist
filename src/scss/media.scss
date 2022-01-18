@@ -191,7 +191,7 @@
             position: relative;
 
             &:not(:first-child) {
-                border-top: 1px solid #E9EFF5;
+                border-top: 1px solid $border-white;
             }
         }
 
@@ -255,8 +255,8 @@
         &__item {
             width: 50%;
             min-width: initial;
-            border-bottom: 1px solid #E9EFF5;
-            border-right: 1px solid #E9EFF5;
+            border-bottom: 1px solid $border-white;
+            border-right: 1px solid $border-white;
         }
     }
 
@@ -425,7 +425,7 @@
             display: block;
             position: relative;
             text-align: center;
-            border-bottom: 1px solid #E9EFF5;
+            border-bottom: 1px solid $border-white;
             padding: 12px 0;
             margin: 0 16px;
         }
@@ -477,14 +477,14 @@
 
             .menu {
                 &__link {
-                    color: #4d5a65;
+                    color: $color-medium;
 
                     &:before {
                         background: #3777B1;
                     }
 
                     path {
-                        fill: #4d5a65;
+                        fill: $color-medium;
                     }
                 }
             }
