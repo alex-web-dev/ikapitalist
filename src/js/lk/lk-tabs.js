@@ -4,16 +4,23 @@ window.addEventListener('load', () => {
     $btn.addEventListener('click', () => {
       const newTabNum = +$btn.dataset.tabNum;
 
-
       const $tabs = $btn.closest('.lk-tabs');
 
+      if (+$tabs.dataset.toggleBtn === 1) {
+        const $activeBtn = $tabs.querySelector('.lk-tabs__btn_active');
+        $activeBtn.classList.remove('lk-tabs__btn_active');
+  
+        const $newActiveTab = $tabs.querySelectorAll('.lk-tabs__btn')[newTabNum - 1];
+        $newActiveTab.classList.add('lk-tabs__btn_active');
+      }
+      
       const $activeTab = $tabs.querySelector('.lk-tabs__item_active');
       $activeTab.classList.remove('lk-tabs__item_active');
 
       const $newActiveTab = $tabs.querySelectorAll('.lk-tabs__item')[newTabNum - 1];
       $newActiveTab.classList.add('lk-tabs__item_active');
     });
-  })
+  });
 
   const $moreFundsBtns = document.querySelectorAll('.lk-tabs__radio_more_funds');
   $moreFundsBtns.forEach($btn => {

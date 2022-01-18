@@ -191,7 +191,7 @@
             position: relative;
 
             &:not(:first-child) {
-                border-top: 1px solid #E9EFF5;
+                border-top: 1px solid $border-white;
             }
         }
 
@@ -203,6 +203,16 @@
             right: 0;
             border: none;
             margin: 0;
+        }
+    }
+
+    .editor {
+        &__toolbar-controls {
+            margin-right: 50px;
+
+            &_last {
+                margin-right: 0;
+            }
         }
     }
 }
@@ -245,8 +255,8 @@
         &__item {
             width: 50%;
             min-width: initial;
-            border-bottom: 1px solid #E9EFF5;
-            border-right: 1px solid #E9EFF5;
+            border-bottom: 1px solid $border-white;
+            border-right: 1px solid $border-white;
         }
     }
 
@@ -415,7 +425,7 @@
             display: block;
             position: relative;
             text-align: center;
-            border-bottom: 1px solid #E9EFF5;
+            border-bottom: 1px solid $border-white;
             padding: 12px 0;
             margin: 0 16px;
         }
@@ -467,14 +477,14 @@
 
             .menu {
                 &__link {
-                    color: #4d5a65;
+                    color: $color-medium;
 
                     &:before {
                         background: #3777B1;
                     }
 
                     path {
-                        fill: #4d5a65;
+                        fill: $color-medium;
                     }
                 }
             }
@@ -1031,26 +1041,17 @@
         }
     }
 
-    .deal-controls {
-        flex-direction: column;
-        align-items: flex-start;
-
-        &__btn {
-            width: 100%;
-            max-width: 375px;
-            
-            &:not(:last-child) {
-                margin-right: 0;
-                margin-bottom: 15px;
-            }
-        }
-    }
-
     .create-deal {
-        padding-bottom: 30px;
+        padding-bottom: 70px;
         
         &__banner {
             margin-top: -24px;
+        }
+    }
+
+    .deal-controls {
+        &_mobile {
+            display: flex;
         }
     }
 }
@@ -1716,8 +1717,18 @@
         }
 
         &__group {
-            margin-top: 24px;
-            padding-top: 24px;
+            &:not(:first-child) {
+                margin-top: 24px;
+                padding-top: 24px;
+            }
+        }
+    }
+
+    .editor {
+        &__toolbar-controls {
+            &_desktop {
+                display: none;
+            }
         }
     }
 }

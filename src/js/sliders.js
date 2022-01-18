@@ -34,22 +34,6 @@ const $newsSlider = new Swiper('.news-slider__main', {
   },
 });
 
-// const $newsSlider = new Swiper('.news-slider__main', {
-//   direction: 'horizontal',
-//   slidesPerView: 3,
-//   spaceBetween: 0,
-//   speed: 600,
-//   watchOverflow: false,
-//   navigation: {
-//     nextEl: '.news-slider__next',
-//     prevEl: '.news-slider__prev',
-//   },
-//   grid: {
-//     rows: 2,
-//     fill: 'row',
-//   },
-// });
-
 const $casesSlider = new Swiper('.cases__main', {
   direction: 'horizontal',
   slidesPerView: 1,
@@ -149,4 +133,33 @@ const $newsInfoSlider = new Swiper('.news-info_slider', {
     nextEl: '.news-info__next',
     prevEl: '.news-info__prev',
   }
+});
+
+const $productsSlider = new Swiper('.products-slider', {
+  direction: 'horizontal',
+  slidesPerView: 1,
+  spaceBetween: 0,
+  speed: 400,
+  watchOverflow: false,
+  loop: true,
+  pagination: {
+    el: '.products-slider__pagination',
+    type: 'bullets',
+    clickable: true
+  },
+  navigation: {
+    nextEl: '.products-slider__next',
+    prevEl: '.products-slider__prev',
+  }
+});
+
+
+
+
+const $appControlsSlider = new Swiper('.app-controls', {
+  direction: 'horizontal',
+  slidesPerView: 'auto',
+  spaceBetween: 0,
+  speed: 400,
+  watchOverflow: false
 });

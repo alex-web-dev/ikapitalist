@@ -11,11 +11,11 @@ $grid-gutter-width: 30px;
 $spacer: 1rem !default;
 $gutters: (
   0: 0,
-  1: $spacer * .25,
-  2: $spacer * .5,
-  3: $spacer,
-  4: $spacer * 1.875,
-  5: $spacer * 2.25,
+  1: $spacer,
+  2: $spacer * 1.5,
+  3: $spacer * 1.875,
+  4: $spacer * 2.25,
+  5: $spacer * 2.5,
 ) !default;
 
 
@@ -27,3 +27,8 @@ $gutters: (
 @import "../../node_modules/bootstrap/scss/mixins";
 
 @import '../../node_modules/bootstrap/scss/progress';
+
+.lk-container {
+  @include make-container();
+  max-width: 1050px;
+}
