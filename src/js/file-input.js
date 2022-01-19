@@ -51,8 +51,6 @@ function handleFiles(files, $form) {
   const fileType = $form.dataset.type;
   let callbackFunction;
 
-  console.log(fileType);
-  
   if (fileType === 'file') {
     ([...files]).forEach(file => uploadFile(file, $form, callbackFunction));
 
