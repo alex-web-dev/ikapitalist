@@ -6194,6 +6194,7 @@
         margin-top: 8px;
         font-size: 15px;
         color: rgba($color-medium, .9);
+        display: none;
     }
 }
 
@@ -6838,6 +6839,12 @@
             display: inline-block;
             @include bg-icon('../images/icons/comment.svg', 14px, 14px);
         }
+    }
+}
+
+.add-menu {
+    &__close {
+        display: none;
     }
 }
 

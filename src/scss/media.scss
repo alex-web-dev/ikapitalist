@@ -1150,6 +1150,7 @@
         transition: transform .45s;
 
         &__close {
+            display: inline-block;
             position: absolute;
             left: 15px;
             top: 15px;
