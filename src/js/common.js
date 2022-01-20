@@ -9,15 +9,16 @@ import './steps';
 import './date-input';
 import './file-input';
 
-import './editor';
-
+import './lk/editor';
 import './lk/header';
-import './lk/lk-tabs';
+import './lk/tabs';
 import './lk/sidebar';
 import './lk/filter-menu';
 import './lk/chart';
 import './lk/calc';
 import './lk/discuss';
+import './lk/table';
+import './lk/add-menu';
 
 
 window.addEventListener('load', () => {

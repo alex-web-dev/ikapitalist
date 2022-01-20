@@ -6,7 +6,6 @@ if ($form) {
   $input.addEventListener('input', () => {
     const length = $input.value.length;
     const max = +$input.getAttribute('maxlength');
-    console.log(length, max, $symbols);
     
     $symbols.innerHTML = `${length}/${max}`;
   });

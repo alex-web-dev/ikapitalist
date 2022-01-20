@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no">
     <link rel="shortcut icon" href="dist/images/ico.png">
-    <link rel="stylesheet" href="dist/css/styles.css?v=100">
+    <link rel="stylesheet" href="dist/css/styles.css?v=101">
     <title>iKapitalist - Документы компании</title>
 </head>
 
@@ -152,7 +152,7 @@
                     <div class="container">
                         <div class="lk-header__mobile-content">
                             <a href="./lk-spisok-sdelok.html" class="back-btn"></a>
-                            <div class="lk-header__mobile-title">Документы компании</div>
+                            <div class="mobile-title lk-header__mobile-title">Документы компании</div>
                         </div>
                     </div>
                 </div>
@@ -168,9 +168,9 @@
                         <div class="request-menu request__menu">
                             <a href="./lk-vladelec-zagruzka-doc.html" class="tab-btn tab-btn_request request-menu__link tab-btn_active">Документы компании</a>
                             <a href="./lk-vladelec-zayavka.html" class="tab-btn tab-btn_request request-menu__link">Заявка</a>
-                            <a href="#" class="tab-btn tab-btn_request request-menu__link">Отчетность</a>
-                            <a href="#" class="tab-btn tab-btn_request request-menu__link">Документы</a>
-                            <a href="#" class="tab-btn tab-btn_request request-menu__link">Договоры</a>
+                            <a href="./lk-vladelec-otchet.html" class="tab-btn tab-btn_request request-menu__link">Отчетность</a>
+                            <a href="./lk-vladelec-docs.html" class="tab-btn tab-btn_request request-menu__link">Документы</a>
+                            <a href="./lk-vladelec-contracts.html" class="tab-btn tab-btn_request request-menu__link">Договоры</a>
                             <a href="#" class="tab-btn tab-btn_request request-menu__link">Публикация</a>
                         </div>
                         <div class="request__main">
@@ -310,7 +310,7 @@
                                         </div>
                                         <div class="doc-item__group">
                                             <div class="lk-title1 lk-title1_blue doc-item__title">Договора</div>
-                                            <div class="file doc-item__file">
+                                            <div class="file doc-item__file" data-type="file">
                                                 <p class="file__text">Доверенность кто подает заявку</p>
                                                 <input class="file__input" type="file" id="file-1">
                                                 <label class="file__btn" for="file-1">
@@ -338,7 +338,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="file doc-item__file">
+                                            <div class="file doc-item__file" data-type="file">
                                                 <p class="file__text">Удостоверение лицевая сторона</p>
                                                 <input class="file__input" type="file" id="file-2">
                                                 <label class="file__btn" for="file-2">
@@ -366,7 +366,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="file doc-item__file">
+                                            <div class="file doc-item__file" data-type="file">
                                                 <p class="file__text">Удостоверение обратная сторона</p>
                                                 <input class="file__input" type="file" id="file-3">
                                                 <label class="file__btn" for="file-3">
@@ -394,7 +394,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="file file_error doc-item__file">
+                                            <div class="file file_error doc-item__file" data-type="file">
                                                 <p class="file__text">Выписка с банковского счёта компании</p>
                                                 <input class="file__input" type="file" id="file-4">
                                                 <label class="file__btn" for="file-4">
@@ -423,7 +423,7 @@
                                                 </div>
                                                 <p class="file__error-text">Необходимо заполнить “Выписка с банковской компании”</p>
                                             </div>
-                                            <div class="file doc-item__file">
+                                            <div class="file doc-item__file" data-type="file">
                                                 <p class="file__text">Договор с клиентом</p>
                                                 <input class="file__input" type="file" id="file-5">
                                                 <label class="file__btn" for="file-5">
@@ -527,7 +527,7 @@
             </div>
         </div>
     </div>
-    <script src="dist/js/common.js?v=100"></script>
+    <script src="dist/js/common.js?v=101"></script>
 </body>
 
 </html>

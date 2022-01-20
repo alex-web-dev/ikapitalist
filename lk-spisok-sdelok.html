@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no">
     <link rel="shortcut icon" href="dist/images/ico.png">
-    <link rel="stylesheet" href="dist/css/styles.css?v=100">
+    <link rel="stylesheet" href="dist/css/styles.css?v=101">
     <title>iKapitalist - Список сделок</title>
 </head>
 
@@ -144,8 +144,8 @@
                 <div class="lk-header__mobile">
                     <div class="container">
                         <div class="lk-header__mobile-content">
-                            <div class="lk-header__mobile-title">Список сделок</div>
-                            <button class="open-filter-btn"></button>
+                            <div class="mobile-title lk-header__mobile-title">Список сделок</div>
+                            <button class="open-add-menu open-add-menu_filter"></button>
                         </div>
                     </div>
                 </div>
@@ -274,20 +274,25 @@
                                     <button class="tab-btn tab-btn_active deals-list__tab-btn">Первичный рынок</button>
                                     <button class="tab-btn deals-list__tab-btn">Вторичный рынок <span class="not-view deals-list__tab-btn-count">1</span></button>
                                 </div>
-                                <div class="filter-menu deals-list__filters">
-                                    <div class="switch filter-menu__switch">
-                                        <div class="switch__text">Активные сделки</div>
-                                        <div class="switch__main">
-                                            <input type="checkbox" name="active-deals" class="switch__field" id="active-deals">
-                                            <label for="active-deals" class="switch__label"></label>
+                                <div class="add-menu deals-list__add-menu">
+                                    <div class="add-menu__header">
+                                        <div class="mobile-title">Фильтр</div>
+                                        <button class="close-btn close-add-menu add-menu__close"></button>
+                                    </div>
+                                    <div class="filter-menu">
+                                        <div class="switch filter-menu__switch">
+                                            <div class="switch__text">Активные сделки</div>
+                                            <div class="switch__main">
+                                                <input type="checkbox" name="active-deals" class="switch__field" id="active-deals">
+                                                <label for="active-deals" class="switch__label"></label>
+                                            </div>
+                                        </div>
+                                        <div class="filter-menu__btns">
+                                            <button class="filter-btn filter-menu__btn">Инструмент</button>
+                                            <button class="filter-btn filter-menu__btn">Цель</button>
+                                            <button class="filter-btn filter-menu__btn">Город</button>
                                         </div>
                                     </div>
-                                    <div class="filter-menu__btns">
-                                        <button class="filter-btn filter-menu__btn">Инструмент</button>
-                                        <button class="filter-btn filter-menu__btn">Цель</button>
-                                        <button class="filter-btn filter-menu__btn">Город</button>
-                                    </div>
-                                    <button class="back-btn close-filter-btn filter-menu__close "></button>
                                 </div>
                             </div>
                             <div class="deals-list__items">
@@ -580,7 +585,7 @@
             </div>
         </div>
     </div>
-    <script src="dist/js/common.js?v=100"></script>
+    <script src="dist/js/common.js?v=101"></script>
 </body>
 
 </html>
