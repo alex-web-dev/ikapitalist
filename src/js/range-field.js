@@ -10,7 +10,6 @@ $rangeInputs.forEach($input => {
 
 function rangeInputUpdate (input, max) {
   const value = input.value;
-  const thumbWidth = 18;
 
   const percent = (value / max * 100);
 

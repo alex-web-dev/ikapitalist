@@ -118,10 +118,7 @@
     &:before {
         content: '';
         display: block;
-        width: 10px;
-        height: 10px;
-        background: url('../images/icons/exit.svg') center no-repeat;
-        background-size: contain;
+        @include bg-icon('../images/icons/exit.svg', 10px, 10px);
     }
 }
 
@@ -148,14 +145,6 @@
             width: 28px;
             height: 28px;
         }
-    }
-}
-
-.open-filter-btn {
-    &:before {
-        content: '';
-        display: inline-block;
-        @include bg-icon('../images/icons/filter.svg', 13px, 12px);
     }
 }
 
@@ -188,6 +177,15 @@
         font-size: 13px;
         padding: 10px 24px;
     }
+}
+
+.lk-submit {
+    font-size: 13px;
+    padding: 10px 24px;
+    border-radius: 4px;
+    border: 1px solid #3777B1;
+    color: #3777B1;
+    font-weight: 500;
 }
 
 .delete-btn {
@@ -3407,9 +3405,6 @@
     }
 
     &__mobile-title {
-        font-size: 17px;
-        font-weight: 500;
-        color: #3777b1;
         margin: 0 auto;
     }
 
@@ -3426,6 +3421,12 @@
     &__app-controls {
         margin-right: 16px;
     }
+}
+
+.mobile-title {
+    font-size: 17px;
+    font-weight: 500;
+    color: #3777b1;
 }
 
 .user-verif {
@@ -3667,6 +3668,13 @@
 }
 
 .table {
+    &__header {
+        margin-bottom: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
     &__wrapper {
         overflow-x: auto;
         padding: 0 15px;
@@ -3690,12 +3698,51 @@
             border-radius: 2px;
             border-bottom: none;
         }
+
+        &.table__sublist {
+            border-bottom: none;
+            cursor: pointer;
+            user-select: none;
+
+            &_active {
+                box-shadow: 0px 4px 32px rgba(0, 0, 0, 0.08);
+
+                td {
+                    background: #FFFFFF;
+                }
+
+                .table__dropdown:before {
+                    background-image: url('../images/icons/up.svg');
+                }
+            }
+        }
+    
+        &.table__subitem {
+            background: #fafbfc;
+            box-shadow: 0px 4px 32px rgba(0, 0, 0, 0.08);
+            border-bottom: none;
+            display: none;
+
+            td {
+                &:first-child {
+                    padding-left: 52px;
+                }
+
+                background: #fafbfc;
+                position: relative;
+            }
+
+            &_active {
+                display: table-row;
+            }
+        }
     }
 
     th, td {
         color: $color-medium;
         padding: 16px 0;
         line-height: 1.2;
+        position: relative;
 
         &:first-child {
             padding-left: 16px;
@@ -3709,11 +3756,6 @@
     &__prices {
         width: 200px;
         min-width: 200px;
-    }
-
-    &__statuses {
-        width: 260px;
-        min-width: 260px;
     }
 
     &__companies {
@@ -3733,6 +3775,26 @@
     &__date {
         width: 110px;
         min-width: 110px;
+    }
+
+    &__checks {
+        width: 64px;
+        min-width: 64px;
+    }
+
+    &__names {
+        width: 370px;
+        min-width: 370px;
+    }
+
+    &__invests {
+        width: 528px;
+        min-width: 528px;
+    }
+
+    &__ids {
+        width: 78px;
+        min-width: 78px;
     }
 
     &__company {
@@ -3846,6 +3908,48 @@
     &__show-select {
         margin-left: 13px;
         width: 59px;
+    }
+
+    &__dropdown {
+        display: inline-flex;
+        align-items: center;
+
+        &:before {
+            content: '';
+            display: inline-block;
+            @include bg-icon('../images/icons/down.svg', 11px, 6px);
+            margin-right: 24px;
+        }
+    }
+
+    &_tasks {
+        .table__statuses {
+            width: 373px;
+        }
+    }
+
+    &_contracts {
+        .table__date {
+            width: 170px;
+            min-width: 170px;
+        }
+
+        .table__statuses {
+            width: 200px;
+            min-width: 200px;
+        }
+    }
+
+    &_docs {
+        .table__wrapper {
+            margin: 0 -25px;
+            padding: 0 25px 30px;
+        }
+
+        .table__date {
+            width: 250px;
+            min-width: 250px;
+        }
     }
 }
 
@@ -4087,7 +4191,7 @@
         margin-left: 8px;
     }
 
-    &__filters {
+    &__add-menu {
         margin-left: auto;
     }
 
@@ -4260,8 +4364,8 @@
     white-space: nowrap;
 
     &_request {
-        color: rgba($color-medium, .32);
-        border-color: rgba($border-white, .32);
+        color: $color-medium;
+        border-color: rgba($border-color, .32);
     }
 
     &_active {
@@ -4817,10 +4921,6 @@
     &__switch {
         margin-right: 15px;
     }
-
-    &__close {
-        display: none;
-    }
 }
 
 .filter {
@@ -4828,6 +4928,7 @@
 
     &__main {
         position: absolute;
+        z-index: 1;
         background: #fff;
         border: 1px solid $border-white;
         border-radius: 4px;
@@ -4927,6 +5028,10 @@
 
     &__contract-form {
         margin-top: 27px;
+    }
+
+    &__table {
+        margin-top: 32px;
     }
 }
 
@@ -6833,16 +6938,39 @@
 }
 
 .open-add-menu {
+    &:before {
+        content: '';
+        display: inline-block;
+    }
+
     &_discuss {
         &:before {
-            content: '';
-            display: inline-block;
             @include bg-icon('../images/icons/comment.svg', 14px, 14px);
+        }
+    }
+
+    &_filter {
+        &:before {
+            @include bg-icon('../images/icons/filter.svg', 13px, 12px);
         }
     }
 }
 
 .add-menu {
+    position: relative;
+
+    &__header {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 56px;
+        text-align: center;
+        padding: 0 16px;
+        box-shadow: 0px 6px 32px rgba(0, 0, 0, 0.08);
+        display: none;
+    }
+
     &__close {
         display: none;
     }

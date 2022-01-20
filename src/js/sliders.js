@@ -153,9 +153,6 @@ const $productsSlider = new Swiper('.products-slider', {
   }
 });
 
-
-
-
 const $appControlsSlider = new Swiper('.app-controls', {
   direction: 'horizontal',
   slidesPerView: 'auto',

@@ -99,7 +99,7 @@
             width: 100%;
         }
 
-        &__filters {
+        &__add-menu {
             margin-left: 0;
             width: 100%;
         }
@@ -976,19 +976,7 @@
     }
 
     .filter-menu {
-        position: fixed;
-        left: 0;
-        top: 0;
-        background: #fff;
         display: block;
-        z-index: 2;
-        box-shadow: 0px 6px 32px rgba(0, 0, 0, 0.08);
-        height: 100%;
-        width: 100%;
-        overflow-y: auto;
-        padding: 50px 15px 15px;
-        transform: translateX(-100%);
-        transition: transform .45s;
 
         &__left,
         &__right {
@@ -1023,17 +1011,6 @@
 
         &__switch {
             margin: 0;
-        }
-
-        &__close {
-            position: absolute;
-            left: 15px;
-            top: 15px;
-            display: inline-block;
-        }
-
-        &_active {
-            transform: translateX(0);
         }
     }
 
@@ -1145,15 +1122,22 @@
         height: 100%;
         width: 100%;
         overflow-y: auto;
-        padding: 50px 15px 110px;
+        padding: 76px 15px 110px;
         transform: translateX(-100%);
         transition: transform .45s;
+
+        &__header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
         &__close {
             display: inline-block;
             position: absolute;
-            left: 15px;
-            top: 15px;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
         }
 
         &_active {
@@ -1169,7 +1153,7 @@
         }
 
         &__title {
-            padding: 0 12px 10px;
+            display: none;
         }
     }
 }
@@ -1721,6 +1705,15 @@
             font-size: 13px;
         }
 
+        &__id {
+            font-size: 15px;
+        }
+
+        &__invests {
+            min-width: 470px;
+            width: 470px;
+        }
+
         &__price-type {
             font-size: 13px;
         }
@@ -1728,6 +1721,26 @@
         &__companies {
             width: 205px;
             min-width: 205px;
+        }
+
+        &__names {
+            width: 250px;
+            min-width: 250px;
+        }
+
+        &_contracts,
+        &_docs {
+            .table__statuses {
+                width: 120px;
+                min-width: 120px;
+            }
+        }
+
+        &_docs {
+            .table__date {
+                width: 150px;
+                min-width: 150px;
+            }
         }
     }
 

@@ -48,7 +48,6 @@ window.addEventListener('load', () => {
       $menu.classList.add('menu_active');
     });
   }
-
 });
 
 function menuTouchEnd($menu, initialPoint, finalPoint) {

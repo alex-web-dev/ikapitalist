@@ -19,7 +19,6 @@ window.addEventListener('load', () => {
       $toElem.classList.remove('login__hide');
     });
   });
-
 });
 
 

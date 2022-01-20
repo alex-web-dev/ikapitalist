@@ -8,7 +8,7 @@
     <meta name="format-detection" content="telephone=no">
     <link rel="shortcut icon" href="dist/images/ico.png">
     <link rel="stylesheet" href="dist/css/styles.css?v=101">
-    <title>iKapitalist - Документы компании</title>
+    <title>iKapitalist - Договоры</title>
 </head>
 
 <body>
@@ -162,59 +162,158 @@
                     <div class="request">
                         <div class="request__header">
                             <h1 class="lk-title1 lk-title-desktop request__title">Казпромтранс-сервис</h1>
-                            <span class="status status_warning request__status">На подписании</span>
+                            <span class="status status_success request__status">Исполнено</span>
                             <span class="request__date">23 авг. в 18:22</span>
                         </div>
                         <div class="request-menu request__menu">
-                            <a href="./lk-vladelec-zagruzka-doc.html" class="tab-btn tab-btn_request request-menu__link tab-btn_active">Документы компании</a>
+                            <a href="./lk-vladelec-zagruzka-doc.html" class="tab-btn tab-btn_request request-menu__link">Документы компании</a>
                             <a href="./lk-vladelec-zayavka.html" class="tab-btn tab-btn_request request-menu__link">Заявка</a>
                             <a href="./lk-vladelec-otchet.html" class="tab-btn tab-btn_request request-menu__link">Отчетность</a>
                             <a href="./lk-vladelec-docs.html" class="tab-btn tab-btn_request request-menu__link">Документы</a>
-                            <a href="./lk-vladelec-contracts.html" class="tab-btn tab-btn_request request-menu__link">Договоры</a>
+                            <a href="./lk-vladelec-contracts.html" class="tab-btn tab-btn_request request-menu__link tab-btn_active">Договоры</a>
                             <a href="#" class="tab-btn tab-btn_request request-menu__link">Публикация</a>
                         </div>
                         <div class="request__main">
-                            <div class="row">
-                                <div class="col-xl-8">
-                                    <div class="doc-item request__doc-item">
-                                        <div class="doc-item__group">
-                                            <div class="field-group doc-item__field-group">
-                                                <div class="field field-group__item">
-                                                    <input type="text" name="company-bin" class="field__input"
-                                                        placeholder="111111111111">
-                                                    <span class="field__text">ИИН учредителя</span>
-                                                </div>
-                                                <div class="field field-group__item">
-                                                    <input type="text" name="company-name" class="field__input"
-                                                        placeholder="Иванов">
-                                                    <span class="field__text">Фамилия</span>
-                                                </div>
-                                            </div>
-                                            <div class="field-group doc-item__field-group">
-                                                <div class="field field-group__item">
-                                                    <input type="text" name="company-bin" class="field__input"
-                                                        placeholder="Иван">
-                                                    <span class="field__text">Имя</span>
-                                                </div>
-                                                <div class="field field-group__item">
-                                                    <input type="text" name="company-name" class="field__input"
-                                                        placeholder="Отчество">
-                                                    <span class="field__text">Иванович</span>
-                                                </div>
-                                            </div>
-                                            <button class="request__add-item">Сформировать документ</button>
-                                        </div>
-                                        <div class="doc-item__group">
-                                            <div class="doc-item__btns">
-                                                <div class="agreement-elem doc-item__btns-item">Согласие ПКБ по учредителю</div>
-                                                <button class="lk-btn doc-item__btns-item">Сформировать</button>
-                                            </div>
-                                            <div class="doc-item__btns">
-                                                <div class="agreement-elem doc-item__btns-item">Согласие ПКБ наименование ЮР лица</div>
-                                                <button class="lk-btn doc-item__btns-item">Подписать</button>
-                                            </div>
-                                        </div>
-                                    </div>
+                            <div class="table table_contracts request__table">
+                                <div class="table__wrapper">
+                                    <table class="table__main">
+                                        <tr>
+                                            <th class="table__ids">
+                                                <span>ID</span>
+                                            </th>
+                                            <th class="table__invests">
+                                                <span>Инвестиции</span>
+                                            </th>
+                                            <th class="table__file">
+                                                <span>Документ</span>
+                                            </th>
+                                            <th class="table__date">
+                                                <span>Дата создания</span>
+                                            </th>
+                                            <th class="table__statuses">
+                                                <span>Статус</span>
+                                            </th>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span class="table__text table__id">2</span>
+                                            </td>
+                                            <td>
+                                                <span class="table__name">Договор с компанией об оказании услуг по размещению информации и привлечению инвестирования</span>
+                                            </td>
+                                            <td>
+                                                <a class="table__link" href="#">Скачать PDF</a>
+                                            </td>
+                                            <td>
+                                                <span class="table__text table__text_gray">Сегодня в 15:02</span>
+                                            </td>
+                                            <td>
+                                                <span class="status status_success">Подписан</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span class="table__text table__id">4</span>
+                                            </td>
+                                            <td>
+                                                <span class="table__name">Акт выполненных работ</span>
+                                            </td>
+                                            <td>
+                                                <a class="table__link" href="#">Скачать PDF</a>
+                                            </td>
+                                            <td>
+                                                <span class="table__text table__text_gray">Вчера в 15:02</span>
+                                            </td>
+                                            <td>
+                                                <span class="status status_success">Подписан</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span class="table__text table__id">8</span>
+                                            </td>
+                                            <td>
+                                                <span class="table__name">Договор займа</span>
+                                            </td>
+                                            <td>
+                                                <a class="table__link" href="#">Скачать PDF</a>
+                                            </td>
+                                            <td>
+                                                <span class="table__text table__text_gray">24 авг. в 15:02</span>
+                                            </td>
+                                            <td>
+                                                <span class="status status_success">Подписан</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span class="table__text table__id">16</span>
+                                            </td>
+                                            <td>
+                                                <span class="table__name">Приложение 1. Декларация осведомленности займодателя о рисках</span>
+                                            </td>
+                                            <td>
+                                                <a class="table__link" href="#">Скачать PDF</a>
+                                            </td>
+                                            <td>
+                                                <span class="table__text table__text_gray">24 авг. в 15:02</span>
+                                            </td>
+                                            <td>
+                                                <span class="status status_success">Подписан</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span class="table__text table__id">32</span>
+                                            </td>
+                                            <td>
+                                                <span class="table__name">Приложение 2. График погашения</span>
+                                            </td>
+                                            <td>
+                                                <a class="table__link" href="#">Скачать PDF</a>
+                                            </td>
+                                            <td>
+                                                <span class="table__text table__text_gray">24 авг. в 15:02</span>
+                                            </td>
+                                            <td>
+                                                <span class="status status_success">Подписан</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span class="table__text table__id">64</span>
+                                            </td>
+                                            <td>
+                                                <span class="table__name">Договор гарантии к договору займа</span>
+                                            </td>
+                                            <td>
+                                                <a class="table__link" href="#">Скачать PDF</a>
+                                            </td>
+                                            <td>
+                                                <span class="table__text table__text_gray">24 авг. в 15:02</span>
+                                            </td>
+                                            <td>
+                                                <span class="status status_success">Подписан</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span class="table__text table__id">128</span>
+                                            </td>
+                                            <td>
+                                                <span class="table__name">Форма бронирования</span>
+                                            </td>
+                                            <td>
+                                                <a class="table__link" href="#">Скачать PDF</a>
+                                            </td>
+                                            <td>
+                                                <span class="table__text table__text_gray">24 авг. 2020  в 15:02</span>
+                                            </td>
+                                            <td>
+                                                <span class="status status_success">Подписан</span>
+                                            </td>
+                                        </tr>
+                                    </table>
                                 </div>
                             </div>
                         </div>

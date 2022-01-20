@@ -145,8 +145,8 @@
                     <div class="container">
                         <div class="lk-header__mobile-content">
                             <a href="./lk-spisok-sdelok.html" class="back-btn"></a>
-                            <div class="lk-header__mobile-title">Владелец бизнеса</div>
-                            <button class="open-filter-btn"></button>
+                            <div class="mobile-title lk-header__mobile-title">Владелец бизнеса</div>
+                            <button class="open-add-menu open-add-menu_filter"></button>
                         </div>
                     </div>
                 </div>
@@ -168,72 +168,77 @@
                             </div>
                         </div>
                         <div class="table lk-owner__table">
-                            <div class="filter-menu table__filters">
-                                <div class="filter-menu__left">
-                                    <button class="filter-btn filter-menu__btn table__filter-btn">По компаниям</button>
-                                    <button class="filter-btn filter-menu__btn table__filter-btn">По типу сделки</button>
-                                    <input type="number" class="filter-field filter-menu__field table__filter-field" placeholder="Сумма от">
-                                    <input type="number" class="filter-field filter-menu__field table__filter-field" placeholder="Сумма до">
-                                    <button class="filter-btn filter-menu__btn table__filter-btn">По дате</button>
+                            <div class="add-menu">
+                                <div class="add-menu__header">
+                                    <div class="mobile-title">Фильтр</div>
+                                    <button class="close-btn close-add-menu add-menu__close"></button>
                                 </div>
-                                <div class="filter-menu__right">
-                                    <div class="filter filter-menu__item">
-                                        <button class="filter-btn filter__btn filter-menu__btn">Настроить таблицу</button>
-                                        <div class="filter__main">
-                                            <div class="switch switch_filter filter__switch">
-                                                <div class="switch__text">Инвестиции</div>
-                                                <div class="switch__main">
-                                                    <input type="checkbox" name="invests" class="switch__field" id="filter-invests">
-                                                    <label for="filter-invests" class="switch__label"></label>
+                                <div class="filter-menu table__filters">
+                                    <div class="filter-menu__left">
+                                        <button class="filter-btn filter-menu__btn table__filter-btn">По компаниям</button>
+                                        <button class="filter-btn filter-menu__btn table__filter-btn">По типу сделки</button>
+                                        <input type="number" class="filter-field filter-menu__field table__filter-field" placeholder="Сумма от">
+                                        <input type="number" class="filter-field filter-menu__field table__filter-field" placeholder="Сумма до">
+                                        <button class="filter-btn filter-menu__btn table__filter-btn">По дате</button>
+                                    </div>
+                                    <div class="filter-menu__right">
+                                        <div class="filter filter-menu__item">
+                                            <button class="filter-btn filter__btn filter-menu__btn">Настроить таблицу</button>
+                                            <div class="filter__main">
+                                                <div class="switch switch_filter filter__switch">
+                                                    <div class="switch__text">Инвестиции</div>
+                                                    <div class="switch__main">
+                                                        <input type="checkbox" name="invests" class="switch__field" id="filter-invests">
+                                                        <label for="filter-invests" class="switch__label"></label>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="switch switch_filter filter__switch">
-                                                <div class="switch__text">Начало инвестиции</div>
-                                                <div class="switch__main">
-                                                    <input type="checkbox" name="start-invests" class="switch__field" id="filter-start-invests">
-                                                    <label for="filter-start-invests" class="switch__label"></label>
+                                                <div class="switch switch_filter filter__switch">
+                                                    <div class="switch__text">Начало инвестиции</div>
+                                                    <div class="switch__main">
+                                                        <input type="checkbox" name="start-invests" class="switch__field" id="filter-start-invests">
+                                                        <label for="filter-start-invests" class="switch__label"></label>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="switch switch_filter filter__switch">
-                                                <div class="switch__text">Тип сделки</div>
-                                                <div class="switch__main">
-                                                    <input type="checkbox" name="type-transaction" class="switch__field" id="filter-type-transaction">
-                                                    <label for="filter-type-transaction" class="switch__label"></label>
+                                                <div class="switch switch_filter filter__switch">
+                                                    <div class="switch__text">Тип сделки</div>
+                                                    <div class="switch__main">
+                                                        <input type="checkbox" name="type-transaction" class="switch__field" id="filter-type-transaction">
+                                                        <label for="filter-type-transaction" class="switch__label"></label>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="switch switch_filter filter__switch">
-                                                <div class="switch__text">Номинал</div>
-                                                <div class="switch__main">
-                                                    <input type="checkbox" name="nominal" class="switch__field" id="filter-nominal">
-                                                    <label for="filter-nominal" class="switch__label"></label>
+                                                <div class="switch switch_filter filter__switch">
+                                                    <div class="switch__text">Номинал</div>
+                                                    <div class="switch__main">
+                                                        <input type="checkbox" name="nominal" class="switch__field" id="filter-nominal">
+                                                        <label for="filter-nominal" class="switch__label"></label>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="switch switch_filter filter__switch">
-                                                <div class="switch__text">Доходность</div>
-                                                <div class="switch__main">
-                                                    <input type="checkbox" name="yield" class="switch__field" id="filter-yield">
-                                                    <label for="filter-yield" class="switch__label"></label>
+                                                <div class="switch switch_filter filter__switch">
+                                                    <div class="switch__text">Доходность</div>
+                                                    <div class="switch__main">
+                                                        <input type="checkbox" name="yield" class="switch__field" id="filter-yield">
+                                                        <label for="filter-yield" class="switch__label"></label>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="switch switch_filter filter__switch">
-                                                <div class="switch__text">Полученный доход</div>
-                                                <div class="switch__main">
-                                                    <input type="checkbox" name="income" class="switch__field" id="filter-income">
-                                                    <label for="filter-income" class="switch__label"></label>
+                                                <div class="switch switch_filter filter__switch">
+                                                    <div class="switch__text">Полученный доход</div>
+                                                    <div class="switch__main">
+                                                        <input type="checkbox" name="income" class="switch__field" id="filter-income">
+                                                        <label for="filter-income" class="switch__label"></label>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="switch switch_filter filter__switch">
-                                                <div class="switch__text">Доход будущих проектов</div>
-                                                <div class="switch__main">
-                                                    <input type="checkbox" name="income-future" class="switch__field" id="filter-income-future">
-                                                    <label for="filter-income-future" class="switch__label"></label>
+                                                <div class="switch switch_filter filter__switch">
+                                                    <div class="switch__text">Доход будущих проектов</div>
+                                                    <div class="switch__main">
+                                                        <input type="checkbox" name="income-future" class="switch__field" id="filter-income-future">
+                                                        <label for="filter-income-future" class="switch__label"></label>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
+                                        <button class="filter-btn filter-btn_export filter-menu__btn table__filter-btn">Экспортировать</button>
                                     </div>
-                                    <button class="filter-btn filter-btn_export filter-menu__btn table__filter-btn">Экспортировать</button>
                                 </div>
-                                <button class="back-btn close-filter-btn filter-menu__close "></button>
                             </div>
                             <div class="table__wrapper">
                                 <table class="table__main">
@@ -256,7 +261,7 @@
                                         <th class="table__date">
                                             <button class="table__sort">Дата</button>
                                         </th>
-                                        <th class="statuses">
+                                        <th class="table__statuses">
                                             <button class="table__sort">Статус</button>
                                         </th>
                                     </tr>
