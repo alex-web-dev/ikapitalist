@@ -375,6 +375,17 @@
     .discuss-sidebar {
         box-shadow: none;
     }
+
+    .docs {
+        &__header {
+            flex-direction: column;
+        }
+
+        &__iin {
+            display: inline-block;
+            margin-top: 8px;
+        }
+    }
 }
 
 @media screen and (max-width: 991px) {
@@ -833,6 +844,18 @@
         }
     }
 
+    .lk-btn {
+        &_mobile_fixed {
+            position: fixed;
+            z-index: 2;
+            bottom: 16px;
+            left: 50%;
+            transform: translateX(-50%);
+            margin-left: 0;
+            width: calc(100% - 30px);
+        }
+    }
+
     .lk {
         &__body {
             max-width: 100%;
@@ -905,16 +928,6 @@
 
         &__controls {
             margin: 0;
-        }
-
-        &__create {
-            position: fixed;
-            z-index: 2;
-            bottom: 16px;
-            left: 50%;
-            transform: translateX(-50%);
-            margin-left: 0;
-            width: calc(100% - 30px);
         }
     }
 
@@ -990,6 +1003,10 @@
             flex-direction: column;
         }
 
+        &__item {
+            margin-bottom: 15px;
+        }
+
         &__btn {
             width: 180px;
             
@@ -1018,8 +1035,12 @@
         &__main {
             left: 0;
             width: 290px;
-            top: calc(100% - 10px);
-            margin-top: 0;
+        }
+
+        &__btn {
+            &:not(:last-child) {
+                margin-bottom: 0;
+            }
         }
     }
 
@@ -1038,18 +1059,6 @@
             &:first-child {
                 margin-top: 20px;
             }
-        }
-    }
-
-    .contract-form {
-        &__submit {
-            position: fixed;
-            z-index: 2;
-            bottom: 16px;
-            left: 50%;
-            transform: translateX(-50%);
-            margin-left: 0;
-            width: calc(100% - 30px);
         }
     }
 
@@ -1140,6 +1149,11 @@
             transform: translateY(-50%);
         }
 
+        &__submit {
+            display: inline-block;
+            bottom: 65px;
+        }
+
         &_active {
             transform: translateX(0);
         }
@@ -1154,6 +1168,34 @@
 
         &__title {
             display: none;
+        }
+    }
+
+    .payment {
+        padding-bottom: 24px;
+
+        &__body {
+            margin-top: 0;
+        }
+    }
+
+    .notify {
+        padding-bottom: 30px;
+
+        &__body {
+            margin-top: 0;
+        }
+    }
+
+    .publicate-term {
+        padding-top: 20px;
+
+        &__body {
+            margin-top: 24px;
+        }
+
+        &__title3 {
+            font-size: 15px;
         }
     }
 }
@@ -1965,6 +2007,41 @@
 
         &__num {
             margin-right: 16px;
+        }
+    }
+
+    .all-docs {
+        &__title {
+            font-size: 17px;
+            font-weight: 500;
+        }
+
+        &__title3 {
+            font-size: 15px;
+        }
+    }
+
+    .docs {
+        &__text {
+            font-size: 13px;
+        }
+    }
+
+    .notify-popup {
+        padding: 12px;
+
+        &__icon {
+            width: 26px;
+            height: 26px;
+
+            &:before {
+                width: 13px;
+                height: 14px;
+            }
+        }
+
+        &__text {
+            font-size: 12px;
         }
     }
 }

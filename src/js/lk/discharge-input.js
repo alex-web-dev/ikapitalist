@@ -1,4 +1,4 @@
-const $inputs = document.querySelectorAll('.calc__field-input');
+const $inputs = document.querySelectorAll('.discharge-input');
 $inputs.forEach($input => {
   discharge($input);
 

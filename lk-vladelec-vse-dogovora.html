@@ -8,7 +8,7 @@
     <meta name="format-detection" content="telephone=no">
     <link rel="shortcut icon" href="dist/images/ico.png">
     <link rel="stylesheet" href="dist/css/styles.css?v=101">
-    <title>iKapitalist - Форма подписания договора</title>
+    <title>iKapitalist - Ве договора с инвесторами и графики</title>
 </head>
 
 <body>
@@ -42,7 +42,7 @@
                             Портфель инвестора
                         </a>
                     </div>
-                    <div class="sidebar__item sidebar__item_active">
+                    <div class="sidebar__item">
                         <a href="./lk-vladelec-biznesa.html" class="sidebar__link">
                             <img src="dist/images/icons/sidebar/case.svg" alt="" class="sidebar__icon">
                             Владелец бизнеса
@@ -66,7 +66,7 @@
                             Документы
                         </a>
                     </div>
-                    <div class="sidebar__item">
+                    <div class="sidebar__item sidebar__item_active">
                         <a href="./lk-notification.html" class="sidebar__link">
                             <img src="dist/images/icons/sidebar/notification.svg" alt="" class="sidebar__icon">
                             Уведомления
@@ -152,41 +152,103 @@
                     <div class="container">
                         <div class="lk-header__mobile-content">
                             <a href="./lk-spisok-sdelok.html" class="back-btn"></a>
-                            <div class="mobile-title lk-header__mobile-title">Форма подписания договора</div>
+                            <div class="mobile-title lk-header__mobile-title">Уведомление о проведении пров...</div>
                         </div>
                     </div>
                 </div>
             </header>
             <main class="lk-main">
                 <div class="container">
-                    <div class="request">
-                        <div class="request__header">
-                            <div class="lk-title1 lk-title-desktop request__title">Казпромтранс-сервис</div>
-                            <span class="status status_warning request__status">Необходимо подписать договор</span>
-                            <span class="request__date">23 авг. в 18:22</span>
-                        </div>
-                        <div class="request-menu request__menu">
-                            <a href="./lk-vladelec-zagruzka-doc.html" class="tab-btn request-menu__link tab-btn_selected">Документы компании</a>
-                            <a href="./lk-vladelec-zayavka.html" class="tab-btn request-menu__link tab-btn_selected">Заявка</a>
-                            <a href="#" class="tab-btn request-menu__link tab-btn_selected">Отчетность</a>
-                            <a href="#" class="tab-btn request-menu__link tab-btn_selected">Документы</a>
-                            <a href="#" class="tab-btn request-menu__link">Договоры</a>
-                            <a href="#" class="tab-btn request-menu__link">Публикация</a>
-                        </div>
-                        <div class="request__main">
-                            <div class="row">
-                                <div class="col-xl-8">
-                                    <div class="contract-form contract-form_error request__contract-form">
-                                        <h1 class="lk-title1 lk-title-desktop contract-form__title">Форма подписания договора</h1>
-                                        <h3 class="lk-title3 contract-form__title3">Ознакомтесь с содержимым договора</h3>
-                                        <div class="agreement-elem contract-form__agreement">Договор с компанией об оказании услуг по размешению информации и привлечению инвестирования</div>
-                                        <div class="contract-form__footer">
-                                            <button class="lk-btn lk-btn_mobile_fixed contract-form__submit">Подписать</button>
-                                            <div class="error-text contract-form__error-text">Подписывает директор!</div>
+                    <div class="all-docs">
+                        <h1 class="lk-title1 all-docs__title">Форма подписания договоров, все договора с инвесторами и графики</h1>
+                        <h3 class="lk-title3 all-docs__title3">Ознакомьтесь с содержимым договора</h3>
+                        <div class="all-docs__list">
+                            <div class="row gy-1 gy-md-3">
+                                <div class="col-lg-6">
+                                    <div class="docs box">
+                                        <div class="docs__header">
+                                            <span class="docs__text">Инвестор: <span class="docs__name">Иван Иванов</span></span>
+                                            <span class="docs__text">ИИН <span class="docs__iin">000000000000</span></span>
+                                        </div>
+                                        <span class="docs__text">Сумма: <span class="docs__sum">600 000 тенге</span></span>
+                                        <div class="docs__list">
+                                            <div class="docs__item">
+                                                <div class="doc-type docs__item-type">doc</div>
+                                                <div class="docs__item-text">Договор займа</div>
+                                            </div>
+                                            <div class="docs__item">
+                                                <div class="doc-type docs__item-type">doc</div>
+                                                <div class="docs__item-text">Приложение 1. Декларация осведомленности займодателя о рисках</div>
+                                            </div>
+                                            <div class="docs__item">
+                                                <div class="doc-type docs__item-type">doc</div>
+                                                <div class="docs__item-text">Приложение 2. График погашения</div>
+                                            </div>
+                                            <div class="docs__item">
+                                                <div class="doc-type docs__item-type">doc</div>
+                                                <div class="docs__item-text">Договор гарантии к договору займа</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="docs box">
+                                        <div class="docs__header">
+                                            <span class="docs__text">Инвестор: <span class="docs__name">Иван Иванов</span></span>
+                                            <span class="docs__text">ИИН <span class="docs__iin">000000000000</span></span>
+                                        </div>
+                                        <span class="docs__text">Сумма: <span class="docs__sum">600 000 тенге</span></span>
+                                        <div class="docs__list">
+                                            <div class="docs__item">
+                                                <div class="doc-type docs__item-type">doc</div>
+                                                <div class="docs__item-text">Договор займа</div>
+                                            </div>
+                                            <div class="docs__item">
+                                                <div class="doc-type docs__item-type">doc</div>
+                                                <div class="docs__item-text">Приложение 1. Декларация осведомленности займодателя о рисках</div>
+                                            </div>
+                                            <div class="docs__item">
+                                                <div class="doc-type docs__item-type">doc</div>
+                                                <div class="docs__item-text">Приложение 2. График погашения</div>
+                                            </div>
+                                            <div class="docs__item">
+                                                <div class="doc-type docs__item-type">doc</div>
+                                                <div class="docs__item-text">Договор гарантии к договору займа</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="docs box">
+                                        <div class="docs__header">
+                                            <span class="docs__text">Инвестор: <span class="docs__name">Иван Иванов</span></span>
+                                            <span class="docs__text">ИИН <span class="docs__iin">000000000000</span></span>
+                                        </div>
+                                        <span class="docs__text">Сумма: <span class="docs__sum">600 000 тенге</span></span>
+                                        <div class="docs__list">
+                                            <div class="docs__item">
+                                                <div class="doc-type docs__item-type">doc</div>
+                                                <div class="docs__item-text">Договор займа</div>
+                                            </div>
+                                            <div class="docs__item">
+                                                <div class="doc-type docs__item-type">doc</div>
+                                                <div class="docs__item-text">Приложение 1. Декларация осведомленности займодателя о рисках</div>
+                                            </div>
+                                            <div class="docs__item">
+                                                <div class="doc-type docs__item-type">doc</div>
+                                                <div class="docs__item-text">Приложение 2. График погашения</div>
+                                            </div>
+                                            <div class="docs__item">
+                                                <div class="doc-type docs__item-type">doc</div>
+                                                <div class="docs__item-text">Договор гарантии к договору займа</div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                        <div class="all-docs__footer">
+                            <button class="lk-btn lk-btn_full lk-btn_mobile_fixed all-docs__submit">Подписать</button>
                         </div>
                     </div>
                 </div>
