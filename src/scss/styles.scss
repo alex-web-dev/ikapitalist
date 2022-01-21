@@ -7284,4 +7284,96 @@
     }
 }
 
+.email-popup {
+    position: fixed;
+    z-index: 6;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    overflow: hidden;
+    
+    &__content {
+        position: relative;
+        text-align: center;
+        padding: 32px 32px 36px;
+        background: #fff;
+        border-radius: 8px;
+        margin: auto;
+        width: 510px;
+        max-width: calc(100% - 30px);
+        box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.04);
+
+        svg {
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 2;
+            pointer-events: none;
+        }
+    }
+
+    &__icon {
+        width: 112px;
+        height: 112px;
+        background-color: #38C370;
+        position: relative;
+        z-index: 1;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+
+        &:before {
+            content: '';
+            display: inline-block;
+            @include bg-icon('../images/icons/checks-white.svg', 45px, 20px);
+            position: relative;
+            z-index: 1;
+        }
+
+        &:after {
+            content: '';
+            width: 88px;
+            height: 88px;
+            position: absolute;
+            z-index: 0;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #35B96A;
+            border-radius: 50%;
+        }
+    }
+
+    &__text {
+        margin: 24px 0;
+        color: #3777b1;
+        font-size: 19px;
+        font-weight: 500;
+    }
+
+    &__close {
+        position: absolute;
+        right: -18px;
+        top: -18px;
+        background: #fff;
+        width: 36px;
+        height: 36px;
+        display: flex;
+        box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.04);
+        border-radius: 50%;
+
+        &:before {
+            margin: auto;
+            width: 13px;
+            height: 13px;
+        }
+    }
+}
+
+
+
 @import 'media';

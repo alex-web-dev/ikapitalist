@@ -61,6 +61,17 @@ window.addEventListener('load', () => {
       addYouTubeVideoPopup(url);
     });
   });
+
+  const $emailPopup = document.querySelector('.email-popup');
+  if ($emailPopup) {
+    
+
+    const $close = $emailPopup.querySelector('.email-popup__close');
+    const $submit = $emailPopup.querySelector('.email-popup__submit');
+
+    $close.addEventListener('click', () => $emailPopup.remove());
+    $submit.addEventListener('click', () => $emailPopup.remove());
+  }
 });
 
 function addYouTubeVideoPopup(url) {
@@ -120,7 +131,7 @@ function addNotifyPopup({text, timeout = 7000, type}) {
 
   $popupsWrapper.appendChild($popup);
 
-  setTimeout(() => $popup.classList.remove('notify-popup_hide'));
+  setTimeout(() => $popup.classList.remove('notify-popup_hide'), 100);
   setTimeout(closePopup, timeout);
 
   const $close = $popup.querySelector('.notify-popup__close');

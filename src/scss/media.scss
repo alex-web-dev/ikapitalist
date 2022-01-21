@@ -2044,6 +2044,12 @@
             font-size: 12px;
         }
     }
+
+    .email-popup {
+        &__close {
+            right: 0;
+        }
+    }
 }
 
 @media screen and (max-width: 480px) {
