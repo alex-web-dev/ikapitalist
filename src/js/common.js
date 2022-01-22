@@ -4,12 +4,11 @@ import './form';
 import './login';
 import './popup-boxes';
 import './range-field';
-
-import './lottiefiles';
-
+import './password-input';
 import './steps';
 import './date-input';
 import './file-input';
+import './lottiefiles';
 
 import './lk/editor';
 import './lk/header';

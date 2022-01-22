@@ -375,13 +375,92 @@
             </div>
         </div>
     </div>
-    <!-- <div class="email-popup">
-        <div class="email-popup__content">
-            <div class="email-popup__icon"></div>
-            <div class="email-popup__text">Email  подтвержден</div>
-            <button class="lk-btn email-popup__submit">Отлично</button>
-            <button class="close-btn email-popup__close"></button>
+    <div class="inf-popup inf-popup_email">
+        <div class="inf-popup__content">
+            <div class="inf-popup__icon"></div>
+            <div class="inf-popup__animation"></div>
+            <div class="inf-popup__message">Поздравляем</div>
+            <div class="inf-popup__text">Отправлено на рассмотрение в течение 72 часов</div>
+            <button class="lk-btn inf-popup__submit">Вернуться в кабинет</button>
+            <button class="close-btn inf-popup__close"></button>
         </div>
+    </div>
+    <!-- <div class="inf-popup inf-popup_validate">
+        <div class="inf-popup__content">
+            <div class="inf-popup__animation"></div>
+            <div class="inf-popup__message">Проверка валидности данных</div>
+            <div class="inf-popup__text">Не закрывайте окно и не перезагружайте браузер</div>
+            <button class="close-btn inf-popup__close"></button>
+        </div>
+    </div> -->
+    <!-- <div class="inf-popup inf-popup_card">
+        <div class="inf-popup__content">
+            <div class="inf-popup__header">
+                <img src="dist/images/card.jpg" alt="" class="inf-popup__img">
+                <div class="logo-card inf-popup__logo-card">
+                    <img src="dist/images/card-logo.png" alt="" class="logo-card__img">
+                </div>
+            </div>
+            <div class="inf-popup__main">
+                <div class="inf-popup__title">Подписать документы</div>
+                <p class="inf-popup__text">Необходимо прикрепить ЭЦП(RSA)</p>
+                <p class="inf-popup__error-text">Подписывает учеридитель!</p>
+                <div class="file inf-popup__file file_error" data-type="file">
+                    <input class="file__input" type="file" id="file-1">
+                    <label class="file__btn" for="file-1">
+                        <div class="file__btn-text">Нажмите, чтобы выбрать файл или перетащите сюда</div>
+                    </label>
+                    <div class="file__result">
+                        <div class="file__result-icon-box">
+                            <span class="file__result-type"></span>
+                        </div>
+                        <div class="file__result-inf">
+                            <div class="file__result-header">
+                                <div class="file__result-header-inf">
+                                    <div class="file__result-name"></div>
+                                    <span class="status status_verify file__status">На проверке</span>
+                                </div>
+                                <div class="file__result-header-btns">
+                                    <button type="button" class="reload-btn file__reload file__result-header-btn"></button>
+                                    <button type="button" class="delete-btn file__delete file__result-header-btn"></button>
+                                </div>
+                                <span class="file__progress-num"></span>
+                            </div>
+                            <div class="progress file__progress">
+                                <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>                                                        
+                        </div>
+                    </div>
+                    <p class="file__error-text">Прикрепите ЭЦП</p>
+                </div>
+                <div class="field inf-popup__field">
+                    <input type="password" name="funds-amount" class="field__input"
+                        placeholder="****">
+                    <span class="field__text">Пароль</span>
+                    <button type="button" class="field__show-pass"></button>
+                </div>
+                <div class="inf-popup__list">
+                    <div class="inf-popup__item">
+                        <span class="inf-popup__item-text">Уникальное имя владельца</span>
+                        <span class="inf-popup__item-value">НУРБЕК РАЕВ</span>
+                    </div>
+                    <div class="inf-popup__item">
+                        <span class="inf-popup__item-text">Срок действия</span>
+                        <span class="inf-popup__item-value">2021-06-04 15:58:55-2022-06-04 15:58:55</span>
+                    </div>
+                    <div class="inf-popup__item">
+                        <span class="inf-popup__item-text">Серийный номер</span>
+                        <span class="inf-popup__item-value">58943759873894274374987419739287197533495</span>
+                    </div>
+                    <div class="inf-popup__item">
+                        <span class="inf-popup__item-text">Имя издателя</span>
+                        <span class="inf-popup__item-value">УЛТТЫК КУАЛАНДЫРУШЫ ОРТАЛЫК (RSA)</span>
+                    </div>
+                </div>
+                <button class="lk-btn lk-btn_full lk-btn_mobile_fixed inf-popup__submit">Подписать</button>
+            </div>
+        </div>
+        <button class="close-btn inf-popup__close"></button>
     </div> -->
     <script src="dist/js/common.js?v=102"></script>
 </body>

@@ -4589,6 +4589,26 @@
         padding-left: 12px;
     }
 
+    &__show-pass {
+        position: absolute;
+        right: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: transparent;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+
+        &:before {
+            content: '';
+            width: 15px;
+            height: 10px;
+            background: url('../images/icons/eye.svg') center no-repeat;
+            background-size: contain;
+            display: block;
+        }
+    }
+
     &_error {
         .field__input {
             border-color: $color-error;    
@@ -7284,34 +7304,27 @@
     }
 }
 
-.email-popup {
+.inf-popup {
+    width: 510px;
     position: fixed;
-    z-index: 6;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    display: flex;
-    overflow: hidden;
-    
+    top: 50%;
+    left: 50%;
+    max-width: calc(100% - 30px);
+    transform: translate(-50%, -50%);
+
     &__content {
-        position: relative;
-        text-align: center;
+        width: 100%;
         padding: 32px 32px 36px;
         background: #fff;
         border-radius: 8px;
-        margin: auto;
-        width: 510px;
-        max-width: calc(100% - 30px);
         box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.04);
+        max-height: 100vh;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
 
-        svg {
-            position: absolute;
-            left: 0;
-            top: 0;
-            z-index: 2;
-            pointer-events: none;
-        }
+    &__main {
+        padding: 16px 32px 36px;
     }
 
     &__icon {
@@ -7348,11 +7361,30 @@
         }
     }
 
-    &__text {
-        margin: 24px 0;
+    &__title {
+        font-size: 20px;
+        line-height: 1.2;
+        font-weight: 700;
+        color: #112e49;
+    }
+
+    &__message {
+        margin-top: 24px;
         color: #3777b1;
         font-size: 19px;
         font-weight: 500;
+    }
+
+    &__text {
+        font-size: 16px;
+        color: rgba($color-medium, .8);
+        margin-top: 16px;
+    }
+
+    &__error-text {
+        color: $color-error;
+        margin-top: 8px;
+        line-height: 1.2;
     }
 
     &__close {
@@ -7372,8 +7404,116 @@
             height: 13px;
         }
     }
+
+    &__animation {
+        pointer-events: none;
+        width: 50%;
+        margin: 0 auto;
+        position: relative;
+        z-index: 2;
+
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__header {
+        position: relative;
+        height: 156px;
+    }
+
+    &__img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+    }
+
+    &__logo-card {
+        position: absolute;
+        bottom: -28px;
+        right: 32px;
+    }
+
+    &__file {
+        margin-top: 24px;
+
+        .file__btn-text {
+            line-height: 1;
+        }
+    }
+
+    &__field {
+        margin-top: 10px;
+    }
+
+    &__list {
+        padding-top: 16px;
+        margin-top: 16px;
+        border-top: 1px solid $border-color;
+    }
+
+    &__item {
+        display: flex;
+        font-size: 12px;
+        line-height: 1.4;
+
+        &:not(:last-child) {
+            margin-bottom: 12px;
+        }
+    }
+
+    &__item-text {
+        width: 170px;
+        color: $color-medium;
+    }
+
+    &__item-value {
+        color: $color-secondary;
+    }
+
+    &__submit {
+        margin-top: 24px;
+    }
+
+    &_email {
+        text-align: center;
+
+        .inf-popup__animation {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 200%;
+            height: 200%;
+        }
+    }
+
+    &_card {
+        .inf-popup__content {
+            padding: 0;
+        }
+
+        .inf-popup__text {
+            font-size: 15px;
+        }
+    }
+
+    &_validate {
+        text-align: center;
+    }
 }
 
+.logo-card {
+    width: 56px;
+    height: 56px;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid $border-color;
+    background: #fff;
+}
 
 
 @import 'media';

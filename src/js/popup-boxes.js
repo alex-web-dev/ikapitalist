@@ -62,16 +62,19 @@ window.addEventListener('load', () => {
     });
   });
 
-  const $emailPopup = document.querySelector('.email-popup');
-  if ($emailPopup) {
-    
+  const $infPopups = document.querySelectorAll('.inf-popup');
+  $infPopups.forEach($popup => {
+    const $close = $popup.querySelector('.inf-popup__close');
+    const $submit = $popup.querySelector('.inf-popup__submit');
 
-    const $close = $emailPopup.querySelector('.email-popup__close');
-    const $submit = $emailPopup.querySelector('.email-popup__submit');
+    if ($close) {
+      $close.addEventListener('click', () => $popup.remove());
+    }
 
-    $close.addEventListener('click', () => $emailPopup.remove());
-    $submit.addEventListener('click', () => $emailPopup.remove());
-  }
+    if ($submit) {
+      $submit.addEventListener('click', () => $popup.remove());
+    }
+  });
 });
 
 function addYouTubeVideoPopup(url) {

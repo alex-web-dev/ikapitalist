@@ -1198,6 +1198,19 @@
             font-size: 15px;
         }
     }
+
+    .inf-popup {
+        &__content {
+            max-height: calc(100vh - 120px);
+            padding-bottom: 60px;
+        }
+
+        &_card {
+            .inf-popup__content {
+                padding-bottom: 60px;
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -2045,9 +2058,25 @@
         }
     }
 
-    .email-popup {
+    .inf-popup {
+        &__logo-card {
+            right: 8px;
+        }
+
+        &__main {
+            padding: 12px 16px 16px;
+        }
+
         &__close {
             right: 0;
+        }
+
+        &__item {
+            flex-direction: column;
+        }
+
+        &__item-value {
+            margin-top: 4px;
         }
     }
 }
