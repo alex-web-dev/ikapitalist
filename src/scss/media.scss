@@ -976,6 +976,7 @@
     .lk-tabs {
         &__btns {
             margin-top: 0;
+            overflow-x: auto;
         }
 
         &__fields {
