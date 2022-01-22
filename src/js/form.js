@@ -13,19 +13,6 @@ window.addEventListener('load', () => {
       switchFormTab(index);
     });
   });
-
-  const $showPassBtns = document.querySelectorAll('.form__show-pass');
-  $showPassBtns.forEach($btn => {
-    $btn.addEventListener('click', () => {
-      const $field = $btn.closest('.form__item').querySelector('.form__field');
-
-      if ($field.getAttribute('type') === 'password') {
-        $field.setAttribute('type', 'text');
-      } else {
-        $field.setAttribute('type', 'password');
-      }
-    });
-  });
 });
 
 function switchFormTab(newIndex) {

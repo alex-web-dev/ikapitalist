@@ -4,10 +4,11 @@ import './form';
 import './login';
 import './popup-boxes';
 import './range-field';
-
+import './password-input';
 import './steps';
 import './date-input';
 import './file-input';
+import './lottiefiles';
 
 import './lk/editor';
 import './lk/header';
@@ -15,7 +16,7 @@ import './lk/tabs';
 import './lk/sidebar';
 import './lk/filter-menu';
 import './lk/chart';
-import './lk/calc';
+import './lk/discharge-input';
 import './lk/discuss';
 import './lk/table';
 import './lk/add-menu';
