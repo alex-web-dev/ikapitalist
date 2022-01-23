@@ -4216,12 +4216,16 @@
     position: relative;
 
     &__field {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
         padding: 15px 48px;
         border: 1px solid $border-white;
         border-radius: 8px;
         background: #FFFFFF;
         width: 100%;
         transition: border .3s;
+    
 
         &::placeholder {
             color: $color-hint;
