@@ -268,11 +268,11 @@
                                 </table>
                             </div>
                         </div>
-                        <div class="deals-list lk-deals__list">
+                        <div class="lk-tabs deals-list lk-deals__list" data-toggle-btn="1">
                             <div class="deals-list__header">
                                 <div class="deals-list__tab-btns">
-                                    <button class="tab-btn tab-btn_active deals-list__tab-btn">Первичный рынок</button>
-                                    <button class="tab-btn deals-list__tab-btn">Вторичный рынок <span class="not-view deals-list__tab-btn-count">1</span></button>
+                                    <button class="tab-btn lk-tabs__btn lk-tabs__btn_active deals-list__tab-btn" data-tab-num="1">Первичный рынок</button>
+                                    <button class="tab-btn lk-tabs__btn deals-list__tab-btn" data-tab-num="2">Вторичный рынок <span class="not-view deals-list__tab-btn-count">1</span></button>
                                 </div>
                                 <div class="add-menu deals-list__add-menu">
                                     <div class="add-menu__header">
@@ -296,7 +296,7 @@
                                     <button class="lk-btn lk-btn_mobile_fixed add-menu__submit">Показать 21</button>
                                 </div>
                             </div>
-                            <div class="deals-list__items">
+                            <div class="deals-list__items lk-tabs__item lk-tabs__item_active">
                                 <div class="row gy-3">
                                     <div class="col-md-6 col-xl-4">
                                         <div class="card">
@@ -497,6 +497,89 @@
                                     </div>
                                     <div class="col-md-6 col-xl-4">
                                         <div class="card card_disable">
+                                            <img src="dist/images/card.jpg" alt="Starbucks" class="card__img">
+                                            <div class="card__inf">
+                                                <h3 class="card__title">
+                                                    <a href="#">Starbucks</a>
+                                                </h3>
+                                                <p class="text text_small card__text">Американская компания по продаже кофе и
+                                                    одноимённая сеть
+                                                    кофеен.</p>
+                                                <div class="categories card__categories">
+                                                    <span class="category categories__item card__category">Промышленность</span>
+                                                    <span
+                                                        class="category categories__item category_blue card__category">Отрасль</span>
+                                                    <span class="category categories__item category_brown card__category">Продажа
+                                                        бизнеса</span>
+                                                    <span
+                                                        class="category categories__item category_green card__category">Исполнено</span>
+                                                </div>
+                                                <div class="progress card__progress">
+                                                    <div class="progress-bar card__progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">100%</div>
+                                                </div>
+                                                <div class="card__nums">
+                                                    <div class="card__num">
+                                                        <span class="card__num-text">Цель</span>
+                                                        <span class="card__num-value">50 000 000</span>
+                                                        <span class="card__num-type">₸</span>
+                                                    </div>
+                                                    <div class="card__num card__num_rate">
+                                                        <span class="card__num-text">Ставка</span>
+                                                        <span class="card__num-value">24</span>
+                                                        <span class="card__num-type">%</span>
+                                                    </div>
+                                                </div>
+                                                <a href="#" class="card__link">Перейти</a>
+                                                <img src="dist/images/card-logo.png" alt="" class="card__logo">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="deals-list__items lk-tabs__item">
+                                <div class="row gy-3">
+                                    <div class="col-md-6 col-xl-4">
+                                        <div class="card">
+                                            <img src="dist/images/card.jpg" alt="Starbucks" class="card__img">
+                                            <span class="card__type">Новая сделка</span>
+                                            <div class="card__inf">
+                                                <h3 class="card__title">
+                                                    <a href="#">Starbucks</a>
+                                                </h3>
+                                                <p class="text text_small card__text">Американская компания по продаже кофе и
+                                                    одноимённая сеть
+                                                    кофеен.</p>
+                                                <div class="categories card__categories">
+                                                    <span class="category categories__item card__category">Промышленность</span>
+                                                    <span
+                                                        class="category categories__item category_blue card__category">Отрасль</span>
+                                                    <span class="category categories__item category_brown card__category">Продажа
+                                                        бизнеса</span>
+                                                    <span
+                                                        class="category categories__item category_green card__category">Исполнено</span>
+                                                </div>
+                                                <div class="progress card__progress">
+                                                    <div class="progress-bar card__progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">100%</div>
+                                                </div>
+                                                <div class="card__nums">
+                                                    <div class="card__num">
+                                                        <span class="card__num-text">Цель</span>
+                                                        <span class="card__num-value">50 000 000</span>
+                                                        <span class="card__num-type">₸</span>
+                                                    </div>
+                                                    <div class="card__num card__num_rate">
+                                                        <span class="card__num-text">Ставка</span>
+                                                        <span class="card__num-value">24</span>
+                                                        <span class="card__num-type">%</span>
+                                                    </div>
+                                                </div>
+                                                <a href="#" class="card__link">Перейти</a>
+                                                <img src="dist/images/card-logo.png" alt="" class="card__logo">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-xl-4">
+                                        <div class="card">
                                             <img src="dist/images/card.jpg" alt="Starbucks" class="card__img">
                                             <div class="card__inf">
                                                 <h3 class="card__title">

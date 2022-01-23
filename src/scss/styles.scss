@@ -4002,6 +4002,7 @@
         width: 100%;
         -webkit-appearance: none;
         -moz-appearance: none;
+        appearance: none;
         background: transparent;
         border: 1px solid $border-white;
         border-radius: 2px;
@@ -4052,6 +4053,7 @@
         color: $color-medium;
         -webkit-appearance: none;
         -moz-appearance: none;
+        appearance: none;
 
         &:focus {
             outline: none;
@@ -4511,6 +4513,9 @@
     position: relative;
 
     &__input {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
         width: 100%;
         padding: 27px 16px 7px;
         background: #FAFBFC;
@@ -4523,12 +4528,6 @@
         &[type='date'] {
             padding-left: 13px;
             padding-right: 13px;
-
-            &::-webkit-datetime-edit-text,
-            &::-webkit-datetime-edit-month-field,
-            &::-webkit-datetime-edit-day-field,
-            &::-webkit-datetime-edit-year-field {
-            }
 
             &::-webkit-datetime-edit { 
                 font-size: 13px;
@@ -6383,6 +6382,8 @@
 
     &__input {
         -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
         width: 100%;
 
         &:focus {
