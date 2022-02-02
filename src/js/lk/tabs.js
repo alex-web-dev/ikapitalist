@@ -5,7 +5,7 @@ window.addEventListener('load', () => {
       const newTabNum = +$btn.dataset.tabNum;
 
       const $tabs = $btn.closest('.lk-tabs');
-
+      
       if (+$tabs.dataset.toggleBtn === 1) {
         const $activeBtn = $tabs.querySelector('.lk-tabs__btn_active');
         $activeBtn.classList.remove('lk-tabs__btn_active');
