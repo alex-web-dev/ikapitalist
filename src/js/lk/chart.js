@@ -6,9 +6,10 @@ chartCanvases.forEach($canvas => {
     type: 'doughnut',
     data: {
       datasets: [{
-          data: [82, 16, 1, 1],
-          backgroundColor: ['#1DBCDE', '#50E243', '#AA2020', '#D5B02F'],
-          offset: 5,
+        data: [82, 16, 1, 1],
+        backgroundColor: ['#1DBCDE', '#50E243', '#AA2020', '#D5B02F'],
+        offset: 5,
+        borderDash: [10, 5]
       }]
     },
     options: {
@@ -19,4 +20,193 @@ chartCanvases.forEach($canvas => {
       animation: false,
     }
   });
-})
+});
+
+Chart.defaults.elements.bar.borderWidth = 2;
+Chart.defaults.plugins.legend.align = 'start';
+Chart.defaults.plugins.legend.labels.color = '#4D5A65';
+Chart.defaults.plugins.legend.labels.padding = 12;
+Chart.defaults.plugins.legend.labels.font = {
+  size: 15
+};
+Chart.defaults.plugins.legend.labels.boxWidth = 7;
+Chart.defaults.plugins.legend.labels.boxHeight = 7;
+
+const $branchChart = document.querySelector('.chart-branch');
+if ($branchChart) {
+  const chartBranch = new Chart($branchChart, {
+    type: 'doughnut',
+    data: {
+      labels: ["Промышленность", "Услуги", "IT технологии"],
+      datasets: [{
+        data: [33, 33, 33],
+        backgroundColor: ['#E89040', '#E937C2', '#F5C038'],
+        offset: 5,
+      }]
+    },
+    options: {
+      layout: {
+        padding: 0,
+        fontSize: 4
+      },
+      cutout: 79,
+      animation: false,
+    }
+  });
+}
+
+const $purposeChart = document.querySelector('.chart-purpose');
+if ($purposeChart) {
+  const chartPurpose = new Chart($purposeChart, {
+    type: 'doughnut',
+    data: {
+      labels: ["Развитие", "Покупка", "ЗП сотрудникам"],
+      datasets: [{
+        data: [33, 33, 33],
+        backgroundColor: ['#E89040', '#E937C2', '#38C370'],
+        offset: 5,
+      }]
+    },
+    options: {
+      layout: {
+        padding: 0,
+        fontSize: 4
+      },
+      cutout: 79,
+      animation: false,
+    }
+  });
+}
+
+const $toolsChart = document.querySelector('.chart-tools');
+if ($toolsChart) {
+  const chartTools = new Chart($toolsChart, {
+    type: 'doughnut',
+    data: {
+      labels: ["Займ", "Облигации", "Доля в бизнесе"],
+      datasets: [{
+        data: [33, 33, 33],
+        backgroundColor: ['#1DBCDE', '#C74FE4', '#E44F4F'],
+        offset: 5,
+      }]
+    },
+    options: {
+      layout: {
+        padding: 0,
+        fontSize: 4
+      },
+      cutout: 79,
+      animation: false,
+    }
+  });
+}
+
+const $dealsChart = document.querySelector('.chart-deals');
+if ($dealsChart) {
+  const chartDeals = new Chart($dealsChart, {
+    type: 'doughnut',
+    data: {
+      labels: ["Активных", "Реструктуризация", "В просрочке", "В дефолте", "Завершенных"],
+      datasets: [{
+        data: [60, 15, 5, 0, 20],
+        backgroundColor: ['#38C370', '#379CD4', '#E1AB1F', '#E44F4F', '#C74FE4'],
+        offset: 5,
+      }]
+    },
+    options: {
+      layout: {
+        padding: 0,
+        fontSize: 4
+      },
+      cutout: 67,
+      animation: false,
+      plugins: {
+        legend: {
+          display: false,
+        },
+      }
+    },
+    plugins: [{
+      beforeInit: function (chart, args, options) {
+        if (chart.canvas.id === "chart-deals") {
+          const ul = document.createElement('ul');
+          ul.className = 'chart-deals__labels-list';
+  
+          chart.data.labels.forEach((label, i) => {
+            ul.innerHTML += `
+              <li class="chart-deals__label">
+                <span class="chart-deals__label-point" style="background-color: ${ chart.data.datasets[0].backgroundColor[i] }">
+                </span>
+                <span class="chart-deals__label-name">${label}</span>
+                <span class="chart-deals__label-value">${ chart.data.datasets[0].data[i] }</span>
+              </li>
+            `;
+          });
+  
+          return document.getElementById("legend-deals").appendChild(ul);
+        }
+        return;
+      }
+    }]
+  });
+}
+
+const $forecastChart = document.querySelector('.chart-forecast');
+if ($forecastChart) {
+  const chartForecast = new Chart($forecastChart, {
+    type: 'line',
+    data: {
+      labels: ['1 окт.', '2 окт.', '3 окт.', 'Вчера', 'Сегодня', 'Завтра'],
+      color: 'rgb(255, 255, 255)',
+      datasets: [{
+        data: [0, 120000, 200000, 500000, 421934, 530000],
+        color: 'rgb(255, 255, 255)',
+        borderColor: 'rgb(255, 255, 255)',
+        pointBackgroundColor: 'rgb(255, 255, 255)',
+        pointBorderColor: 'rgb(255, 255, 255)',
+        pointBorderWidth: 1,
+        borderWidth: 3,
+        hoverBorderWidth: 15,
+        fill: {
+          target: 'origin',
+          above: 'rgb(255, 255, 255, 0.1)',
+          below: 'rgb(255, 255, 255, 0.1)',
+        }
+      }]
+    },
+    options: {
+      plugins: {
+        legend: {
+          display: false,
+        },
+      },
+      scales: {
+        y: {
+          max: 1400000,
+          beginAtZero: true,
+          weight: 2,
+          ticks: {
+            color: 'rgba(255, 255, 255, 0.5)',
+            font: {
+              size: 14
+            }
+          }
+        },
+        x: {
+          ticks: {
+            color: 'rgba(255, 255, 255, 0.5)',
+            font: {
+              size: 14
+            }
+          }
+        },
+      },
+      animation: false,
+      elements: {
+        line: {
+          tension: 0.5
+        }
+      }
+    }
+  });
+}
