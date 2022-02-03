@@ -256,7 +256,7 @@
 .telegram-btn {
     width: 24px;
     height: 24px;
-    background: $border-color;
+    background: $border-white;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -4418,7 +4418,7 @@
 
     &_request {
         color: $color-medium;
-        border-color: rgba($border-color, .32);
+        border-color: rgba($border-white, .32);
     }
 
     &_active {
@@ -4904,7 +4904,7 @@
 
 .mobile-menu {
     position: fixed;
-    z-index: 3;
+    z-index: 9005;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -6629,7 +6629,7 @@
     }
 
     &__footer {
-        border-top: 1px solid $border-color;
+        border-top: 1px solid $border-white;
         padding-top: 27px;
         margin-top: 18px;
     }
@@ -6676,7 +6676,7 @@
     display: flex;
     align-items: center;
     padding: 16px 24px 16px 26px;
-    border: 1px solid $border-color;
+    border: 1px solid $border-white;
 
     &__type {
         flex: 0 0 auto;
@@ -6722,7 +6722,7 @@
     &__header {
         padding-bottom: 6px;
         margin-bottom: 16px;
-        border-bottom: 1px solid $border-color;   
+        border-bottom: 1px solid $border-white;   
     }
 
     &__title {
@@ -6740,7 +6740,7 @@
         &:not(:last-child) {
             margin-right: 16px;
             padding-right: 16px;
-            border-right: 1px solid $border-color;
+            border-right: 1px solid $border-white;
         }
     }
 
@@ -6803,7 +6803,7 @@
     &__footer {
         padding-top: 16px;
         margin-top: 16px;
-        border-top: 1px solid $border-color;   
+        border-top: 1px solid $border-white;   
     }
 
     &__submit {
@@ -6839,14 +6839,14 @@
         &:not(:first-child) {
             margin-top: 18px;
             padding-top: 9px;
-            border-top: 1px solid $border-color;
+            border-top: 1px solid $border-white;
         }
     } 
 }
 
 .discuss-form {
     padding-bottom: 8px;
-    border-bottom: 1px solid $border-color;
+    border-bottom: 1px solid $border-white;
     display: flex;
     align-items: center;
 
@@ -7126,12 +7126,12 @@
     &__filter {
         border-radius: 4px;
         padding: 12px 24px;
-        border: 1px solid $border-color;
+        border: 1px solid $border-white;
     }
 
     &__filter-switch {
         padding: 12px 0;
-        border-bottom: 1px solid $border-color;
+        border-bottom: 1px solid $border-white;
     }
 
     &__filter-subtitle {
@@ -7157,7 +7157,7 @@
     &__filter-menu-item {
         margin-top: 12px;
         padding-top: 12px;
-        border-top: 1px solid $border-color;
+        border-top: 1px solid $border-white;
 
         .filter__btn {
             width: 100%;
@@ -7197,7 +7197,7 @@
     &__footer {
         padding-top: 5px;
         margin-top: 12px;
-        border-top: 1px solid $border-color;
+        border-top: 1px solid $border-white;
         display: flex;
         justify-content: flex-end;
         align-items: center;
@@ -7228,7 +7228,7 @@
     &__footer {
         margin-top: 16px;
         padding-top: 16px;
-        border-top: 1px solid $border-color;
+        border-top: 1px solid $border-white;
     }
 }
 
@@ -7244,7 +7244,7 @@
     &__footer {
         padding-top: 16px;
         margin-top: 16px;
-        border-top: 1px solid $border-color;
+        border-top: 1px solid $border-white;
     }
 }
 
@@ -7318,7 +7318,7 @@
 
 .notify-popup {
     padding: 16px;
-    border: 1px solid $border-color;
+    border: 1px solid $border-white;
     border-radius: 4px;
     background: #fff;
     display: flex;
@@ -7331,7 +7331,7 @@
         width: 32px;
         height: 32px;
         border-radius: 50%;
-        background-color: $border-color;
+        background-color: $border-white;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -7538,7 +7538,7 @@
     &__list {
         padding-top: 16px;
         margin-top: 16px;
-        border-top: 1px solid $border-color;
+        border-top: 1px solid $border-white;
     }
 
     &__item {
@@ -7597,7 +7597,7 @@
     height: 56px;
     padding: 10px;
     border-radius: 4px;
-    border: 1px solid $border-color;
+    border: 1px solid $border-white;
     background: #fff;
 }
 
@@ -7637,6 +7637,7 @@
         font-weight: 500;
         color: $color-medium;
         margin-top: 16px;
+        white-space: nowrap;
 
         &_green {
             color: #14a84f;
@@ -7648,7 +7649,7 @@
     }
 
     &__inf {
-        margin-right: 15px;
+        margin-right: 5px;
     }
 
     &__quarter {
@@ -7659,6 +7660,7 @@
         color: $color-low;
         display: inline-block;
         margin-left: 25px;
+        white-space: nowrap;
     }
 
     &__quarter-value {
@@ -7693,6 +7695,7 @@
 
 .profit-analysis {
     padding: 26px 32px;
+    height: 100%;
 
     &__title {
         color: $color-secondary;   
@@ -7735,6 +7738,7 @@
     font-weight: 500;
     font-size: 13px;
     line-height: 1.2;
+    white-space: nowrap;
 
     &_yellow {
         background-color: #f5c038;
@@ -7759,25 +7763,23 @@
 
 .nums-analysis {
     padding: 16px 0;
-    
-    &__table {
-        padding: 16px 0;
-        width: 100%;
-        border-collapse: collapse;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
 
-        td {
-            border-right: 1px solid $border-color;
-            width: calc(100% / 12 * 4);
+    &__item {
+        border-right: 1px solid $border-white;
+        width: calc(100% / 12 * 4);
+        position: relative;
 
-            &:nth-child(5n - 2) {
-                border-right: none;
-            }
+        &:nth-child(3n + 1):not(:first-child),
+        &:nth-child(3n + 2):not(:nth-child(2)),
+        &:nth-child(3n + 3):not(:nth-child(3)) {
+            border-top: 1px solid $border-white;
         }
 
-        tr {
-            &:not(:last-child) {
-                border-bottom: 1px solid $border-color;
-            }
+        &:nth-child(3n) {
+            border-right: none;
         }
     }
 }
@@ -7788,10 +7790,13 @@
     &__header {
         display: flex;
         align-items: center;
+        flex-wrap: wrap;
     }
 
-    &__profit {
-        margin-left: 12px;
+    &__title {
+        color: $color-secondary;
+        margin-right: 12px;
+        line-height: 1.2;
     }
 
     &__value {
@@ -7799,6 +7804,7 @@
         font-weight: 500;
         color: $color-medium;
         margin-top: 16px;
+        white-space: nowrap;
     }
 
     &__type {
@@ -7809,6 +7815,7 @@
 
 .chart-analysis {
     padding: 30px 12px;
+    height: 100%;
 
     &__header {
         margin: 0 20px 5px;
@@ -7816,7 +7823,7 @@
         justify-content: space-between;
         align-items: center;
         padding-bottom: 12px;
-        border-bottom: 1px solid $border-color
+        border-bottom: 1px solid $border-white
     }
 
     &__wrapper {
@@ -7908,6 +7915,9 @@
         margin-top: 12px;
         font-size: 28px;
         color: #379CD4;
+        white-space: nowrap;
+        display: flex;
+        align-items: center;
 
         &_green {
             color: #38C370;
@@ -7915,7 +7925,7 @@
     }
 
     &__type {
-        margin-left: 3px;
+        margin-left: 8px;
         font-size: 24px;
         line-height: 1.1;
         color: $color-low;
@@ -8090,6 +8100,7 @@
 
     &__header {
         display: flex;
+        align-items: center;
         justify-content: space-between;
         padding-bottom: 12px;
         border-bottom: 1px solid $border-white;
@@ -8146,6 +8157,7 @@
     &__value {
         font-size: 17px;
         color: $color-medium;
+        white-space: nowrap;
     }
 
     &__type {
@@ -8158,7 +8170,7 @@
     }
 
     &__footer {
-        margin-top: 16px;
+        margin-top: 10px;
     }
 
     &__labels {
@@ -8173,7 +8185,7 @@
         display: flex;
         align-items: center;
         line-height: 1;
-        margin-right: 40px;
+        margin: 6px 40px 6px 0;
     }
 
     &__point {
@@ -8189,6 +8201,7 @@
 .calendar {
     position: relative;
     height: 100%;
+    min-height: 320px;
 
     &__input {
         display: none;
@@ -8204,6 +8217,8 @@
         border: 1px solid $border-white;
 
         .qs-square {
+            line-height: 1;
+
             &:not(.qs-empty):not(.qs-disabled):not(.qs-day):not(.qs-active):hover {
                 background: transparent;
                 color: $color-medium;
@@ -8212,6 +8227,88 @@
             &.qs-active {
                 background-color: transparent;
             }
+        }
+
+        .qs-num-event {
+            color: #14a84f;
+    
+            &:not(.qs-empty):not(.qs-disabled):not(.qs-day):not(.qs-active):hover {
+                color: #14a84f;
+            }
+
+            &.qs-active {
+                position: relative;
+                
+                &:before {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    border: 2px solid #14A84F;
+                    border-radius: 50%;
+                    width: 32px;
+                    height: 32px;
+                    box-sizing: border-box;
+                }
+            }
+        }
+    }
+
+    &__event {
+        display: none;
+        position: absolute;
+        width: 240px;
+        z-index: 9002;
+        top: 0;
+        left: 0;
+        background: #fff;
+        border-radius: 8px;
+        padding: 12px 24px 12px 16px;
+        box-shadow: 0px 3px 5px rgb(0 0 0 / 14%);
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: calc(100% - 2px);
+            left: 50%;
+            transform: translateX(-50%);
+            @include bg-icon('../images/icons/triangle.svg', 30px, 20px);
+        }
+
+        &_active {
+            display: block;
+        }
+    }
+
+    &__event-text {
+        color: #112E49;
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    &__event-value {
+        color: #1C6FBC;
+        font-weight: 500;
+
+        &_green {
+            color: #14A84F;
+        }
+
+        &_yellow {
+            color: #E1AB1F;
+        }
+    }
+
+    &__event-close {
+        position: absolute;
+        right: 8px;
+        top: 8px;
+
+        &:before {
+            content: '';
+            display: inline-block;
+            @include bg-icon('../images/icons/exit.svg', 10px, 10px);
         }
     }
 }

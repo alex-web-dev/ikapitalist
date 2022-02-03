@@ -259,16 +259,17 @@ if ($forecastChart) {
     type: 'line',
     data: {
       labels: ['1 окт.', '2 окт.', '3 окт.', 'Вчера', 'Сегодня', 'Завтра'],
-      color: 'rgb(255, 255, 255)',
+      color: '#ffffff',
       datasets: [{
         data: [0, 120000, 200000, 500000, 421934, 530000],
-        color: 'rgb(255, 255, 255)',
-        borderColor: 'rgb(255, 255, 255)',
-        pointBackgroundColor: 'rgb(255, 255, 255)',
-        pointBorderColor: 'rgb(255, 255, 255)',
-        pointBorderWidth: 1,
+        color: '#ffffff',
+        borderColor: '#ffffff',
+        pointBackgroundColor: '#ffffff',
+        pointHoverBackgroundColor: '#ffffff',
+        pointHoverBorderColor: '#ffffff',
+        pointHoverBorderWidth: 20,
         borderWidth: 3,
-        hoverBorderWidth: 15,
+        hoverBorderWidth: 25,
         fill: {
           target: 'origin',
           above: 'rgb(255, 255, 255, 0.1)',
@@ -281,6 +282,29 @@ if ($forecastChart) {
         legend: {
           display: false,
         },
+        tooltip: {
+          padding: {
+            top: 12,
+            right: 16,
+            bottom: 12,
+            left: 12
+          },
+          backgroundColor: '#ffffff',
+          titleColor: 'rgba(60, 60, 67, 0.6)',
+          titleAlign: 'right',
+          rtl: true,
+          bodyColor: '#112E49',
+          xAlign: 'center',
+          yAlign: 'bottom',
+          footerColor: '#112E49',
+          caretPadding: 20,
+          caretSize: 8,
+          bodyAlign: 'center',
+          bodyFont: {
+            size: 24,
+            weight: 700
+          }
+        }
       },
       scales: {
         y: {
