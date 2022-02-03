@@ -8,10 +8,10 @@ import './password-input';
 import './steps';
 import './date-input';
 import './file-input';
-import './lottiefiles';
+// import './lottiefiles';
 import './calendar';
 
-import './lk/editor';
+// import './lk/editor';
 import './lk/header';
 import './lk/tabs';
 import './lk/sidebar';

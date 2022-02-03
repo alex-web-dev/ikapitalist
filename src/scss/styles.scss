@@ -4904,7 +4904,7 @@
 
 .mobile-menu {
     position: fixed;
-    z-index: 3;
+    z-index: 9005;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -7637,6 +7637,7 @@
         font-weight: 500;
         color: $color-medium;
         margin-top: 16px;
+        white-space: nowrap;
 
         &_green {
             color: #14a84f;
@@ -7648,7 +7649,7 @@
     }
 
     &__inf {
-        margin-right: 15px;
+        margin-right: 5px;
     }
 
     &__quarter {
@@ -7659,6 +7660,7 @@
         color: $color-low;
         display: inline-block;
         margin-left: 25px;
+        white-space: nowrap;
     }
 
     &__quarter-value {
@@ -7693,6 +7695,7 @@
 
 .profit-analysis {
     padding: 26px 32px;
+    height: 100%;
 
     &__title {
         color: $color-secondary;   
@@ -7735,6 +7738,7 @@
     font-weight: 500;
     font-size: 13px;
     line-height: 1.2;
+    white-space: nowrap;
 
     &_yellow {
         background-color: #f5c038;
@@ -7809,6 +7813,7 @@
 
 .chart-analysis {
     padding: 30px 12px;
+    height: 100%;
 
     &__header {
         margin: 0 20px 5px;
@@ -7908,6 +7913,9 @@
         margin-top: 12px;
         font-size: 28px;
         color: #379CD4;
+        white-space: nowrap;
+        display: flex;
+        align-items: center;
 
         &_green {
             color: #38C370;
@@ -7915,7 +7923,7 @@
     }
 
     &__type {
-        margin-left: 3px;
+        margin-left: 8px;
         font-size: 24px;
         line-height: 1.1;
         color: $color-low;
@@ -8090,6 +8098,7 @@
 
     &__header {
         display: flex;
+        align-items: center;
         justify-content: space-between;
         padding-bottom: 12px;
         border-bottom: 1px solid $border-white;
@@ -8146,6 +8155,7 @@
     &__value {
         font-size: 17px;
         color: $color-medium;
+        white-space: nowrap;
     }
 
     &__type {
@@ -8158,7 +8168,7 @@
     }
 
     &__footer {
-        margin-top: 16px;
+        margin-top: 10px;
     }
 
     &__labels {
@@ -8173,7 +8183,7 @@
         display: flex;
         align-items: center;
         line-height: 1;
-        margin-right: 40px;
+        margin: 6px 40px 6px 0;
     }
 
     &__point {
@@ -8189,6 +8199,7 @@
 .calendar {
     position: relative;
     height: 100%;
+    min-height: 320px;
 
     &__input {
         display: none;
