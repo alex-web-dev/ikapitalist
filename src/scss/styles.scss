@@ -8204,6 +8204,8 @@
         border: 1px solid $border-white;
 
         .qs-square {
+            line-height: 1;
+
             &:not(.qs-empty):not(.qs-disabled):not(.qs-day):not(.qs-active):hover {
                 background: transparent;
                 color: $color-medium;
@@ -8212,6 +8214,88 @@
             &.qs-active {
                 background-color: transparent;
             }
+        }
+
+        .qs-num-event {
+            color: #14a84f;
+    
+            &:not(.qs-empty):not(.qs-disabled):not(.qs-day):not(.qs-active):hover {
+                color: #14a84f;
+            }
+
+            &.qs-active {
+                position: relative;
+                
+                &:before {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    border: 2px solid #14A84F;
+                    border-radius: 50%;
+                    width: 32px;
+                    height: 32px;
+                    box-sizing: border-box;
+                }
+            }
+        }
+    }
+
+    &__event {
+        display: none;
+        position: absolute;
+        width: 240px;
+        z-index: 9002;
+        top: 0;
+        left: 0;
+        background: #fff;
+        border-radius: 8px;
+        padding: 12px 24px 12px 16px;
+        box-shadow: 0px 3px 5px rgb(0 0 0 / 14%);
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: calc(100% - 2px);
+            left: 50%;
+            transform: translateX(-50%);
+            @include bg-icon('../images/icons/triangle.svg', 30px, 20px);
+        }
+
+        &_active {
+            display: block;
+        }
+    }
+
+    &__event-text {
+        color: #112E49;
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    &__event-value {
+        color: #1C6FBC;
+        font-weight: 500;
+
+        &_green {
+            color: #14A84F;
+        }
+
+        &_yellow {
+            color: #E1AB1F;
+        }
+    }
+
+    &__event-close {
+        position: absolute;
+        right: 8px;
+        top: 8px;
+
+        &:before {
+            content: '';
+            display: inline-block;
+            @include bg-icon('../images/icons/exit.svg', 10px, 10px);
         }
     }
 }
