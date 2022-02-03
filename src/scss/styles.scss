@@ -256,7 +256,7 @@
 .telegram-btn {
     width: 24px;
     height: 24px;
-    background: $border-color;
+    background: $border-white;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -4418,7 +4418,7 @@
 
     &_request {
         color: $color-medium;
-        border-color: rgba($border-color, .32);
+        border-color: rgba($border-white, .32);
     }
 
     &_active {
@@ -6629,7 +6629,7 @@
     }
 
     &__footer {
-        border-top: 1px solid $border-color;
+        border-top: 1px solid $border-white;
         padding-top: 27px;
         margin-top: 18px;
     }
@@ -6676,7 +6676,7 @@
     display: flex;
     align-items: center;
     padding: 16px 24px 16px 26px;
-    border: 1px solid $border-color;
+    border: 1px solid $border-white;
 
     &__type {
         flex: 0 0 auto;
@@ -6722,7 +6722,7 @@
     &__header {
         padding-bottom: 6px;
         margin-bottom: 16px;
-        border-bottom: 1px solid $border-color;   
+        border-bottom: 1px solid $border-white;   
     }
 
     &__title {
@@ -6740,7 +6740,7 @@
         &:not(:last-child) {
             margin-right: 16px;
             padding-right: 16px;
-            border-right: 1px solid $border-color;
+            border-right: 1px solid $border-white;
         }
     }
 
@@ -6803,7 +6803,7 @@
     &__footer {
         padding-top: 16px;
         margin-top: 16px;
-        border-top: 1px solid $border-color;   
+        border-top: 1px solid $border-white;   
     }
 
     &__submit {
@@ -6839,14 +6839,14 @@
         &:not(:first-child) {
             margin-top: 18px;
             padding-top: 9px;
-            border-top: 1px solid $border-color;
+            border-top: 1px solid $border-white;
         }
     } 
 }
 
 .discuss-form {
     padding-bottom: 8px;
-    border-bottom: 1px solid $border-color;
+    border-bottom: 1px solid $border-white;
     display: flex;
     align-items: center;
 
@@ -7126,12 +7126,12 @@
     &__filter {
         border-radius: 4px;
         padding: 12px 24px;
-        border: 1px solid $border-color;
+        border: 1px solid $border-white;
     }
 
     &__filter-switch {
         padding: 12px 0;
-        border-bottom: 1px solid $border-color;
+        border-bottom: 1px solid $border-white;
     }
 
     &__filter-subtitle {
@@ -7157,7 +7157,7 @@
     &__filter-menu-item {
         margin-top: 12px;
         padding-top: 12px;
-        border-top: 1px solid $border-color;
+        border-top: 1px solid $border-white;
 
         .filter__btn {
             width: 100%;
@@ -7197,7 +7197,7 @@
     &__footer {
         padding-top: 5px;
         margin-top: 12px;
-        border-top: 1px solid $border-color;
+        border-top: 1px solid $border-white;
         display: flex;
         justify-content: flex-end;
         align-items: center;
@@ -7228,7 +7228,7 @@
     &__footer {
         margin-top: 16px;
         padding-top: 16px;
-        border-top: 1px solid $border-color;
+        border-top: 1px solid $border-white;
     }
 }
 
@@ -7244,7 +7244,7 @@
     &__footer {
         padding-top: 16px;
         margin-top: 16px;
-        border-top: 1px solid $border-color;
+        border-top: 1px solid $border-white;
     }
 }
 
@@ -7318,7 +7318,7 @@
 
 .notify-popup {
     padding: 16px;
-    border: 1px solid $border-color;
+    border: 1px solid $border-white;
     border-radius: 4px;
     background: #fff;
     display: flex;
@@ -7331,7 +7331,7 @@
         width: 32px;
         height: 32px;
         border-radius: 50%;
-        background-color: $border-color;
+        background-color: $border-white;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -7538,7 +7538,7 @@
     &__list {
         padding-top: 16px;
         margin-top: 16px;
-        border-top: 1px solid $border-color;
+        border-top: 1px solid $border-white;
     }
 
     &__item {
@@ -7597,7 +7597,7 @@
     height: 56px;
     padding: 10px;
     border-radius: 4px;
-    border: 1px solid $border-color;
+    border: 1px solid $border-white;
     background: #fff;
 }
 
@@ -7763,25 +7763,23 @@
 
 .nums-analysis {
     padding: 16px 0;
-    
-    &__table {
-        padding: 16px 0;
-        width: 100%;
-        border-collapse: collapse;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
 
-        td {
-            border-right: 1px solid $border-color;
-            width: calc(100% / 12 * 4);
+    &__item {
+        border-right: 1px solid $border-white;
+        width: calc(100% / 12 * 4);
+        position: relative;
 
-            &:nth-child(5n - 2) {
-                border-right: none;
-            }
+        &:nth-child(3n + 1):not(:first-child),
+        &:nth-child(3n + 2):not(:nth-child(2)),
+        &:nth-child(3n + 3):not(:nth-child(3)) {
+            border-top: 1px solid $border-white;
         }
 
-        tr {
-            &:not(:last-child) {
-                border-bottom: 1px solid $border-color;
-            }
+        &:nth-child(3n) {
+            border-right: none;
         }
     }
 }
@@ -7792,10 +7790,13 @@
     &__header {
         display: flex;
         align-items: center;
+        flex-wrap: wrap;
     }
 
-    &__profit {
-        margin-left: 12px;
+    &__title {
+        color: $color-secondary;
+        margin-right: 12px;
+        line-height: 1.2;
     }
 
     &__value {
@@ -7803,6 +7804,7 @@
         font-weight: 500;
         color: $color-medium;
         margin-top: 16px;
+        white-space: nowrap;
     }
 
     &__type {
@@ -7821,7 +7823,7 @@
         justify-content: space-between;
         align-items: center;
         padding-bottom: 12px;
-        border-bottom: 1px solid $border-color
+        border-bottom: 1px solid $border-white
     }
 
     &__wrapper {

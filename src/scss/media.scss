@@ -388,7 +388,28 @@
     }
 
     .nums-analysis {
-        display: none;
+        padding: 0;
+
+        &__row {
+            flex-wrap: wrap;
+        }
+
+        &__item {
+            width: 50%;
+            border-right: 1px solid $border-white;
+
+            &:nth-child(3n) {
+                border-right: 1px solid $border-white;
+            }
+
+            &:nth-child(2n) {
+                border-right: none;
+            }
+
+            &:nth-child(2n + 1):not(:first-child) {
+                border-top: 1px solid $border-white;
+            }
+        }
     }
 }
 
@@ -2193,6 +2214,22 @@
             padding: 24px 16px;
         }
     }
+
+    .nums-analysis {
+        &__item {
+            padding: 24px 12px;
+        }
+    }
+
+    .num-analysis {
+        &__title {
+            font-size: 13px;
+        }
+
+        &__profit-text {
+            display: none;
+        }
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -2296,6 +2333,12 @@
 
         &_big {
             font-size: 17px;
+        }
+    }
+
+    .num-analysis {
+        &__value {
+            font-size: 20px;
         }
     }
 }

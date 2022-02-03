@@ -2,7 +2,6 @@ import datepicker from 'js-datepicker';
 
 const $calendar = document.querySelector('.calendar');
 if ($calendar) {
-	console.log($calendar);
 	const $calendarInput = $calendar.querySelector('.calendar__input');
 
 	const picker = datepicker($calendarInput, {
@@ -38,8 +37,8 @@ window.addEventListener('resize', hideActiveEvent)
 function addCalendarEvents(datePicker, $calendar) {
 	const $events = $calendar.querySelectorAll('.calendar__event');
 	$events.forEach($event => {
-	const date = new Date(Date.parse($event.dataset.date));
-	const day = date.getDate();
+		const date = new Date(Date.parse($event.dataset.date));
+		const day = date.getDate();
 		const month = date.getMonth();
 		if (datePicker.currentMonth !== month) {
 			return;
@@ -65,21 +64,19 @@ function showEvent($calendar) {
 		return;
 	}
 
-
 	const numClientRect = $activeNum.getBoundingClientRect();
-	const numOffset = { 
-			top: numClientRect.top + window.scrollY, 
-			left: numClientRect.left + window.scrollX, 
+	const numOffset = {
+		top: numClientRect.top + window.scrollY,
+		left: numClientRect.left + window.scrollX,
 	};
 
 	const calendarClientRect = $calendar.getBoundingClientRect();
-	const calendarOffset = { 
-			top: calendarClientRect.top + window.scrollY, 
-			left: calendarClientRect.left + window.scrollX, 
+	const calendarOffset = {
+		top: calendarClientRect.top + window.scrollY,
+		left: calendarClientRect.left + window.scrollX,
 	};
 
 	const date = $activeNum.dataset.eventDate;
-
 
 	setTimeout(() => {
 		const $event = document.querySelector(`.calendar__event[data-date="${date}"]`);
@@ -97,7 +94,7 @@ function showEvent($calendar) {
 
 function hideActiveEvent() {
 	const $activeEvent = document.querySelector('.calendar__event_active');
-	if ($activeEvent) {		
+	if ($activeEvent) {
 		$activeEvent.classList.remove('calendar__event_active');
 	}
 }
