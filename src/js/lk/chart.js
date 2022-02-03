@@ -39,19 +39,51 @@ if ($branchChart) {
     data: {
       labels: ["Промышленность", "Услуги", "IT технологии"],
       datasets: [{
-        data: [33, 33, 33],
+        data: [5333333, 5333333, 5333334],
         backgroundColor: ['#E89040', '#E937C2', '#F5C038'],
         offset: 5,
       }]
     },
     options: {
-      layout: {
-        padding: 0,
-        fontSize: 4
+      plugins: {
+        legend: {
+          display: false
+        },
+        tooltip: {
+          boxPadding: 5
+        }
       },
-      cutout: 79,
+      layout: {
+        padding: {
+          left: 20,
+          right: 20,
+        },
+      },
+      cutout: 67,
       animation: false,
-    }
+    },
+    plugins: [{
+      beforeInit: function (chart, args, options) {
+        if (chart.canvas.classList.contains('chart-branch')) {
+          const ul = document.createElement('ul');
+          ul.className = 'chart-analysis__labels-list';
+  
+          chart.data.labels.forEach((label, i) => {
+            ul.innerHTML += `
+              <li class="chart-analysis__label">
+                <span class="chart-analysis__label-point" style="background-color: ${ chart.data.datasets[0].backgroundColor[i] }">
+                </span>
+                <span class="chart-analysis__label-name">${label}</span>
+              </li>
+            `;
+          });
+  
+          return document.querySelector(".chart-analysis__labels_branch").appendChild(ul);
+        }
+        
+        return;
+      }
+    }]
   });
 }
 
@@ -62,19 +94,51 @@ if ($purposeChart) {
     data: {
       labels: ["Развитие", "Покупка", "ЗП сотрудникам"],
       datasets: [{
-        data: [33, 33, 33],
+        data: [5333333, 5333333, 5333334],
         backgroundColor: ['#E89040', '#E937C2', '#38C370'],
         offset: 5,
       }]
     },
     options: {
-      layout: {
-        padding: 0,
-        fontSize: 4
+      plugins: {
+        legend: {
+          display: false
+        },
+        tooltip: {
+          boxPadding: 5
+        }
       },
-      cutout: 79,
+      layout: {
+        padding: {
+          left: 20,
+          right: 20,
+        },
+      },
+      cutout: 67,
       animation: false,
-    }
+    },
+    plugins: [{
+      beforeInit: function (chart, args, options) {
+        if (chart.canvas.classList.contains('chart-purpose')) {
+          const ul = document.createElement('ul');
+          ul.className = 'chart-analysis__labels-list';
+  
+          chart.data.labels.forEach((label, i) => {
+            ul.innerHTML += `
+              <li class="chart-analysis__label">
+                <span class="chart-analysis__label-point" style="background-color: ${ chart.data.datasets[0].backgroundColor[i] }">
+                </span>
+                <span class="chart-analysis__label-name">${label}</span>
+              </li>
+            `;
+          });
+  
+          return document.querySelector(".chart-analysis__labels_purpose").appendChild(ul);
+        }
+        
+        return;
+      }
+    }]
   });
 }
 
@@ -85,19 +149,51 @@ if ($toolsChart) {
     data: {
       labels: ["Займ", "Облигации", "Доля в бизнесе"],
       datasets: [{
-        data: [33, 33, 33],
+        data: [5333333, 5333333, 5333334],
         backgroundColor: ['#1DBCDE', '#C74FE4', '#E44F4F'],
         offset: 5,
       }]
     },
     options: {
-      layout: {
-        padding: 0,
-        fontSize: 4
+      plugins: {
+        legend: {
+          display: false
+        },
+        tooltip: {
+          boxPadding: 5
+        }
       },
-      cutout: 79,
+      layout: {
+        padding: {
+          left: 20,
+          right: 20,
+        },
+      },
+      cutout: 67,
       animation: false,
-    }
+    },
+    plugins: [{
+      beforeInit: function (chart, args, options) {
+        if (chart.canvas.classList.contains('chart-tools')) {
+          const ul = document.createElement('ul');
+          ul.className = 'chart-analysis__labels-list';
+  
+          chart.data.labels.forEach((label, i) => {
+            ul.innerHTML += `
+              <li class="chart-analysis__label">
+                <span class="chart-analysis__label-point" style="background-color: ${ chart.data.datasets[0].backgroundColor[i] }">
+                </span>
+                <span class="chart-analysis__label-name">${label}</span>
+              </li>
+            `;
+          });
+  
+          return document.querySelector(".chart-analysis__labels_tools").appendChild(ul);
+        }
+        
+        return;
+      }
+    }]
   });
 }
 
@@ -108,15 +204,17 @@ if ($dealsChart) {
     data: {
       labels: ["Активных", "Реструктуризация", "В просрочке", "В дефолте", "Завершенных"],
       datasets: [{
-        data: [60, 15, 5, 0, 20],
+        data: [12, 3, 1, 0, 4],
         backgroundColor: ['#38C370', '#379CD4', '#E1AB1F', '#E44F4F', '#C74FE4'],
         offset: 5,
       }]
     },
     options: {
       layout: {
-        padding: 0,
-        fontSize: 4
+        padding: {
+          left: 20,
+          right: 20,
+        },
       },
       cutout: 67,
       animation: false,
@@ -124,6 +222,9 @@ if ($dealsChart) {
         legend: {
           display: false,
         },
+        tooltip: {
+          boxPadding: 5,
+        }
       }
     },
     plugins: [{
@@ -145,6 +246,7 @@ if ($dealsChart) {
   
           return document.getElementById("legend-deals").appendChild(ul);
         }
+
         return;
       }
     }]
