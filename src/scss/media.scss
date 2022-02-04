@@ -1188,7 +1188,8 @@
 
         &__submit {
             display: inline-block;
-            bottom: 65px;
+            width: 100%;
+            margin-top: 15px;
         }
 
         &_active {
