@@ -1,7 +1,17 @@
 import Chart from 'chart.js/auto';
 
-const chartCanvases = document.querySelectorAll('.chart__canvas');
-chartCanvases.forEach($canvas => {
+Chart.defaults.elements.bar.borderWidth = 2;
+Chart.defaults.plugins.legend.align = 'start';
+Chart.defaults.plugins.legend.labels.color = '#4D5A65';
+Chart.defaults.plugins.legend.labels.padding = 12;
+Chart.defaults.plugins.legend.labels.boxWidth = 7;
+Chart.defaults.plugins.legend.labels.boxHeight = 7;
+Chart.defaults.plugins.legend.labels.font = {
+  size: 15
+};
+
+const simpleChartCanvases = document.querySelectorAll('.chart__canvas');
+simpleChartCanvases.forEach($canvas => {
   const chart = new Chart($canvas, {
     type: 'doughnut',
     data: {
@@ -22,236 +32,102 @@ chartCanvases.forEach($canvas => {
   });
 });
 
-Chart.defaults.elements.bar.borderWidth = 2;
-Chart.defaults.plugins.legend.align = 'start';
-Chart.defaults.plugins.legend.labels.color = '#4D5A65';
-Chart.defaults.plugins.legend.labels.padding = 12;
-Chart.defaults.plugins.legend.labels.font = {
-  size: 15
-};
-Chart.defaults.plugins.legend.labels.boxWidth = 7;
-Chart.defaults.plugins.legend.labels.boxHeight = 7;
+const analysisChartsData = [
+  {
+    parentClass: 'chart-branch',
+    labels: ["Промышленность", "Услуги", "IT технологии"],
+    data: [5333333, 5333333, 5333334],
+    backgroundColor: ['#E89040', '#E937C2', '#F5C038'],
+    labelsClass: 'chart-analysis__labels_branch',
+    labelsParentClass: 'chart-analysis',
+  },
+  {
+    parentClass: 'chart-purpose',
+    labels: ["Развитие", "Покупка", "ЗП сотрудникам"],
+    data: [5333333, 5333333, 5333334],
+    backgroundColor: ['#E89040', '#E937C2', '#38C370'],
+    labelsClass: 'chart-analysis__labels_purpose',
+    labelsParentClass: 'chart-analysis',
+  },
+  {
+    parentClass: 'chart-tools',
+    labels: ["Займ", "Облигации", "Доля в бизнесе"],
+    data: [5333333, 5333333, 5333334],
+    backgroundColor: ['#1DBCDE', '#C74FE4', '#E44F4F'],
+    labelsClass: 'chart-analysis__labels_tools',
+    labelsParentClass: 'chart-analysis',
+  },
+  {
+    parentClass: 'chart-deals',
+    labels: ["Активных", "Реструктуризация", "В просрочке", "В дефолте", "Завершенных"],
+    data: [12, 3, 1, 0, 4],
+    backgroundColor: ['#38C370', '#379CD4', '#E1AB1F', '#E44F4F', '#C74FE4'],
+    labelsClass: 'chart-deals__labels',
+    labelsParentClass: 'chart-deals',
+    showValue: true
+  },
+];
 
-const $branchChart = document.querySelector('.chart-branch');
-if ($branchChart) {
-  const chartBranch = new Chart($branchChart, {
-    type: 'doughnut',
-    data: {
-      labels: ["Промышленность", "Услуги", "IT технологии"],
-      datasets: [{
-        data: [5333333, 5333333, 5333334],
-        backgroundColor: ['#E89040', '#E937C2', '#F5C038'],
-        offset: 5,
+analysisChartsData.forEach(chartData => {
+  const $chartCanvas = document.querySelector(`.${chartData.parentClass}`);
+
+  if ($chartCanvas) {
+    const chart = new Chart($chartCanvas, {
+      type: 'doughnut',
+      data: {
+        labels: chartData.labels,
+        datasets: [{
+          data: chartData.data,
+          backgroundColor: chartData.backgroundColor,
+          offset: 5,
+        }]
+      },
+      options: {
+        plugins: {
+          legend: {
+            display: false
+          },
+          tooltip: {
+            boxPadding: 5
+          }
+        },
+        layout: {
+          padding: {
+            left: 20,
+            right: 20,
+          },
+        },
+        cutout: 67,
+        animation: false,
+      },
+      plugins: [{
+        beforeInit: function (chart, args, options) {
+          if (chart.canvas.classList.contains(chartData.parentClass)) {
+            const ul = document.createElement('ul');
+            ul.className = `${chartData.labelsParentClass}__labels-list`;
+    
+            chart.data.labels.forEach((label, i) => {
+              let $value = `<span class="chart-deals__label-value">${ chart.data.datasets[0].data[i] }</span>`;
+
+              ul.innerHTML += `
+                <li class="${chartData.labelsParentClass}__label">
+                  <span class="${chartData.labelsParentClass}__label-point" style="background-color: ${ chart.data.datasets[0].backgroundColor[i] }">
+                  </span>
+                  <span class="${chartData.labelsParentClass}__label-name">${label}</span>
+                  ${chartData.showValue ? $value : ''}
+                </li>
+              `;
+            });
+    
+            return document.querySelector(`.${chartData.labelsClass}`).appendChild(ul);
+          }
+          
+          return;
+        }
       }]
-    },
-    options: {
-      plugins: {
-        legend: {
-          display: false
-        },
-        tooltip: {
-          boxPadding: 5
-        }
-      },
-      layout: {
-        padding: {
-          left: 20,
-          right: 20,
-        },
-      },
-      cutout: 67,
-      animation: false,
-    },
-    plugins: [{
-      beforeInit: function (chart, args, options) {
-        if (chart.canvas.classList.contains('chart-branch')) {
-          const ul = document.createElement('ul');
-          ul.className = 'chart-analysis__labels-list';
-  
-          chart.data.labels.forEach((label, i) => {
-            ul.innerHTML += `
-              <li class="chart-analysis__label">
-                <span class="chart-analysis__label-point" style="background-color: ${ chart.data.datasets[0].backgroundColor[i] }">
-                </span>
-                <span class="chart-analysis__label-name">${label}</span>
-              </li>
-            `;
-          });
-  
-          return document.querySelector(".chart-analysis__labels_branch").appendChild(ul);
-        }
-        
-        return;
-      }
-    }]
-  });
-}
-
-const $purposeChart = document.querySelector('.chart-purpose');
-if ($purposeChart) {
-  const chartPurpose = new Chart($purposeChart, {
-    type: 'doughnut',
-    data: {
-      labels: ["Развитие", "Покупка", "ЗП сотрудникам"],
-      datasets: [{
-        data: [5333333, 5333333, 5333334],
-        backgroundColor: ['#E89040', '#E937C2', '#38C370'],
-        offset: 5,
-      }]
-    },
-    options: {
-      plugins: {
-        legend: {
-          display: false
-        },
-        tooltip: {
-          boxPadding: 5
-        }
-      },
-      layout: {
-        padding: {
-          left: 20,
-          right: 20,
-        },
-      },
-      cutout: 67,
-      animation: false,
-    },
-    plugins: [{
-      beforeInit: function (chart, args, options) {
-        if (chart.canvas.classList.contains('chart-purpose')) {
-          const ul = document.createElement('ul');
-          ul.className = 'chart-analysis__labels-list';
-  
-          chart.data.labels.forEach((label, i) => {
-            ul.innerHTML += `
-              <li class="chart-analysis__label">
-                <span class="chart-analysis__label-point" style="background-color: ${ chart.data.datasets[0].backgroundColor[i] }">
-                </span>
-                <span class="chart-analysis__label-name">${label}</span>
-              </li>
-            `;
-          });
-  
-          return document.querySelector(".chart-analysis__labels_purpose").appendChild(ul);
-        }
-        
-        return;
-      }
-    }]
-  });
-}
-
-const $toolsChart = document.querySelector('.chart-tools');
-if ($toolsChart) {
-  const chartTools = new Chart($toolsChart, {
-    type: 'doughnut',
-    data: {
-      labels: ["Займ", "Облигации", "Доля в бизнесе"],
-      datasets: [{
-        data: [5333333, 5333333, 5333334],
-        backgroundColor: ['#1DBCDE', '#C74FE4', '#E44F4F'],
-        offset: 5,
-      }]
-    },
-    options: {
-      plugins: {
-        legend: {
-          display: false
-        },
-        tooltip: {
-          boxPadding: 5
-        }
-      },
-      layout: {
-        padding: {
-          left: 20,
-          right: 20,
-        },
-      },
-      cutout: 67,
-      animation: false,
-    },
-    plugins: [{
-      beforeInit: function (chart, args, options) {
-        if (chart.canvas.classList.contains('chart-tools')) {
-          const ul = document.createElement('ul');
-          ul.className = 'chart-analysis__labels-list';
-  
-          chart.data.labels.forEach((label, i) => {
-            ul.innerHTML += `
-              <li class="chart-analysis__label">
-                <span class="chart-analysis__label-point" style="background-color: ${ chart.data.datasets[0].backgroundColor[i] }">
-                </span>
-                <span class="chart-analysis__label-name">${label}</span>
-              </li>
-            `;
-          });
-  
-          return document.querySelector(".chart-analysis__labels_tools").appendChild(ul);
-        }
-        
-        return;
-      }
-    }]
-  });
-}
-
-const $dealsChart = document.querySelector('.chart-deals');
-if ($dealsChart) {
-  const chartDeals = new Chart($dealsChart, {
-    type: 'doughnut',
-    data: {
-      labels: ["Активных", "Реструктуризация", "В просрочке", "В дефолте", "Завершенных"],
-      datasets: [{
-        data: [12, 3, 1, 0, 4],
-        backgroundColor: ['#38C370', '#379CD4', '#E1AB1F', '#E44F4F', '#C74FE4'],
-        offset: 5,
-      }]
-    },
-    options: {
-      layout: {
-        padding: {
-          left: 20,
-          right: 20,
-        },
-      },
-      cutout: 67,
-      animation: false,
-      plugins: {
-        legend: {
-          display: false,
-        },
-        tooltip: {
-          boxPadding: 5,
-        }
-      }
-    },
-    plugins: [{
-      beforeInit: function (chart, args, options) {
-        if (chart.canvas.id === "chart-deals") {
-          const ul = document.createElement('ul');
-          ul.className = 'chart-deals__labels-list';
-  
-          chart.data.labels.forEach((label, i) => {
-            ul.innerHTML += `
-              <li class="chart-deals__label">
-                <span class="chart-deals__label-point" style="background-color: ${ chart.data.datasets[0].backgroundColor[i] }">
-                </span>
-                <span class="chart-deals__label-name">${label}</span>
-                <span class="chart-deals__label-value">${ chart.data.datasets[0].data[i] }</span>
-              </li>
-            `;
-          });
-  
-          return document.getElementById("legend-deals").appendChild(ul);
-        }
-
-        return;
-      }
-    }]
-  });
-}
+    });
+  }
+});
 
 const $forecastChart = document.querySelector('.chart-forecast');
 if ($forecastChart) {
