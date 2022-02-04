@@ -123,7 +123,8 @@
     }
 
     .filter-menu {
-        &__btns {
+        &__btns,
+        &__selects {
             margin-top: 15px;
         }
         
@@ -1023,7 +1024,8 @@
             align-items: flex-start;
         }
 
-        &__btns {
+        &__btns,
+        &__selects {
             display: flex;
             align-items: flex-start;
             flex-direction: column;
@@ -1054,6 +1056,15 @@
 
         &__switch {
             margin: 0;
+        }
+
+        &__select {
+            min-width: 180px;
+            
+            &:not(:last-child) {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
         }
     }
 

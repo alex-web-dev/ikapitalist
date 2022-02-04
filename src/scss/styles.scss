@@ -4990,6 +4990,18 @@
     &__switch {
         margin-right: 15px;
     }
+
+    &__select {
+        display: inline-flex;
+
+        &:not(:last-child) {
+            margin-right: 15px;
+        }
+
+        .select__field {
+            color: $color-secondary;
+        }
+    }
 }
 
 .filter {
@@ -6544,7 +6556,7 @@
         top: calc(50% + 10px);
         left: 50%;
         transform: translate(-50%, -50%);
-        width: calc(100% - 20px);
+        width: calc(100% - 50px);
         text-align: center;
     }
 
