@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>iKapitalist - Навигация по сайту</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="shortcut icon" href="assets/favicon.png">
+    <link rel="shortcut icon" href="dist/images/ico.png">
+    <link rel="stylesheet" href="dist/css/styles.css">
+    <style type="text/css">
+      body {
+      	color: #272727;
+      	background: #ccc;
+      	padding: 0 16px;
+      }
+      
+      .all-pages {
+      	width: 100%;
+      	max-width: 600px;
+      	max-height: calc(100% - 40px);
+      	overflow: hidden;
+      	border-radius: 10px;
+      	background: #fff;
+      	display: flex;
+      	flex-direction: column;
+      	margin: 20px auto;
+      }
+      
+      .all-pages__title {
+      	font-size: 30px;
+      	padding: 10px 0;
+      	border-bottom: 1px solid #ebebeb;
+      	text-align: center;
+      }
+      
+      .all-pages__list {
+      	counter-reset: list;
+      	list-style: none;
+      	overflow-y: auto
+      }
+      
+      .all-pages__item {
+      	display: block;
+      	text-align: left;
+      	border-bottom: 1px solid #ebebeb;
+      }
+      
+      .all-pages__link {
+      	padding: 10px 20px;
+      	display: block;
+      	color: rgb(0, 170, 145);
+      	text-decoration: none;
+      }
+      
+      .all-pages__item .all-pages__link:before {
+      	counter-increment: list;
+      	content: counter(list) ". ";
+      	color: #272727;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="all-pages">
+      <div class="all-pages__title">Список страниц</div>
+      <ul class="all-pages__list">
+        <li class="all-pages__item"><a class="all-pages__link" href="index.html">Главная</a></li>
+        <li class="all-pages__item"><a class="all-pages__link" href="companies.html">Компаниям</a></li>
+        <li class="all-pages__item"><a class="all-pages__link" href="investors.html">Инвесторам</a></li>
+        <li class="all-pages__item"><a class="all-pages__link" href="referal.html">Пригласи предпринимателя</a></li>
+        <li class="all-pages__item"><a class="all-pages__link" href="referal-form-advisor.html">Стать советником</a></li>
+        <li class="all-pages__item"><a class="all-pages__link" href="news.html">Новости</a></li>
+        <li class="all-pages__item"><a class="all-pages__link" href="about.html">О нас</a></li>
+        <li class="all-pages__item"><a class="all-pages__link" href="blog.html">Блог</a></li>
+        <li class="all-pages__item"><a class="all-pages__link" href="vacancy.html">Вакансии</a></li>
+        <li class="all-pages__item"><a class="all-pages__link" href="login.html">Авторизация</a></li>
+        <li class="all-pages__item"><a class="all-pages__link" href="lk-spisok-sdelok.html">Кабинет - Список сделок</a></li>
+        <li class="all-pages__item"><a class="all-pages__link" href="lk-vladelec-biznesa.html">Кабинет - Владелец бизнеса</a></li>
+        <li class="all-pages__item"><a class="all-pages__link" href="lk-vladelec-zagruzka-doc.html">Кабинет - Документы</a></li>
+        <li class="all-pages__item"><a class="all-pages__link" href="lk-vladelec-zayavka.html">Кабинет - Заявка</a></li>
+        <li class="all-pages__item"><a class="all-pages__link" href="lk-vladelec-otchet.html">Кабинет - Отчетность</a></li>
+        <li class="all-pages__item"><a class="all-pages__link" href="lk-vladelec-sozdanie-sdelki-1.html">Кабинет - Создание сделки - Общее</a></li>
+        <li class="all-pages__item"><a class="all-pages__link" href="lk-vladelec-sozdanie-sdelki-2.html">Кабинет - Создание сделки - Описание</a></li>
+        <li class="all-pages__item"><a class="all-pages__link" href="lk-vladelec-zagruzka-doc-2.html">Кабинет - Загрузка документов</a></li>
+        <li class="all-pages__item"><a class="all-pages__link" href="lk-vladelec-vse-dogovora.html">Все договора</a></li>
+        <li class="all-pages__item"><a class="all-pages__link" href="lk-analitika.html">Кабинет - Аналитика</a></li>
+        <li class="all-pages__item"><a class="all-pages__link" href="lk-notification.html">Кабинет - Уведомления</a></li>
+
+      </ul>
+    </div>
+  </body>
+</html>
