@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="shortcut icon" href="images/ico.png">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>iKapitalist - Уведомления</title>
+</head>
+
+<body>
+    <div class="lk">
+        <aside class="sidebar">
+            <div class="sidebar__content">
+                <div class="sidebar__header">
+                    <button class="sidebar__toggle">
+                        <img src="images/icons/lk-menu.svg" alt="">
+                    </button>
+                    <a href="./" class="logo sidebar__logo">
+                        <img src="images/logo.svg" alt="" class="logo__img">
+                    </a>
+                </div>
+                <div class="sidebar__list">
+                    <div class="sidebar__item">
+                        <a href="./lk-spisok-sdelok.html" class="sidebar__link">
+                            <img src="images/icons/sidebar/handshake.svg" alt="" class="sidebar__icon">
+                            Список сделок
+                        </a>
+                    </div>
+                    <div class="sidebar__item">
+                        <a href="#" class="sidebar__link">
+                            <img src="images/icons/sidebar/card.svg" alt="" class="sidebar__icon">
+                            Лента новостей
+                        </a>
+                    </div>
+                    <div class="sidebar__item">
+                        <a href="#" class="sidebar__link">
+                            <img src="images/icons/sidebar/bank.svg" alt="" class="sidebar__icon">
+                            Портфель инвестора
+                        </a>
+                    </div>
+                    <div class="sidebar__item">
+                        <a href="./lk-vladelec-biznesa.html" class="sidebar__link">
+                            <img src="images/icons/sidebar/case.svg" alt="" class="sidebar__icon">
+                            Владелец бизнеса
+                        </a>
+                    </div>
+                    <div class="sidebar__item">
+                        <a href="#" class="sidebar__link">
+                            <img src="images/icons/sidebar/check.svg" alt="" class="sidebar__icon">
+                            Гарант
+                        </a>
+                    </div>
+                    <div class="sidebar__item">
+                        <a href="./lk-analitika.html" class="sidebar__link">
+                            <img src="images/icons/sidebar/chart.svg" alt="" class="sidebar__icon">
+                            Аналитика
+                        </a>
+                    </div>
+                    <div class="sidebar__item">
+                        <a href="#" class="sidebar__link">
+                            <img src="images/icons/sidebar/files.svg" alt="" class="sidebar__icon">
+                            Документы
+                        </a>
+                    </div>
+                    <div class="sidebar__item sidebar__item_active">
+                        <a href="./lk-notification.html" class="sidebar__link">
+                            <img src="images/icons/sidebar/notification.svg" alt="" class="sidebar__icon">
+                            Уведомления
+                            <span class="not-view sidebar__count">1</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="sidebar__footer">
+                    <a href="#" class="download-btn sidebar__download">
+                        Скачать мобильное приложение
+                    </a>
+                </div>
+            </div>
+        </aside>
+        <div class="lk__body">
+            <header class="lk-header">
+                <div class="lk-header__desktop">
+                    <div class="container">
+                        <div class="lk-header__desktop-content">
+                            <div class="user-verif user-verif_error lk-header__verif">
+                                <button class="user-verif__btn">Верификация не пройдена</button>
+                                <div class="user-verif__main">
+                                    <div class="user-verif__item">Подтверждение Email</div>
+                                    <div class="user-verif__item user-verif__item_error">Проверка по ИИН</div>
+                                    <div class="user-verif__item user-verif__item_warning">Договор с платформой</div>
+                                    <div class="user-verif__item user-verif__item_error">Онлайн тест</div>
+                                </div>
+                            </div>
+                            <div class="user-panel">
+                                <button class="user-panel__btn">
+                                    <div class="user-panel__name">Нурбек Раев</div>
+                                    <img src="images/user-avatar.png" alt="" class="user-panel__img">
+                                </button>
+                                <div class="user-panel__main">
+                                    <div class="user-panel__item">
+                                        <a href="#" class="user-panel__link">
+                                            <img src="images/icons/user-panel/file.svg" alt=""
+                                                class="user-panel__icon">
+                                            Мои договора
+                                        </a>
+                                    </div>
+                                    <div class="user-panel__item">
+                                        <a href="#" class="user-panel__link">
+                                            <img src="images/icons/user-panel/edit.svg" alt=""
+                                                class="user-panel__icon">
+                                            Редактировать профиль
+                                        </a>
+                                    </div>
+                                    <div class="user-panel__item">
+                                        <img src="images/icons/user-panel/lang.svg" alt=""
+                                            class="user-panel__icon">
+                                        <div class="user-panel__lang">
+                                            <button class="user-panel__lang-btn user-panel__lang-btn_active">
+                                                <span class="user-panel__lang-name">Казахский</span>
+                                                <img src="images/icons/user-panel/kz.png" alt=""
+                                                    class="user-panel__lang-img">
+                                            </button>
+                                            <button class="user-panel__lang-btn">
+                                                <span class="user-panel__lang-name">Русский</span>
+                                                <img src="images/icons/user-panel/ru.png" alt=""
+                                                    class="user-panel__lang-img">
+                                            </button>
+                                            <button class="user-panel__lang-btn">
+                                                <span class="user-panel__lang-name">English</span>
+                                                <img src="images/icons/user-panel/gb.png" alt=""
+                                                    class="user-panel__lang-img">
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="user-panel__item user-panel__exit">
+                                        <a href="#" class="user-panel__link">
+                                            <img src="images/icons/user-panel/exit.svg" alt=""
+                                                class="user-panel__icon">
+                                            Выйти
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lk-header__mobile">
+                    <div class="container">
+                        <div class="lk-header__mobile-content">
+                            <a href="./lk-spisok-sdelok.html" class="back-btn"></a>
+                            <div class="mobile-title lk-header__mobile-title">Уведомления</div>
+                            <button class="open-add-menu open-add-menu_filter"></button>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <main class="lk-main">
+                <div class="container">
+                    <div class="notify">
+                        <h1 class="lk-title1 lk-title-desktop">Уведомления</h1>
+                        <div class="notify__body">
+                            <div class="row gy-lg-4">
+                                <div class="col-xl-4 order-xl-2">
+                                    <div class="add-menu">
+                                        <div class="add-menu__header">
+                                            <div class="mobile-title">Фильтр</div>
+                                            <button class="close-btn close-add-menu add-menu__close"></button>
+                                        </div>
+                                        <div class="notify__filter">
+                                            <h3 class="lk-title3 notify__filter-title">Фильтр</h3>
+                                            <div class="switch switch_filter notify__filter-switch">
+                                                <div class="switch__text">На подпись</div>
+                                                <div class="switch__main">
+                                                    <input type="checkbox" class="switch__field" id="notif-filter-1">
+                                                    <label for="notif-filter-1" class="switch__label"></label>
+                                                </div>
+                                            </div>
+                                            <div class="switch switch_filter notify__filter-switch">
+                                                <div class="switch__text">Успешная сделка</div>
+                                                <div class="switch__main">
+                                                    <input type="checkbox" class="switch__field" id="notif-filter-2">
+                                                    <label for="notif-filter-2" class="switch__label"></label>
+                                                </div>
+                                            </div>
+                                            <div class="switch switch_filter notify__filter-switch">
+                                                <div class="switch__text">Продажа бизнеса</div>
+                                                <div class="switch__main">
+                                                    <input type="checkbox" class="switch__field" id="notif-filter-3">
+                                                    <label for="notif-filter-3" class="switch__label"></label>
+                                                </div>
+                                            </div>
+                                            <div class="switch switch_filter notify__filter-switch">
+                                                <div class="switch__text">Доля</div>
+                                                <div class="switch__main">
+                                                    <input type="checkbox" class="switch__field" id="notif-filter-4">
+                                                    <label for="notif-filter-4" class="switch__label"></label>
+                                                </div>
+                                            </div>
+                                            <div class="notify__filter-subtitle">По оплатам</div>
+                                            <div class="notify__filter-fields">
+                                                <input type="text" class="filter-field notify__filter-field discharge-input" placeholder="Сумма от">
+                                                <input type="text" class="filter-field notify__filter-field discharge-input" placeholder="Сумма до">
+                                            </div>
+
+                                            <div class="filter notify__filter-menu-item">
+                                                <button class="filter-btn filter__btn">Настроить таблицу</button>
+                                                <div class="filter__main">
+                                                    <div class="search filter__search">
+                                                        <input type="text" class="search__field" placeholder="Поиск">
+                                                        <button class="search__btn">
+                                                            <img src="images/icons/search.svg" alt="Search">
+                                                        </button>
+                                                    </div>
+                                                    <div class="checkbox filter__checkbox">
+                                                        <div class="checkbox__box">
+                                                            <input type="checkbox" id="filter-checkbox-1" class="checkbox__input" name="checkbox-privacy">
+                                                            <label for="filter-checkbox-1" class="checkbox__btn"></label>
+                                                        </div>
+                                                        <div class="checkbox__text checkbox__text_big">Металлсервис</div>
+                                                    </div>
+                                                    <div class="checkbox filter__checkbox">
+                                                        <div class="checkbox__box">
+                                                            <input type="checkbox" id="filter-checkbox-2" class="checkbox__input" name="checkbox-privacy">
+                                                            <label for="filter-checkbox-2" class="checkbox__btn"></label>
+                                                        </div>
+                                                        <div class="checkbox__text checkbox__text_big">Nike</div>
+                                                    </div>
+                                                    <div class="checkbox filter__checkbox">
+                                                        <div class="checkbox__box">
+                                                            <input type="checkbox" id="filter-checkbox-3" class="checkbox__input" name="checkbox-privacy">
+                                                            <label for="filter-checkbox-3" class="checkbox__btn"></label>
+                                                        </div>
+                                                        <div class="checkbox__text checkbox__text_big">Starbucks</div>
+                                                    </div>
+                                                    <div class="checkbox filter__checkbox">
+                                                        <div class="checkbox__box">
+                                                            <input type="checkbox" id="filter-checkbox-4" class="checkbox__input" name="checkbox-privacy">
+                                                            <label for="filter-checkbox-4" class="checkbox__btn"></label>
+                                                        </div>
+                                                        <div class="checkbox__text checkbox__text_big">Worldwide Earth</div>
+                                                    </div>
+                                                    <div class="checkbox filter__checkbox">
+                                                        <div class="checkbox__box">
+                                                            <input type="checkbox" id="filter-checkbox-5" class="checkbox__input" name="checkbox-privacy">
+                                                            <label for="filter-checkbox-5" class="checkbox__btn"></label>
+                                                        </div>
+                                                        <div class="checkbox__text checkbox__text_big">КазПромТранс-Сервис</div>
+                                                    </div>
+                                                    <div class="checkbox filter__checkbox">
+                                                        <div class="checkbox__box">
+                                                            <input type="checkbox" id="filter-checkbox-6" class="checkbox__input" name="checkbox-privacy">
+                                                            <label for="filter-checkbox-6" class="checkbox__btn"></label>
+                                                        </div>
+                                                        <div class="checkbox__text checkbox__text_big">ИП ЖК</div>
+                                                    </div>
+                                                    <div class="checkbox filter__checkbox">
+                                                        <div class="checkbox__box">
+                                                            <input type="checkbox" id="filter-checkbox-7" class="checkbox__input" name="checkbox-privacy">
+                                                            <label for="filter-checkbox-7" class="checkbox__btn"></label>
+                                                        </div>
+                                                        <div class="checkbox__text checkbox__text_big">Название компании</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button class="lk-btn add-menu__submit">Показать 21</button>
+                                    </div>
+                                </div>
+                                <div class="col-xl-8 order-xl-1">
+                                    <div class="notify-item notify__item">
+                                        <span class="status status_success notify-item__status">Новый</span>
+                                        <p class="notify-item__text">
+                                            Поздравляем! Договор с платформой успешно подписан. Теперь вам необходимо предоставить: <br>
+                                            1. Публикация <br>
+                                            2. Документы для регулятора </p>
+                                        <div class="notify-item__footer">
+                                            <button class="lk-submit notify-item__btn">Загрузить документы</button>
+                                            <span class="notify-item__date">03.09.2021 11:58</span>
+                                        </div>
+                                    </div>
+                                    <div class="notify-item notify__item">
+                                        <p class="notify-item__text">Уважаемый Нуржанов Нуркельдин! Необходимо подписать договор с платформой</p>
+                                        <div class="notify-item__footer">
+                                            <button class="lk-submit notify-item__btn">Подписать</button>
+                                            <span class="notify-item__date">03.09.2021 11:58</span>
+                                        </div>
+                                    </div>
+                                    <div class="notify-item notify__item">
+                                        <p class="notify-item__text">Уважаемый (ая) Нуржанов Нуркельдин! Вам необходимо подписать акт выполненных работ</p>
+                                        <div class="notify-item__footer">
+                                            <button class="lk-submit notify-item__btn">Подписать акт выполненных работ</button>
+                                            <span class="notify-item__date">03.09.2021 11:58</span>
+                                        </div>
+                                    </div>
+                                    <div class="notify-item notify__item">
+                                        <p class="notify-item__text">Уважаемый (ая) Нуржанов Нуркельдин! Вам необходимо подписать акт выполненных работ</p>
+                                        <div class="notify-item__footer">
+                                            <span class="notify-item__date">03.09.2021 11:58</span>
+                                        </div>
+                                    </div>
+                                    <div class="notify-item notify__item">
+                                        <p class="notify-item__text">Уважаемый Нуржанов Нуркельдин! Сумма в номинальном счете собрана. Необходимо подписать договор.</p>
+                                        <div class="notify-item__footer">
+                                            <button class="lk-submit notify-item__btn">Перейти</button>
+                                            <span class="notify-item__date">03.09.2021 11:58</span>
+                                        </div>
+                                    </div>
+                                    <div class="notify-item notify__item">
+                                        <p class="notify-item__text">Уважаемый Нуржанов Нуркельдин! Необходимо подписать договор с платформой</p>
+                                        <div class="notify-item__footer">
+                                            <button class="lk-submit notify-item__btn">Перейти</button>
+                                            <span class="notify-item__date">03.09.2021 11:58</span>
+                                        </div>
+                                    </div>
+                                    <div class="notify-item notify__item">
+                                        <p class="notify-item__text">Уважаемый Нуржанов Нуркельдин! Необходимо подписать договор с платформой</p>
+                                        <div class="notify-item__footer">
+                                            <button class="lk-submit notify-item__btn">Перейти</button>
+                                            <span class="notify-item__date">03.09.2021 11:58</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <div class="mobile-menu">
+        <div class="mobile-menu__list">
+            <div class="mobile-menu__item">
+                <a href="./lk-spisok-sdelok.html" class="mobile-menu__link">
+                    <div class="mobile-menu__icon-box">
+                        <img src="images/icons/sidebar/handshake.svg" alt="" class="mobile-menu__icon">
+                    </div>
+                    <span class="mobile-menu__text">Сделки</span>
+                </a>
+            </div>
+            <div class="mobile-menu__item">
+                <a href="#" class="mobile-menu__link">
+                    <div class="mobile-menu__icon-box">
+                        <img src="images/icons/sidebar/card.svg" alt="" class="mobile-menu__icon">
+                    </div>
+                    <span class="mobile-menu__text">Новости</span>
+                </a>
+            </div>
+            <div class="mobile-menu__item">
+                <a href="./lk-analitika.html" class="mobile-menu__link">
+                    <div class="mobile-menu__icon-box">
+                        <img src="images/icons/sidebar/chart.svg" alt="" class="mobile-menu__icon">
+                    </div>
+                    <span class="mobile-menu__text">Аналитика</span>
+                </a>
+            </div>
+            <div class="mobile-menu__item mobile-menu__item_active">
+                <a href="./lk-notification.html" class="mobile-menu__link">
+                    <div class="mobile-menu__icon-box">
+                        <img src="images/icons/sidebar/notification.svg" alt="" class="mobile-menu__icon">
+                    </div>
+                    <span class="mobile-menu__text">Уведомления</span>
+                </a>
+            </div>
+            <div class="mobile-menu__item">
+                <button class="mobile-menu__link open-sidebar">
+                    <div class="mobile-menu__icon-box">
+                        <img src="images/icons/lk-menu.svg" alt="" class="mobile-menu__icon">
+                    </div>
+                    <span class="mobile-menu__text">Меню</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="inf-popup inf-popup_email">
+        <div class="inf-popup__content">
+            <div class="inf-popup__icon"></div>
+            <div class="inf-popup__animation"></div>
+            <div class="inf-popup__message">Поздравляем</div>
+            <div class="inf-popup__text">Отправлено на рассмотрение в течение 72 часов</div>
+            <button class="lk-btn inf-popup__submit">Вернуться в кабинет</button>
+            <button class="close-btn inf-popup__close"></button>
+        </div>
+    </div>
+    <!-- <div class="inf-popup inf-popup_validate">
+        <div class="inf-popup__content">
+            <div class="inf-popup__animation"></div>
+            <div class="inf-popup__message">Проверка валидности данных</div>
+            <div class="inf-popup__text">Не закрывайте окно и не перезагружайте браузер</div>
+            <button class="close-btn inf-popup__close"></button>
+        </div>
+    </div> -->
+    <!-- <div class="inf-popup inf-popup_card">
+        <div class="inf-popup__content">
+            <div class="inf-popup__header">
+                <img src="images/card.jpg" alt="" class="inf-popup__img">
+                <div class="logo-card inf-popup__logo-card">
+                    <img src="images/card-logo.png" alt="" class="logo-card__img">
+                </div>
+            </div>
+            <div class="inf-popup__main">
+                <div class="inf-popup__title">Подписать документы</div>
+                <p class="inf-popup__text">Необходимо прикрепить ЭЦП(RSA)</p>
+                <p class="inf-popup__error-text">Подписывает учеридитель!</p>
+                <div class="file inf-popup__file file_error" data-type="file">
+                    <input class="file__input" type="file" id="file-1">
+                    <label class="file__btn" for="file-1">
+                        <div class="file__btn-text">Нажмите, чтобы выбрать файл или перетащите сюда</div>
+                    </label>
+                    <div class="file__result">
+                        <div class="file__result-icon-box">
+                            <span class="file__result-type"></span>
+                        </div>
+                        <div class="file__result-inf">
+                            <div class="file__result-header">
+                                <div class="file__result-header-inf">
+                                    <div class="file__result-name"></div>
+                                    <span class="status status_verify file__status">На проверке</span>
+                                </div>
+                                <div class="file__result-header-btns">
+                                    <button type="button" class="reload-btn file__reload file__result-header-btn"></button>
+                                    <button type="button" class="delete-btn file__delete file__result-header-btn"></button>
+                                </div>
+                                <span class="file__progress-num"></span>
+                            </div>
+                            <div class="progress file__progress">
+                                <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>                                                        
+                        </div>
+                    </div>
+                    <p class="file__error-text">Прикрепите ЭЦП</p>
+                </div>
+                <div class="field inf-popup__field">
+                    <input type="password" name="funds-amount" class="field__input"
+                        placeholder="****">
+                    <span class="field__text">Пароль</span>
+                    <button type="button" class="field__show-pass"></button>
+                </div>
+                <div class="inf-popup__list">
+                    <div class="inf-popup__item">
+                        <span class="inf-popup__item-text">Уникальное имя владельца</span>
+                        <span class="inf-popup__item-value">НУРБЕК РАЕВ</span>
+                    </div>
+                    <div class="inf-popup__item">
+                        <span class="inf-popup__item-text">Срок действия</span>
+                        <span class="inf-popup__item-value">2021-06-04 15:58:55-2022-06-04 15:58:55</span>
+                    </div>
+                    <div class="inf-popup__item">
+                        <span class="inf-popup__item-text">Серийный номер</span>
+                        <span class="inf-popup__item-value">58943759873894274374987419739287197533495</span>
+                    </div>
+                    <div class="inf-popup__item">
+                        <span class="inf-popup__item-text">Имя издателя</span>
+                        <span class="inf-popup__item-value">УЛТТЫК КУАЛАНДЫРУШЫ ОРТАЛЫК (RSA)</span>
+                    </div>
+                </div>
+                <button class="lk-btn lk-btn_full lk-btn_mobile_fixed inf-popup__submit">Подписать</button>
+            </div>
+        </div>
+        <button class="close-btn inf-popup__close"></button>
+    </div> -->
+    <script src="js/common.js"></script>
+</body>
+
+</html>

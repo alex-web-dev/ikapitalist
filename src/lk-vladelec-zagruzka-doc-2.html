@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="shortcut icon" href="images/ico.png">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>iKapitalist - Документы компании</title>
+</head>
+
+<body>
+    <div class="lk">
+        <aside class="sidebar">
+            <div class="sidebar__content">
+                <div class="sidebar__header">
+                    <button class="sidebar__toggle">
+                        <img src="images/icons/lk-menu.svg" alt="">
+                    </button>
+                    <a href="./" class="logo sidebar__logo">
+                        <img src="images/logo.svg" alt="" class="logo__img">
+                    </a>
+                </div>
+                <div class="sidebar__list">
+                    <div class="sidebar__item">
+                        <a href="./lk-spisok-sdelok.html" class="sidebar__link">
+                            <img src="images/icons/sidebar/handshake.svg" alt="" class="sidebar__icon">
+                            Список сделок
+                        </a>
+                    </div>
+                    <div class="sidebar__item">
+                        <a href="#" class="sidebar__link">
+                            <img src="images/icons/sidebar/card.svg" alt="" class="sidebar__icon">
+                            Лента новостей
+                        </a>
+                    </div>
+                    <div class="sidebar__item">
+                        <a href="#" class="sidebar__link">
+                            <img src="images/icons/sidebar/bank.svg" alt="" class="sidebar__icon">
+                            Портфель инвестора
+                        </a>
+                    </div>
+                    <div class="sidebar__item sidebar__item_active">
+                        <a href="./lk-vladelec-biznesa.html" class="sidebar__link">
+                            <img src="images/icons/sidebar/case.svg" alt="" class="sidebar__icon">
+                            Владелец бизнеса
+                        </a>
+                    </div>
+                    <div class="sidebar__item">
+                        <a href="#" class="sidebar__link">
+                            <img src="images/icons/sidebar/check.svg" alt="" class="sidebar__icon">
+                            Гарант
+                        </a>
+                    </div>
+                    <div class="sidebar__item">
+                        <a href="./lk-analitika.html" class="sidebar__link">
+                            <img src="images/icons/sidebar/chart.svg" alt="" class="sidebar__icon">
+                            Аналитика
+                        </a>
+                    </div>
+                    <div class="sidebar__item">
+                        <a href="#" class="sidebar__link">
+                            <img src="images/icons/sidebar/files.svg" alt="" class="sidebar__icon">
+                            Документы
+                        </a>
+                    </div>
+                    <div class="sidebar__item">
+                        <a href="./lk-notification.html" class="sidebar__link">
+                            <img src="images/icons/sidebar/notification.svg" alt="" class="sidebar__icon">
+                            Уведомления
+                            <span class="not-view sidebar__count">1</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="sidebar__footer">
+                    <a href="#" class="download-btn sidebar__download">
+                        Скачать мобильное приложение
+                    </a>
+                </div>
+            </div>
+        </aside>
+        <div class="lk__body">
+            <header class="lk-header">
+                <div class="lk-header__desktop">
+                    <div class="container">
+                        <div class="lk-header__desktop-content">
+                            <div class="user-verif user-verif_error lk-header__verif">
+                                <button class="user-verif__btn">Верификация не пройдена</button>
+                                <div class="user-verif__main">
+                                    <div class="user-verif__item">Подтверждение Email</div>
+                                    <div class="user-verif__item user-verif__item_error">Проверка по ИИН</div>
+                                    <div class="user-verif__item user-verif__item_warning">Договор с платформой</div>
+                                    <div class="user-verif__item user-verif__item_error">Онлайн тест</div>
+                                </div>
+                            </div>
+                            <div class="user-panel">
+                                <button class="user-panel__btn">
+                                    <div class="user-panel__name">Нурбек Раев</div>
+                                    <img src="images/user-avatar.png" alt="" class="user-panel__img">
+                                </button>
+                                <div class="user-panel__main">
+                                    <div class="user-panel__item">
+                                        <a href="#" class="user-panel__link">
+                                            <img src="images/icons/user-panel/file.svg" alt=""
+                                                class="user-panel__icon">
+                                            Мои договора
+                                        </a>
+                                    </div>
+                                    <div class="user-panel__item">
+                                        <a href="#" class="user-panel__link">
+                                            <img src="images/icons/user-panel/edit.svg" alt=""
+                                                class="user-panel__icon">
+                                            Редактировать профиль
+                                        </a>
+                                    </div>
+                                    <div class="user-panel__item">
+                                        <img src="images/icons/user-panel/lang.svg" alt=""
+                                            class="user-panel__icon">
+                                        <div class="user-panel__lang">
+                                            <button class="user-panel__lang-btn user-panel__lang-btn_active">
+                                                <span class="user-panel__lang-name">Казахский</span>
+                                                <img src="images/icons/user-panel/kz.png" alt=""
+                                                    class="user-panel__lang-img">
+                                            </button>
+                                            <button class="user-panel__lang-btn">
+                                                <span class="user-panel__lang-name">Русский</span>
+                                                <img src="images/icons/user-panel/ru.png" alt=""
+                                                    class="user-panel__lang-img">
+                                            </button>
+                                            <button class="user-panel__lang-btn">
+                                                <span class="user-panel__lang-name">English</span>
+                                                <img src="images/icons/user-panel/gb.png" alt=""
+                                                    class="user-panel__lang-img">
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="user-panel__item user-panel__exit">
+                                        <a href="#" class="user-panel__link">
+                                            <img src="images/icons/user-panel/exit.svg" alt=""
+                                                class="user-panel__icon">
+                                            Выйти
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lk-header__mobile">
+                    <div class="container">
+                        <div class="lk-header__mobile-content">
+                            <a href="./lk-spisok-sdelok.html" class="back-btn"></a>
+                            <div class="mobile-title lk-header__mobile-title">Документы компании</div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <main class="lk-main">
+                <div class="container">
+                    <div class="request">
+                        <div class="request__header">
+                            <h1 class="lk-title1 lk-title-desktop request__title">Казпромтранс-сервис</h1>
+                            <span class="status status_warning request__status">На подписании</span>
+                            <span class="request__date">23 авг. в 18:22</span>
+                        </div>
+                        <div class="request-menu request__menu">
+                            <a href="./lk-vladelec-zagruzka-doc.html" class="tab-btn request-menu__link tab-btn_active">Документы компании</a>
+                            <a href="./lk-vladelec-zayavka.html" class="tab-btn request-menu__link">Заявка</a>
+                            <a href="./lk-vladelec-otchet.html" class="tab-btn request-menu__link">Отчетность</a>
+                            <a href="./lk-vladelec-docs.html" class="tab-btn request-menu__link">Документы</a>
+                            <a href="./lk-vladelec-contracts.html" class="tab-btn request-menu__link">Договоры</a>
+                            <a href="#" class="tab-btn request-menu__link">Публикация</a>
+                        </div>
+                        <div class="request__main">
+                            <div class="row justify-content-between">
+                                <div class="col-xl-5 order-xl-2">
+                                    <div class="agreement box request__agreement">
+                                        <div class="agreement-elem agreement__elem">Согласие ПКБ по учредителю</div>
+                                        <button class="lk-btn lk-btn_green agreement__btn" disabled>Подписано</button>
+                                        <div class="agreement-elem agreement__elem">Согласие ПКБ наименование ЮР лица</div>
+                                        <button class="lk-btn lk-btn_green agreement__btn" disabled="disabled">Подписано</button>
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-6">
+                                    <div class="doc-item request__doc-item">
+                                        <div class="doc-item__group">
+                                            <div class="lk-title1 lk-title1_blue doc-item__title">Учредитель</div>
+                                            <div class="doc-item__field field">
+                                                <input type="text" name="company-bin" class="field__input"
+                                                    placeholder="Иванов">
+                                                <span class="field__text">Фамилия</span>
+                                            </div>
+                                            <div class="doc-item__field field">
+                                                <input type="text" name="company-bin" class="field__input"
+                                                    placeholder="Иван">
+                                                <span class="field__text">Имя</span>
+                                            </div>
+                                            <div class="doc-item__field field">
+                                                <input type="text" name="company-bin" class="field__input"
+                                                    placeholder="Иванович">
+                                                <span class="field__text">Отчество</span>
+                                            </div>
+                                            <div class="doc-item__field field">
+                                                <input type="text" name="company-bin" class="field__input"
+                                                    placeholder="111111111111">
+                                                <span class="field__text">ИИН учредителя</span>
+                                            </div>
+                                            <div class="doc-item__field field">
+                                                <input type="text" name="company-bin" class="field__input"
+                                                    placeholder="nurkeldin@mail.ru">
+                                                <span class="field__text">Email учредителя</span>
+                                            </div>
+                                            <div class="doc-item__field field">
+                                                <input type="text" name="company-bin" class="field__input"
+                                                    placeholder="+7 (777) 777-77-77">
+                                                <span class="field__text">Номер учредителя</span>
+                                            </div>
+                                            <button class="lk-btn lk-btn_white doc-item__btn">Добавить учредителя</button>
+                                        </div>
+                                        <div class="doc-item__group">
+                                            <div class="lk-title1 lk-title1_blue doc-item__title">Контактное лицо</div>
+                                            <div class="field-group doc-item__field-group">
+                                                <div class="field field-group__item">
+                                                    <input type="text" name="company-bin" class="field__input"
+                                                        placeholder="nurkeldin@mail.ru">
+                                                    <span class="field__text">Email учредителя</span>
+                                                </div>
+                                                <div class="field field-group__item">
+                                                    <input type="text" name="company-name" class="field__input"
+                                                        placeholder="+7 (777) 777-77-77">
+                                                    <span class="field__text">Номер учредителя</span>
+                                                </div>
+                                            </div>
+                                            <div class="field-group doc-item__field-group">
+                                                <div class="field field-group__item">
+                                                    <input type="text" name="company-bin" class="field__input"
+                                                        placeholder="Нуркельдин">
+                                                    <span class="field__text">Имя гаранта</span>
+                                                </div>
+                                                <div class="field field-group__item">
+                                                    <input type="text" name="company-name" class="field__input"
+                                                        placeholder="Нуржанов">
+                                                    <span class="field__text">Фамилия гаранта</span>
+                                                </div>
+                                            </div>
+                                            <div class="field-group doc-item__field-group">
+                                                <div class="field field-group__item">
+                                                    <input type="text" name="company-bin" class="field__input"
+                                                        placeholder="999999999999">
+                                                    <span class="field__text">ИИН гаранта</span>
+                                                </div>
+                                                <div class="field field-group__item">
+                                                    <input type="text" name="company-name" class="field__input"
+                                                        placeholder="mail.@mail.com">
+                                                    <span class="field__text">Email гаранта</span>
+                                                </div>
+                                            </div>
+                                            <div class="doc-item__field field">
+                                                <input type="text" name="company-bin" class="field__input"
+                                                    placeholder="+7 (777) 777-77-77">
+                                                <span class="field__text">Номер гаранта</span>
+                                            </div>
+                                        </div>
+                                        <div class="doc-item__group">
+                                            <div class="lk-title1 lk-title1_blue doc-item__title">О компании</div>
+                                            <div class="field-group doc-item__field-group">
+                                                <div class="field field-group__item">
+                                                    <input type="text" name="company-bin" class="field__input"
+                                                        placeholder="site.kz">
+                                                    <span class="field__text">Ссылка на сайт компании</span>
+                                                </div>
+                                                <div class="field field-group__item">
+                                                    <input type="text" name="company-name" class="field__input"
+                                                        placeholder="+7 (777) 777-77-77">
+                                                    <span class="field__text">Ссылка на профиль instagram</span>
+                                                </div>
+                                            </div>
+                                            <div class="field-group doc-item__field-group">
+                                                <div class="field field-group__item">
+                                                    <input type="text" name="company-bin" class="field__input"
+                                                        placeholder="Нуркельдин">
+                                                    <span class="field__text">Имя гаранта</span>
+                                                </div>
+                                                <div class="field field-group__item">
+                                                    <input type="text" name="company-name" class="field__input"
+                                                        placeholder="Нуржанов">
+                                                    <span class="field__text">Фамилия гаранта</span>
+                                                </div>
+                                            </div>
+                                            <div class="field-group doc-item__field-group">
+                                                <div class="field field-group__item">
+                                                    <input type="text" name="company-bin" class="field__input"
+                                                        placeholder="999999999999">
+                                                    <span class="field__text">ИИН гаранта</span>
+                                                </div>
+                                                <div class="field field-group__item">
+                                                    <input type="text" name="company-name" class="field__input"
+                                                        placeholder="mail.@mail.com">
+                                                    <span class="field__text">Email гаранта</span>
+                                                </div>
+                                            </div>
+                                            <div class="doc-item__field field">
+                                                <input type="text" name="company-bin" class="field__input"
+                                                    placeholder="+7 (777) 777-77-77">
+                                                <span class="field__text">Номер гаранта</span>
+                                            </div>
+                                        </div>
+                                        <div class="doc-item__group">
+                                            <div class="lk-title1 lk-title1_blue doc-item__title">Договора</div>
+                                            <div class="file doc-item__file" data-type="file">
+                                                <p class="file__text">Доверенность кто подает заявку</p>
+                                                <input class="file__input" type="file" id="file-1">
+                                                <label class="file__btn" for="file-1">
+                                                    <div class="file__btn-text">Нажмите, чтобы выбрать файл или перетащите сюда</div>
+                                                </label>
+                                                <div class="file__result">
+                                                    <div class="file__result-icon-box">
+                                                        <span class="file__result-type"></span>
+                                                    </div>
+                                                    <div class="file__result-inf">
+                                                        <div class="file__result-header">
+                                                            <div class="file__result-header-inf">
+                                                                <div class="file__result-name"></div>
+                                                                <span class="status status_verify file__status">На проверке</span>
+                                                            </div>
+                                                            <div class="file__result-header-btns">
+                                                                <button type="button" class="reload-btn file__reload file__result-header-btn"></button>
+                                                                <button type="button" class="delete-btn file__delete file__result-header-btn"></button>
+                                                            </div>
+                                                            <span class="file__progress-num"></span>
+                                                        </div>
+                                                        <div class="progress file__progress">
+                                                            <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        </div>                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="file doc-item__file" data-type="file">
+                                                <p class="file__text">Удостоверение лицевая сторона</p>
+                                                <input class="file__input" type="file" id="file-2">
+                                                <label class="file__btn" for="file-2">
+                                                    <div class="file__btn-text">Нажмите, чтобы выбрать файл или перетащите сюда</div>
+                                                </label>
+                                                <div class="file__result">
+                                                    <div class="file__result-icon-box">
+                                                        <span class="file__result-type"></span>
+                                                    </div>
+                                                    <div class="file__result-inf">
+                                                        <div class="file__result-header">
+                                                            <div class="file__result-header-inf">
+                                                                <div class="file__result-name"></div>
+                                                                <span class="status status_verify file__status">На проверке</span>
+                                                            </div>
+                                                            <div class="file__result-header-btns">
+                                                                <button type="button" class="reload-btn file__reload file__result-header-btn"></button>
+                                                                <button type="button" class="delete-btn file__delete file__result-header-btn"></button>
+                                                            </div>
+                                                            <span class="file__progress-num"></span>
+                                                        </div>
+                                                        <div class="progress file__progress">
+                                                            <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        </div>                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="file doc-item__file" data-type="file">
+                                                <p class="file__text">Удостоверение обратная сторона</p>
+                                                <input class="file__input" type="file" id="file-3">
+                                                <label class="file__btn" for="file-3">
+                                                    <div class="file__btn-text">Нажмите, чтобы выбрать файл или перетащите сюда</div>
+                                                </label>
+                                                <div class="file__result">
+                                                    <div class="file__result-icon-box">
+                                                        <span class="file__result-type"></span>
+                                                    </div>
+                                                    <div class="file__result-inf">
+                                                        <div class="file__result-header">
+                                                            <div class="file__result-header-inf">
+                                                                <div class="file__result-name"></div>
+                                                                <span class="status status_verify file__status">На проверке</span>
+                                                            </div>
+                                                            <div class="file__result-header-btns">
+                                                                <button type="button" class="reload-btn file__reload file__result-header-btn"></button>
+                                                                <button type="button" class="delete-btn file__delete file__result-header-btn"></button>
+                                                            </div>
+                                                            <span class="file__progress-num"></span>
+                                                        </div>
+                                                        <div class="progress file__progress">
+                                                            <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        </div>                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="file file_error doc-item__file" data-type="file">
+                                                <p class="file__text">Выписка с банковского счёта компании</p>
+                                                <input class="file__input" type="file" id="file-4">
+                                                <label class="file__btn" for="file-4">
+                                                    <div class="file__btn-text">Нажмите, чтобы выбрать файл или перетащите сюда</div>
+                                                </label>
+                                                <div class="file__result">
+                                                    <div class="file__result-icon-box">
+                                                        <span class="file__result-type"></span>
+                                                    </div>
+                                                    <div class="file__result-inf">
+                                                        <div class="file__result-header">
+                                                            <div class="file__result-header-inf">
+                                                                <div class="file__result-name"></div>
+                                                                <span class="status status_verify file__status">На проверке</span>
+                                                            </div>
+                                                            <div class="file__result-header-btns">
+                                                                <button type="button" class="reload-btn file__reload file__result-header-btn"></button>
+                                                                <button type="button" class="delete-btn file__delete file__result-header-btn"></button>
+                                                            </div>
+                                                            <span class="file__progress-num"></span>
+                                                        </div>
+                                                        <div class="progress file__progress">
+                                                            <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        </div>                                                        
+                                                    </div>
+                                                </div>
+                                                <p class="file__error-text">Необходимо заполнить “Выписка с банковской компании”</p>
+                                            </div>
+                                            <div class="file doc-item__file" data-type="file">
+                                                <p class="file__text">Договор с клиентом</p>
+                                                <input class="file__input" type="file" id="file-5">
+                                                <label class="file__btn" for="file-5">
+                                                    <div class="file__btn-text">Нажмите, чтобы выбрать файл или перетащите сюда</div>
+                                                </label>
+                                                <div class="file__result">
+                                                    <div class="file__result-icon-box">
+                                                        <span class="file__result-type"></span>
+                                                    </div>
+                                                    <div class="file__result-inf">
+                                                        <div class="file__result-header">
+                                                            <div class="file__result-header-inf">
+                                                                <div class="file__result-name"></div>
+                                                                <span class="status status_verify file__status">На проверке</span>
+                                                            </div>
+                                                            <div class="file__result-header-btns">
+                                                                <button type="button" class="reload-btn file__reload file__result-header-btn"></button>
+                                                                <button type="button" class="delete-btn file__delete file__result-header-btn"></button>
+                                                            </div>
+                                                            <span class="file__progress-num"></span>
+                                                        </div>
+                                                        <div class="progress file__progress">
+                                                            <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        </div>                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="doc-item__links">
+                                            <div class="tdu doc-item__links-title">Ссылки на предущие выигранные договора</div>
+                                            <div class="doc-item__links-item">
+                                                <a href="#" class="doc-item__links-link">docs.com/file12.pdf</a>
+                                            </div>
+                                            <div class="doc-item__links-item">
+                                                <a href="#" class="doc-item__links-link">docs.com/file12.pdf</a>
+                                            </div>
+                                            <div class="doc-item__links-item">
+                                                <a href="#" class="doc-item__links-link">docs.com/file12.pdf</a>
+                                            </div>
+                                        </div>
+                                        <div class="doc-item__group">
+                                            <div class="checkbox checkbox_center doc-item__checkbox">
+                                                <div class="checkbox__box">
+                                                    <input type="checkbox" id="doc-checkbox-privacy" class="checkbox__input" name="checkbox-privacy">
+                                                    <label for="doc-checkbox-privacy" class="checkbox__btn"></label>
+                                                </div>
+                                                <div class="checkbox__text checkbox__text_big">Я согласен оплатить Бизнес проверку</div>
+                                            </div>
+                                            <button class="lk-btn lk-btn_white doc-item__btn">Сохранить</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <div class="mobile-menu">
+        <div class="mobile-menu__list">
+            <div class="mobile-menu__item">
+                <a href="./lk-spisok-sdelok.html" class="mobile-menu__link">
+                    <div class="mobile-menu__icon-box">
+                        <img src="images/icons/sidebar/handshake.svg" alt="" class="mobile-menu__icon">
+                    </div>
+                    <span class="mobile-menu__text">Сделки</span>
+                </a>
+            </div>
+            <div class="mobile-menu__item">
+                <a href="#" class="mobile-menu__link">
+                    <div class="mobile-menu__icon-box">
+                        <img src="images/icons/sidebar/card.svg" alt="" class="mobile-menu__icon">
+                    </div>
+                    <span class="mobile-menu__text">Новости</span>
+                </a>
+            </div>
+            <div class="mobile-menu__item">
+                <a href="./lk-analitika.html" class="mobile-menu__link">
+                    <div class="mobile-menu__icon-box">
+                        <img src="images/icons/sidebar/chart.svg" alt="" class="mobile-menu__icon">
+                    </div>
+                    <span class="mobile-menu__text">Аналитика</span>
+                </a>
+            </div>
+            <div class="mobile-menu__item">
+                <a href="./lk-notification.html" class="mobile-menu__link">
+                    <div class="mobile-menu__icon-box">
+                        <img src="images/icons/sidebar/notification.svg" alt="" class="mobile-menu__icon">
+                    </div>
+                    <span class="mobile-menu__text">Уведомления</span>
+                </a>
+            </div>
+            <div class="mobile-menu__item mobile-menu__item_active">
+                <button class="mobile-menu__link open-sidebar">
+                    <div class="mobile-menu__icon-box">
+                        <img src="images/icons/lk-menu.svg" alt="" class="mobile-menu__icon">
+                    </div>
+                    <span class="mobile-menu__text">Меню</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="js/common.js"></script>
+</body>
+
+</html>
